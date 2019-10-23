@@ -26,7 +26,7 @@
 						<ul>
 							<li><a href="<?=$site_host?>/en/">ENGLISH</a></li>
 							<li><a href="<?=$site_host?>/jp/">JAPANESE</a></li>
-							<li><a href="<?=$site_host?>/ch/">CHINESE</a></li>
+							<li><a href="<?=$site_host?>/cn/">CHINESE</a></li>
 						</ul>
 					</div>
 					<!-- 사이트맵 버튼 ( 기본 라인 三 ) -->

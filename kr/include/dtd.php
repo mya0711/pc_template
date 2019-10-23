@@ -50,6 +50,7 @@
 
 <!-- 아이콘폰트 -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 
 <!-- 슬라이드 플러그인 -->
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/slick.css">
@@ -71,7 +72,6 @@
 </script>
 
 <!-- 인증서 확대 모달 -->
-<!-- 인증서 사용시 주석해제
 <link rel="stylesheet" href="<?=$site_host?>/css/plugin/magnific-popup.css">
 <script src="<?=$site_host?>/js/plugin/jquery.magnific-popup.js"></script>
 <script type="text/javascript">
@@ -82,8 +82,18 @@ $(document).ready(function() {
 		closeOnContentClick: true,
 		closeBtnInside: true,
 		fixedContentPos: true,
-		mainClass: 'mfp-with-zoom'
+		mainClass: 'mfp-with-zoom',
+		removalDelay: 500, //delay removal by X to allow out-animation
+		  callbacks: {
+			beforeOpen: function() {
+			  // just a hack that adds mfp-anim class to markup 
+			   this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+			   this.st.mainClass = this.st.el.attr('data-effect');
+			}
+		  },
+		closeOnContentClick: true,
+		midClick: true, // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 	});
 	
 });
-</script> -->
+</script>
