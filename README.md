@@ -20,7 +20,7 @@ PC Website Template
 	* 언어선택링크 -> ch대신 cn으로
 	
 	<code> <b>3. /kr/include/dtd.php </b></code>
-	* 네이버폰트 추가 ( <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"> )
+	* 네이버폰트 추가 ( https://xpressengine.github.io/XEIcon/library-2.3.3.html )
 	* 인증서 script 수정
 	
   #### * css 파일
