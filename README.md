@@ -3,7 +3,7 @@ PC Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate : 2019/09/27
+* UpDate : 2019/10/23
 
 
   
