@@ -5,62 +5,25 @@
  * date : 2019-09-03
 ******************************************************** */
 
-@import url("./font.css");	/* 나눔고딕 */ 
-
-/* layout */
+/* ****************** LAYOUT ********************** */
 body, table, th, td, button, select, input, textarea {
 	font-family:'Noto Sans KR', "나눔고딕", NanumGothic, "Nanum Gothic","돋움", Dotum, Arial, sans-serif;
 	font-size:13px;
 	color:#666;
 	-webkit-text-size-adjust:none;
 }
-
 body { background-color:#fff; }
-#wrap {overflow:hidden; width:100%; min-width:1200px; position:relative; } /* min-width 홈페이지 컨텐츠 가로값에 맞게 변경 */
-
-/* ****************** 공통클래스 ********************** */
+#wrap {overflow:hidden; width:100%; min-width:1200px; position:relative; }
 .area{ width:1200px; margin:0px auto;} /* width 홈페이지 컨텐츠 가로값에 맞게 변경 */
 .area-box{  width:1600px; margin:0px auto; }
-.clearfix{*zoom:1;}
-.clearfix:after{clear:both; display:block; content:"";}
-.blind{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0}
-.trans200{-webkit-transition:all 0.2s;-moz-transition:all 0.2s;-o-transition:all 0.2s;-ms-transition:all 0.2s;transition:all 0.2s}
-.trans300{-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;-ms-transition:all 0.3s;transition:all 0.3s}
-.trans400{-webkit-transition:all 0.4s;-moz-transition:all 0.4s;-o-transition:all 0.4s;-ms-transition:all 0.4s;transition:all 0.4s}
-.trans500{-webkit-transition:all 0.5s;-moz-transition:all 0.5s;-o-transition:all 0.5s;-ms-transition:all 0.5s;transition:all 0.5s}
-.material-icons{line-height:inherit; color:inherit; vertical-align:middle;}
-.text-ellipsis{white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
-.table-layout{display:table; width:100%; height:100%; }
-.table-cell-layout{display:table-cell; width:100%; height:100%; vertical-align:middle;}
-.over-img{overflow:hidden;}
-.over-img img{-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;-ms-transition:all 0.3s;transition:all 0.3s}
-a:hover .over-img img{
-	-ms-transform: scale(1.1) rotate(0.002deg);
-	  -o-transform: scale(1.1) rotate(0.002deg);
-	  -moz-transform: scale(1.1) rotate(0.002deg);
-	  -webkit-transform: scale(1.1) rotate(0.002deg);
-	  transform: scale(1.1) rotate(0.002deg);
-}
-.line-clamp2{
-	overflow:hidden;
-	display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-.line-clamp3{
-	overflow:hidden;
-	display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
 
 /* ****************** HEADER ********************** */
 #header{
-	position:relative; /* position:absolute; */ height:100px; top:0; left:0; width:100%; z-index:99; 
+	position:relative; /* position:absolute; */ height:100px; top:0; left:0; width:100%; z-index:9999; 
 	-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;-ms-transition:all 0.3s;transition:all 0.3s
 }	/* 배경위에 헤더가있으면 absolute변경 후 headerInnerWrap 배경삭제 */
 #headerInnerWrap{
-	position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:99; background-color:#fff;
+	position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:9999; background-color:#fff;
 	-webkit-transition:background-color 0.3s;
 	-moz-transition:background-color 0.3s;
 	-o-transition:background-color 0.3s;
@@ -130,7 +93,7 @@ a:hover .over-img img{
 .sitemap-custom-btn i{font-size:30px;}
 
 /* -------- Header :: GNB(PC) -------- */
-.gnb-overlay-bg{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:97;}	/* gnb overlay BG */
+.gnb-overlay-bg{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9997;}	/* gnb overlay BG */
 #gnb{position:absolute; text-align:center; top:0; left:0px; width:100%; z-index:99;}
 #gnb > ul{}
 #gnb > ul > li{position:relative; display:inline-block; width:140px; word-break:keep-all;}
@@ -442,7 +405,7 @@ a:hover .over-img img{
 
 /* SUB LAYOUT :: 서브메뉴 Fixed (공통) */
 @media all and (min-width:801px){
-	.fixed-sub-menu.fixed .side-menu-inner{position:fixed; top:0px; left:0px; z-index:99;}
+	.fixed-sub-menu.fixed .side-menu-inner{position:fixed; top:0px; left:0px; z-index:9999;}
 }
 
 /* SUB LAYOUT :: 사이드 서브메뉴 */

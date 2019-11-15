@@ -1,6 +1,6 @@
 <?
 $page_num = "01";
-$sub_num = "04";
+$sub_num = "03";
 $page_section = "company";
 $sub_section = "ceo";
 $page_info = "회사소개";

@@ -1,5 +1,5 @@
-<? include $_SERVER["DOCUMENT_ROOT"]."/common.php"; ?>
-<? $admin_stat = $db->object("cs_seo", ""); ?>
+<? // include $_SERVER["DOCUMENT_ROOT"]."/common.php"; ?>
+<? // $admin_stat = $db->object("cs_seo", ""); ?>
 <?
 $site_directory = "/kr";
 $site_url = $site_host.$site_directory;

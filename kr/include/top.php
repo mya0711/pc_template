@@ -50,12 +50,14 @@
 			<div class="visual-img-con" style="background:#eee url(<?=$site_host?>/images/layout/sub_visual_<?=$page_section?>.jpg) no-repeat 50% 0%"></div>
 			<div class="area visual-txt-con">
 				<div class="table-cell-layout">
-					<h2 class="visual-tit trans400">
-						<?=$page_info?>
-					</h2>
-					<p class="visual-sub-txt"><?=$page_section?> / 서브텍스트가 들어갑니다.</p>
-					<a href="#" class="sub-page-controls-btn sub-prev-page-btn"><span><i class="material-icons">&#xE15B;</i></span><strong class="sub-page-name"></strong></a>
-					<a href="#" class="sub-page-controls-btn sub-next-page-btn"><strong class="sub-page-name"></strong><span><i class="material-icons">&#xE15B;</i></span></a>
+					<div class="visual-txt-container">
+						<h2 class="visual-tit trans400">
+							<?=$page_info?>
+						</h2>
+						<p class="visual-sub-txt"><?=$page_section?> / 서브텍스트가 들어갑니다.</p>
+						<a href="#" class="sub-page-controls-btn sub-prev-page-btn"><span><i class="material-icons">&#xE15B;</i></span><strong class="sub-page-name"></strong></a>
+						<a href="#" class="sub-page-controls-btn sub-next-page-btn"><strong class="sub-page-name"></strong><span><i class="material-icons">&#xE15B;</i></span></a>	
+					</div>
 				</div>
 			</div>
 		</section>

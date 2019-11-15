@@ -116,9 +116,20 @@ jQuery(function($){
 		});
 	});
 
-	/* *********************** 에디터 테이블 스크롤넣기 ************************ */
+	/* *********************** 에디터 관련 ************************ */
+	/* 테이블 스크롤넣기 */ 
 	$(".editor table").each(function  () {
 		$(this).wrap("<div class='editor-table-box'></div>");
+	});
+	
+	/* ifrmae 태그 감싸기 */ 
+	$(".editor iframe").each(function  () {
+		var iframeSrc = $(this).attr("src");
+		var findStr = "https://www.youtube.com/embed"; 
+
+		if (iframeSrc.indexOf(findStr) != -1) {
+		  $(this).wrap("<div class='editor-iframe-box'></div>");
+		}
 	});
 	
 });
