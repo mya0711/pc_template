@@ -118,15 +118,15 @@ a {
 a:active, a:hover, a:focus {
 	text-decoration:none;
 }
-a:hover {
-	color:#333;
-}
 button{
 	margin:0px;
 	padding:0px;
 	cursor:pointer;
 	border:0px;
 	background:none;
+}
+a:focus, button:focus{
+	outline:none;
 }
 
 /* input 기본 스타일 초기화 */
