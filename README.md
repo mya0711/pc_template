@@ -3,12 +3,29 @@ PC Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate : 2019-11-15
-
-
+* UpDate : 2019-11-19
   
 
 ## 업데이트 내역
+
+- #### 2019/11/19
+    
+  #### * php 파일
+	<code> <b>1. /kr/include/dtd.php </b></code>
+	* css선언 경로 변경
+
+  #### * css 파일
+
+	<code> <b>1. common폴더생성후 cm_~ 관련된 css 이동 및 추가</b></code>
+
+	<code> <b>2. member.css 삭제 </b></code>
+
+  #### * js 파일
+
+	<code> <b>1. common폴더생성후 cm_~ 관련된  js 추가</b></code>
+
+
+***************************
 
 - #### 2019/11/15
     

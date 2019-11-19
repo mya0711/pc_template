@@ -31,8 +31,11 @@
 <link rel="stylesheet" href="<?=$site_host?>/css/main.css" />
 <link rel="stylesheet" href="<?=$site_url?>/css/language.css" /><!-- 해당언어에서만 사용하는 css -->
 <!-- Board Skin -->
-<link rel="stylesheet" href="<?=$site_host?>/css/cm_bbs_common.css">
-<link rel="stylesheet" href="<?=$site_host?>/css/cm_board.css">
+<link rel="stylesheet" href="<?=$site_host?>/css/common/cm_bbs_common.css">
+<link rel="stylesheet" href="<?=$site_host?>/css/common/cm_board.css">
+<link rel="stylesheet" href="<?=$site_host?>/css/common/cm_gallery.css" />
+<link rel="stylesheet" href="<?=$site_host?>/css/common/cm_faq.css" />
+<link rel="stylesheet" href="<?=$site_host?>/css/common/cm_online.css" />
 <!-- // -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="<?=$site_host?>/js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
@@ -96,3 +99,7 @@ $(document).ready(function() {
 	
 });
 </script>
+
+<!-- Board Skin -->
+
+<!-- // -->
