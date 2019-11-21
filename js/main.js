@@ -24,35 +24,19 @@ jQuery(function($){
 
 	// 메인 비주얼 높이값 설정
 	if ( $("#mainVisual.full-height").length > 0 ) {
-	
-		scrollWidth = getScrollBarWidth();
-		var win_width = $(window).outerWidth() + getScrollBarWidth();
-
-		if ( $("#header").is(".fixed-header") ) {
-			var visual_height = $(window).height()	// - $("#header").height(); /* header가 fixed가 아닌경우는 주석해제*/ 
-		}else {
-			var visual_height = $(window).height()	- $("#header").height();
-		}
-		
-		if ( win_width > 800 ) {
-			$("#mainVisual").height(visual_height);
-		}else {
-			$("#mainVisual").css("height","auto");
-		}
-		$(window).resize(function  () {
-			var win_width = $(window).outerWidth() + getScrollBarWidth();
-
-			if ( $("#header").is(".fixed-header") ) {
-				var visual_height = $(window).height()	// - $("#header").height(); /* header가 fixed가 아닌경우는 주석해제*/ 
-			}else {
-				var visual_height = $(window).height()	- $("#header").height();
-			}
-
+		mainVisualHeight();
+		function mainVisualHeight () {
+			scrollWidth = getScrollBarWidth();
+			var win_width = $(window).outerWidth() + scrollWidth;
+			var visual_height = $(window).height()	- $("#header").height();	// header가 fixed or absolute일경우 - $("#header").height() 삭제
 			if ( win_width > 800 ) {
 				$("#mainVisual").height(visual_height);
 			}else {
 				$("#mainVisual").css("height","auto");
 			}
+		}
+		$(window).resize(function  () {
+			mainVisualHeight();
 		});
 	}
 	

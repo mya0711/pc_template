@@ -3,11 +3,26 @@ PC Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate : 2019-11-19
+* UpDate : 2019-11-21
   
 
 ## 업데이트 내역
 
+- #### 2019/11/21
+    
+  #### * php 파일
+	<code> <b>1. /kr/lib/config.php </b></code>
+	* 주석해제(DB셋팅이 안되어있을경우는 맨위 2줄 주석처리해야합니다)
+
+  #### * js 파일
+	<code> <b>1. main.js</b></code>
+	* fullheight 계산 함수처리
+
+  #### * images 파일
+	<code> <b>1. /images/test/</b></code>
+	* 테스트이미지(거인로고) 추가 	
+
+***************************
 - #### 2019/11/19
     
   #### * php 파일
