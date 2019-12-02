@@ -343,6 +343,7 @@ body { background-color:#fff; }
 #topMenu02 .side-menu-inner ul li{
 	/* float:left; */ 
 	display:inline-block; 
+	vertical-align:top;
 	width: 16.66%; 
 	margin-left:-4px; 
 	border-right:1px solid #ddd;
@@ -383,7 +384,6 @@ body { background-color:#fff; }
 #topMenu02 .side-menu-inner ul li.on{background-color: #838383;}
 #topMenu02 .side-menu-inner ul li:hover > a, 
 #topMenu02 .side-menu-inner ul li.on > a{color:#fff;}
-
 /*  SUB LAYOUT :: 서브메뉴(스타일3) */
 #topMenu03{position:relative; width:100%;height:70px; }
 #topMenu03 .side-menu-inner{width:100%; height:69px; border-bottom:1px solid #ddd; background-color: #fff;}
@@ -403,10 +403,12 @@ body { background-color:#fff; }
 #topMenu03 .menu-location .location-menu-con li.on a:before{content:""; position:absolute; top:50%; left:10px; width:7px; height:3px; margin-top:-1px; background-color:#f57f20} */
 /* // */
 
+/* SUB LAYOUT :: 서브메뉴 3차메뉴없애기 (공통) */
+#topMenu01 .side-menu-inner .snb-2dep,
+#topMenu02 .side-menu-inner .snb-2dep{display:none !important;}
+
 /* SUB LAYOUT :: 서브메뉴 Fixed (공통) */
-@media all and (min-width:801px){
-	.fixed-sub-menu.fixed .side-menu-inner{position:fixed; top:0px; left:0px; z-index:9999;}
-}
+.fixed-sub-menu.fixed .side-menu-inner{position:fixed; top:0px; left:0px; z-index:9999;}
 
 /* SUB LAYOUT :: 사이드 서브메뉴 */
 #sideMenu{float:left; width:220px; }

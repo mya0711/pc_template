@@ -71,16 +71,20 @@
 
 /* ******************   LOGIN ::  SNS/SHOP  ********************** */
 /* LOGIN :: SNS LOGIN */
-.member-con-inner-sns{overflow:hidden;padding:75px 40px; border:1px solid #ddd; }
-.member-con-inner-sns .member-form-con{display:inline-block; width:44%; vertical-align:middle;  padding-left:20px; }
-.member-con-inner-sns .member-form-con:first-child{display:inline-block; width:50%; vertical-align:middle; border-right:1px solid #ddd; padding-right:20px; padding-left:0;}
+.member-con-inner-sns{position:relative; overflow:hidden;}
+.member-con-inner-sns:before{position:absolute; top:30px; bottom:30px; left:50%; width:1px; background-color:#eee; content:"";}
+.member-con-inner-sns .member-con-inner{padding:60px 30px;}
+.member-con-inner-sns .member-form-con{float:left; width:50%; -webkit-box-sizing: border-box; padding-left:30px;
+-moz-box-sizing: border-box;
+ box-sizing: border-box; }
+.member-con-inner-sns .member-form-con:first-child{padding-left:0; padding-right:30px;}
 .member-con-inner-sns .member-form-sub-txt{font-size:13px; line-height:20px; color:#333;}
-.member-con-inner-sns .member-form-con .sns-login-list {padding-top:15px;}
 .member-con-inner-sns .member-form-con .sns-login-list li{overflow:hidden; position:relative; padding-top:10px; -webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;}
 .member-con-inner-sns .member-form-con .sns-login-list li:first-child{padding-top:0;}
 .member-con-inner-sns .member-form-con .sns-login-list li a,
 .member-con-inner-sns .member-form-con .sns-login-list li button{display:block; width:100%; height:50px; background-color:#888; color:#fff; font-size:16px; text-align:left; text-indent:70px; }
 .member-con-inner-sns .member-form-con .sns-login-list .sns-icon{position:absolute; width:50px; height:50px; border-right:1px solid rgba(255,255,255,0.5); text-align:center; line-height:50px;}
+.member-con-inner-sns .member-form-con .sns-login-list .sns-icon i{color:#fff; font-size:20px; line-height:50px}
 /* LOGIN :: SHOP LOGIN */
 .member-con-inner-shop{overflow:hidden;padding:75px 40px; border:1px solid #ddd; }
 .member-con-inner-shop .member-form-con{display:inline-block; vertical-align:middle; width:44%; padding-left:20px;}	/* 오른쪽영역 */
@@ -198,12 +202,14 @@
 /* ******************   LOGIN  ********************** */
 @media all and (max-width:800px){
 	/* LOGIN :: 아이콘로그인 */
+	.form-list-icon{margin-bottom:15px;}
 	.form-list-icon > li{margin-top:5px;}
 	.form-list-icon > li .login-input{height:40px; width:calc(100% - 30px); font-size:13px;}
 	.form-list-icon > li i{width:25px; font-size:20px;}
 	/*  LOGIN :: 아이디저장 및 하단영역 */
-	.id-save-btn{font-size:12px;}
+	.id-save-btn{font-size:12px; margin-top:0px;}
 	.id-save-btn input[type="checkbox"]{width:20px; height:20px;}
+	.id-save-btn + .cm-btn-controls{padding-top:15px;}
 	.form-box-list{height:44px; line-height:44px; }
 	.form-box-list a{font-size:13px;}
 	.form-box-list a:before{margin:-2px 10px 0 10px;}
@@ -211,7 +217,7 @@
 
 /* ******************   LOGIN ::  SNS/SHOP  ********************** */
 @media all and (max-width:1220px){
-	.member-con-inner-shop, .member-con-inner-sns{padding:40px 25px}
+	.member-con-inner-shop, .member-con-inner-sns{padding:25px}
 	/* LOGIN :: SNS LOGIN */
 	.member-con-inner-sns .member-form-con{padding-left:15px;}
 	.member-con-inner-sns .member-form-con:first-child{padding-right:15px;}
@@ -220,16 +226,19 @@
 	.member-con-inner-shop .member-form-con:first-child{border-right:0; padding-bottom:30px;}
 }
 @media all and (max-width:800px){
+	.member-con-inner-sns .member-con-inner{padding:35px 25px}
+	.member-con-inner-sns:before{display:none;}
 	.member-con-inner-shop, .member-con-inner-sns{padding:40px 15px;}
 	/* LOGIN :: SNS LOGIN */
 	.member-con-inner-sns .member-form-con, .member-con-inner-sns .member-form-con:first-child{
-		display:block; width:100%; padding:0; max-width:480px;
+		display:block; float:none; width:100%; padding:0; max-width:480px; margin:0px auto;
 	}
-	.member-con-inner-sns .member-form-con:first-child{border-right:0; padding-bottom:30px;}
+	.member-con-inner-sns .member-form-con:first-child{border-right:0; padding-bottom:50px;}
 	.member-con-inner-sns .member-form-con .sns-login-list li{padding-top:5px;}
 	.member-con-inner-sns .member-form-con .sns-login-list li a,
 	.member-con-inner-sns .member-form-con .sns-login-list li button{height:40px; text-indent:50px; font-size:14px;}
 	.member-con-inner-sns .member-form-con .sns-login-list .sns-icon{width:40px; height:40px; line-height:40px;}
+	.member-con-inner-sns .member-form-con .sns-login-list .sns-icon i{line-height:40px;}
 	/* LOGIN :: SHOP LOGIN */
 	.member-con-inner-shop .member-form-shop-con{width:100%; }
 	.member-con-inner-shop .member-form-shop{text-align:center; padding:20px 0;}

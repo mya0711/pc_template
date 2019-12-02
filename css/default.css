@@ -130,7 +130,7 @@ a:focus, button:focus{
 }
 
 /* input 기본 스타일 초기화 */
-input,
+input:not(input[type="checkbox"], input[type="radio"]),
 select{
     -webkit-appearance: none;
        -moz-appearance: none;
@@ -139,9 +139,8 @@ select{
 	  -moz-border-radius: 0;
 			border-radius: 0;
 }
-input::-ms-clear,
+input:not(input[type="checkbox"], input[type="radio"])::-ms-clear,
 select::-ms-expand{ display: none; }
-
 
 /* *******************
  * description : editor.css

@@ -29,15 +29,8 @@ jQuery(function($){
 			scrollWidth = getScrollBarWidth();
 			var win_width = $(window).outerWidth() + scrollWidth;
 			var visual_height = $(window).height()	- $("#header").height();	// header가 fixed or absolute일경우 - $("#header").height() 삭제
-			if ( win_width > 800 ) {
-				$("#mainVisual").height(visual_height);
-			}else {
-				$("#mainVisual").css("height","auto");
-			}
+			$("#mainVisual").height(visual_height);
 		}
-		$(window).resize(function  () {
-			mainVisualHeight();
-		});
 	}
 	
 	// 메인 비주얼 zoom-out 효과
