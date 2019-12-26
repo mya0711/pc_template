@@ -3,10 +3,46 @@ PC Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate : 2019-12-02
+* UpDate : 2019-12-26
   
 
 ## 업데이트 내역
+
+- #### 2019/12/26
+    
+  #### * php 파일
+	<code> <b>1. /kr/include/footer.php </b></code>
+	* 하단 파트너사 롤링영역 추가
+	* 푸터로고 위치 이동
+
+	<code> <b>2. /kr/company/ceo.php </b></code>
+	* 상단에붙고 누르면 영역이동하는 moveTab 추가
+
+  #### * js 파일
+	<code> <b>1. common.js</b></code>
+	* 하단 파트너사 롤링 추가
+	
+	<code> <b>2. sub.js</b></code>
+	* 상단에붙고 누르면 영역이동하는 moveTab 추가
+
+  #### * css 파일
+	<code> <b>1. /css/layout.css</b></code>
+	* 하단 파트너사 css 추가
+	* 푸터 로고 왼쪽, 오른쪽 모두 추가
+
+	<code> <b>3. /css/content.css</b></code>
+	* 상단에붙고 누르면 영역이동하는 moveTab css 추가
+	
+	<code> <b>4. /css/common/cm_bbs_common.css</b></code>
+	* 게시판 뷰페이지 수정(border, margin 등)
+
+	<code> <b>5. /css/common/cm_online.css</b></code>
+	* 온라인문의3번폼 css수정
+	
+
+
+***************************
+
 
 - #### 2019/12/02
     

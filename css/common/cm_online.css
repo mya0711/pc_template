@@ -154,7 +154,7 @@
 .inquiry-style03-write-box dd textarea{
 	height:48px; border:0; width:50%; font-size:15px; letter-spacing: -0.5px; color:#555; font-weight: 300; background-color:#F7F7F7; 
 }
-.inquiry-style03-write-box dd textarea {width:100%; padding: 20px 10px; -webkit-box-sizing: border-box;
+.inquiry-style03-write-box dd textarea {width:100%; height:120px; padding: 15px 0px; -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
  box-sizing: border-box; resize:none;  }
 .inquiry-style03-write-box .file dd {vertical-align: middle;}
@@ -165,6 +165,7 @@
 /* 문의하기 03 :: 작성폼 기타 */
 .inquiry-style03-write-box .address-fieldset .write-input{margin-top:6px;}
 .inquiry-style03-write-box .address-fieldset .write-input:first-child{margin-top:0;}
+.inquiry-style03-write-box .address-fieldset .write-input:nth-of-type(2){border-top:1px solid #ddd; border-bottom:1px solid #ddd;}
 .inquiry-style03-write-box .address-btn{display:inline-block; min-width:114px; padding:0 10px; height:38px; border:1px solid #464646; vertical-align:middle; text-align:center; color:#464646; font-size:14px; font-weight:400; margin-left:10px;}
 .inquiry-style03-write-box .address-btn:hover{background-color:#464646; color:#fff;}
 @media all and (max-width:800px){

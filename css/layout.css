@@ -164,6 +164,21 @@ body { background-color:#fff; }
 #gnbM{display:none}
 
 /* ****************** FOOTER ********************** */
+/* -------- FOOTER :: 파트너리스트 -------- */
+#footerPartnerListContent{padding:30px 0; border-top:1px solid #ddd;}
+.footer-partner-list{position:relative; padding:0 65px;}
+.footer-partner-list .partner-item{float:left; }
+.footer-partner-list .partner-item-inner{position:relative; height:44px; padding:0 10px;}
+.footer-partner-list .partner-item-inner span{display:block; position:relative; height:100%; width:100%; }
+.footer-partner-list .partner-item-inner span img{position:absolute; top:0px; left:0px; bottom:0px; right:0px; max-width:100%; max-height:100%; margin:auto; }
+.footer-partner-list .slick-arrow{	position:absolute; top:50%; margin-top:-24px; width:48px; height:48px; cursor:pointer; border:0; cursor:pointer; z-index:9;font-size:48px;}
+.footer-partner-list .slick-arrow i{line-height:48px; vertical-align:top}
+.footer-partner-list .slick-arrow.slick-prev{left:0px; }
+.footer-partner-list .slick-arrow.slick-next{right:0px;}
+.footer-partner-list i{color:#aaa; }
+
+
+/* -------- FOOTER :: 레이아웃 -------- */
 #footer{background-color:#fff;}
 #footerInner{position:relative; }
 .footer-left-con{float:left; }
@@ -179,9 +194,6 @@ body { background-color:#fff; }
 	/* -webkit-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;border-radius:50%; */
 }
 .to-top-btn.fixed{bottom:15px; opacity:1.0;filter:Alpha(opacity=100);}
-
-/* Footer :: 푸터로고 */
-.foot-logo{float:left; padding-right:40px;}
 
 /* Footer :: 푸터메뉴 */
 .foot-menu{float:left; }
@@ -201,6 +213,9 @@ body { background-color:#fff; }
 
 /* -------- FOOTER :: 하단 -------- */
 #footerBottom{ padding:25px 0; }
+/* Footer :: 푸터로고 */
+.foot-logo{display:block; padding-bottom:20px;}
+.footer-right-con .foot-logo{text-align:right;}
 /* Footer :: 왼쪽정보 */
 .footer-address p{color:#2c2c2c; font-size:14.5px; line-height:22px; padding-bottom:10px;}
 .footer-address span{display:inline-block; margin-right:15px}

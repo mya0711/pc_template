@@ -78,10 +78,11 @@ display:inline-block; vertical-align:middle; width:30px; height:30px; border:1px
 .bbs-view-top .reply-state span{display:inline-block; padding:0 10px; height:24px; line-height:24px; background-color:#888; border-radius:5px; font-size:11px; color:#fff; text-align:center;}
 .bbs-view-top .reply-state.reply-state-finish span{background-color:#5997bb}
 .bbs-view-top .bbs-category{display:block; font-size:13px; margin-bottom:10px;}
-.bbs-view-top .bbs-tit{color:#282828; font-size:22px; letter-spacing:-0.6px; font-weight:500; margin-bottom:20px; line-height:32px; word-break:keep-all;}
+.bbs-view-top .bbs-tit{color:#282828; font-size:22px; letter-spacing:-0.6px; font-weight:500; line-height:32px; word-break:keep-all;}
+.bbs-view-top .bbs-write-info{margin-top:20px;}
 .bbs-view-top .bbs-write-info dt,.bbs-view-top .bbs-write-info dd{display:inline-block; color:#777; font-size:14px; vertical-align:middle; font-weight:500}
 .bbs-view-top .bbs-write-info dd{margin:0 20px 0 5px; color:#888; font-weight:400}
-.bbs-view-content{padding:30px 20px; }
+.bbs-view-content{padding:30px 20px; border-bottom:1px solid #ddd; }
 
 /* 게시판 :: 뷰 :: 공유아이콘 */
 .bbs-view-share-con{overflow:hidden; padding:10px 20px; border-bottom:1px solid #ddd;}
@@ -95,7 +96,7 @@ display:inline-block; vertical-align:middle; width:30px; height:30px; border:1px
 .bbs-view-share-controls .bbs-hit-good-num-con{float:right;}
 
 /* 게시판 :: 뷰 :: 첨부파일 */
-.bbs-view-file-info-box{line-height:20px; border-bottom:1px solid #ddd; border-top:1px solid #ddd; background-color:#f9f9f9; padding:10px 20px; margin-bottom:10px;}
+.bbs-view-file-info-box{line-height:20px; border-bottom:1px solid #ddd; background-color:#f9f9f9; padding:10px 20px; margin-bottom:10px;}
 .bbs-view-share-con + .bbs-view-file-info-box{border-top:0;}
 .bbs-view-file-info-box .bbs-file-list{overflow:hidden; padding-top:5px; font-size:13px;}
 .bbs-view-file-info-box .bbs-file-list:first-child{padding-top:0;}
@@ -140,6 +141,7 @@ display:inline-block; vertical-align:middle; width:30px; height:30px; border:1px
 	.bbs-view-top .bbs-view-info{float:none; overflow:hidden;}
 	.bbs-view-top .bbs-write-info dt,.bbs-view-top .bbs-write-info dd{font-size:12px;}
 	.bbs-view-top .bbs-write-info dd{margin:0 7px 0 0}
+	.bbs-view-content{padding:15px}
 
 	/* 게시판 :: 뷰 :: 공유아이콘 */
 	.bbs-view-share-con{padding:10px 15px}

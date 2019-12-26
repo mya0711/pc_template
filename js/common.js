@@ -72,9 +72,24 @@ jQuery(function($){
 			return false;
 		});
 	});
+	
+	/* *********************** 하단 파트너사 리스트 ************************ */
+	$('.footer-partner-list').slick({
+		slidesToShow: 7,
+		slidesToScroll: 1,
+		arrows: true,
+		fade: false,
+		dots:false,
+		autoplay: true,
+		speed:500,
+		infinite:true,
+		autoplaySpeed: 3000,
+		easing: 'easeInOutQuint',
+		pauseOnHover:false,
+		prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Prev" tabindex="0" role="button"><i class="xi-angle-left-min"></i></button>',
+		nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="xi-angle-right-min"></i></button>'
+	});
 
-	
-	
 	/* *********************** 패밀리사이트 ************************ */
 	$(".family-site-box").each(function  () {
 		var $familyBox = $(this);
@@ -116,6 +131,12 @@ jQuery(function($){
 		});
 	});
 
+	/* *********************** 스크롤 터치시 커버 사라지게 ************************ */
+	$(".custom-scrollbar-wrapper").on("touchmove click",function  () {
+		$(this).find(".custom-scrollbar-cover").fadeOut(200);
+	});
+
+	
 	/* *********************** 에디터 관련 ************************ */
 	/* 테이블 스크롤넣기 */ 
 	$(".editor table").each(function  () {
