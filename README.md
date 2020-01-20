@@ -3,10 +3,22 @@ PC Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate : 2019-12-26
+* UpDate : 2020-01-20
   
 
+
 ## 업데이트 내역
+
+- #### 2020/01/20
+    
+  #### * php 파일
+	<code> <b>1. /kr/company/ceo.php </b></code>
+	* 국문이미지파일 샘플삽입
+ #### * images 파일
+	<code> <b>1. /kr/images/content/ 폴더생성 </b></code>
+
+
+***************************
 
 - #### 2019/12/26
     
