@@ -583,8 +583,16 @@ select::-ms-expand{ display: none; }
 .table-layout{display:table; width:100%; height:100%; }
 .table-cell-layout{display:table-cell; width:100%; height:100%; vertical-align:middle;}
 .over-img{overflow:hidden;}
-.over-img img{-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;-ms-transition:all 0.3s;transition:all 0.3s}
+.over-img img{-webkit-transition:transform 0.3s;-moz-transition:transform 0.3s;-o-transition:transform 0.3s;-ms-transition:transform 0.3s;transition:transform 0.3s}
 a:hover .over-img img{
+	-ms-transform: scale(1.1) rotate(0.002deg);
+	  -o-transform: scale(1.1) rotate(0.002deg);
+	  -moz-transform: scale(1.1) rotate(0.002deg);
+	  -webkit-transform: scale(1.1) rotate(0.002deg);
+	  transform: scale(1.1) rotate(0.002deg);
+}
+.over-bg{overflow:hidden;-webkit-transition:transform 0.3s;-moz-transition:transform 0.3s;-o-transition:transform 0.3s;-ms-transition:transform 0.3s;transition:transform 0.3s}
+a:hover .over-bg{
 	-ms-transform: scale(1.1) rotate(0.002deg);
 	  -o-transform: scale(1.1) rotate(0.002deg);
 	  -moz-transform: scale(1.1) rotate(0.002deg);

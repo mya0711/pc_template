@@ -50,7 +50,7 @@
 				<!-- <div id="gnbBg"></div> -->
 				<ul class="clearfix area">
 					<li class="gnb1">
-						<a href="<?=$site_url?>/company/ceo.php">Menu1</a>
+						<a href="<?=$site_url?>/company/sample.php">Menu1</a>
 						<div class="gnb-2dep">
 							<ul>
 								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>

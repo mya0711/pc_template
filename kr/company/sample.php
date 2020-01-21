@@ -21,7 +21,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 </script>
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/top.php"; ?>
 				<!-- 컨텐츠 내용 -->
-				<img src="/images/content/content_ready_img.jpg" alt="현재 페이지는 준비중입니다." style="display:block; margin:0 auto; max-width:100%;" />
+				<img src="<?=$site_url?>/images/content/content_ready_img.png" alt="서비스 준비중입니다." style="display:block; margin:0 auto; max-width:100%;" />
 				<p style="line-height:30px; font-size:16px; color:#222;">국문이미지는 <pre>&lt;?=$site_url?></pre> 사용</p>
 				<img src="<?=$site_url?>/images/content/temp_img.jpg" alt="" style="display:block; margin:0 auto; max-width:100%;" />
 				<!-- //컨텐츠 내용 -->

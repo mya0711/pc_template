@@ -210,6 +210,8 @@ body { background-color:#fff; }
 .foot-sns-menu li{float:left; margin-left:5px}
 .foot-sns-menu li:first-child{margin-left:0}
 .foot-sns-menu li img{width:35px;}
+.foot-sns-menu li a{display:block; width:35px; height:35px; -webkit-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;border-radius:50%; background-color:#444; color:#fff; line-height:35px; text-align:center;}
+.foot-sns-menu li a i{font-size:20px; line-height:35px;}
 
 /* -------- FOOTER :: 하단 -------- */
 #footerBottom{ padding:25px 0; }

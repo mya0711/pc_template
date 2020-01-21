@@ -61,22 +61,9 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						</div>
 					</div>
 				</div>
-				<div class="main-visual-item">
-					<div class="main-visual-pc-img" style="background:#fff url(/images/main/main_visual_03.jpg) no-repeat 50% 50%;"></div>
-					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_03_m.jpg" alt="" /></div>	<!-- 모바일이미지 -->
-					<div class="main-visual-txt-con">
-						<div class="main-visual-txt-inner area-box">
-							<strong class="main-visual-txt1">giantsoft Stand in the world 33</strong>
-							<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
-							<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
-							<a href="" class="main-visual-more-btn">COMPANY VIEW</a>
-						</div>
-					</div>
-				</div>
 			</div>
 			<div class="main-scroll-icon">
 				<span>SCROLL DOWN</span>
-				<img src="<?=$site_host?>/images/icon/main_scroll_icon.png" alt="스크롤다운" />
 			</div>
 		</section>
 

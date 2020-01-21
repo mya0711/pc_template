@@ -65,18 +65,17 @@
 						<ul class="foot-menu clearfix">
 							<li><a href="javascript:;" onclick="javascript:layerLoad('<?=$site_url?>/service/privacy.php'); return false;"><b>개인정보처리방침</b></a></li>
 							<li><a href="javascript:;" onclick="javascript:layerLoad('<?=$site_url?>/service/agreement.php'); return false;">이용약관</a></li>
-							<li><a href="javascript:;" onclick="javascript:layerLoad('<?=$site_url?>/service/sitemap.php'); return false;">사이트맵</a></li>
 						</ul>
 					</div>
 					<!-- 푸터상단 오른쪽 -->
 					<div class="footer-right-con">
 						<div class="foot-sns-menu">
 							<ul class="clearfix">
-								<li><a href="" target="_blank"><img src="<?=$site_host?>/images/icon/sns_icon/sns_face_icon.png" alt="" /></a></li>
-								<li><a href="" target="_blank"><img src="<?=$site_host?>/images/icon/sns_icon/sns_insta_icon.png" alt="" /></a></li>
-								<li><a href="" target="_blank"><img src="<?=$site_host?>/images/icon/sns_icon/sns_kakaostory_icon.png" alt="" /></a></li>
-								<li><a href="" target="_blank"><img src="<?=$site_host?>/images/icon/sns_icon/sns_twt_icon.png" alt="" /></a></li>
-								<li><a href="" target="_blank"><img src="<?=$site_host?>/images/icon/sns_icon/sns_blog_icon.png" alt="" /></a></li>
+								<li><a href="" target="_blank"><i class="xi-facebook"></i></a></li>
+								<li><a href="" target="_blank"><i class="xi-instagram"></i></a></li>
+								<li><a href="" target="_blank"><i class="xi-kakaostory"></i></a></li>
+								<li><a href="" target="_blank"><i class="xi-twitter"></i></a></li>
+								<li><a href="" target="_blank"><i class="xi-naver"></i></a></li>
 							</ul>
 						</div>
 					</div>
