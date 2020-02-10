@@ -45,7 +45,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							<strong class="main-visual-txt1">giantsoft Stand in the world 11</strong>
 							<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
 							<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
-							<a href="" class="main-visual-more-btn">COMPANY VIEW</a>
+							<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
 						</div>
 					</div>
 				</div>
@@ -57,7 +57,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							<strong class="main-visual-txt1">giantsoft Stand in the world 22</strong>
 							<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
 							<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
-							<a href="" class="main-visual-more-btn">COMPANY VIEW</a>
+							<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
 						</div>
 					</div>
 				</div>

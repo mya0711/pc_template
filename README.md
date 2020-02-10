@@ -3,11 +3,39 @@ PC Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate : 2020-01-21
+* UpDate : 2020-02-10
   
 
 
 ## 업데이트 내역
+
+- #### 2020/02/10
+    
+  #### * php 파일
+	<code> <b>1. /kr/index.php </b></code>
+	* 비주얼영역 버튼 Company view -> Detail View로 수정
+	
+	<code> <b>2. /kr/include/footer.php</b></code>
+	* Footer 주소 및 전화번호 부분 수정 + 스타일 2번추가
+
+  #### * css 파일
+	<code> <b>1. /css/defulat.css </b></code>
+	* line150  :  editor 기본셋팅 폰트크기 및 색상변경
+
+	<code> <b>2. /css/layout.css</b></code>
+	* Footer 주소 및 전화번호 부분 수정 + 스타일 2번추가 에 따른 css추가
+
+	<code> <b>3. /css/main.css </b></code>
+	* 메인비주얼 active-item 관련된 효과 transition->animation으로 수정(★)
+
+	<code> <b>4. /css/common/cm_history.css </b></code>
+	* 연혁2번스타일 라인 일부수정
+
+  #### * js 파일
+	<code> <b>1. /js/main.js</b></code>
+	* 메인비주얼 active-item Slick관련 / 기존 AfterChange -> BeforeChange로 변경(★)
+
+***************************
 
 - #### 2020/01/21
     

@@ -37,9 +37,9 @@ jQuery(function($){
 	$(".main-visual-con").on('init', function(event, slick) {
 		$(".main-visual-item").eq(0).addClass("active-item");
 	});
-	$(".main-visual-con").on('afterChange', function(event, slick, currentSlide){
+	$(".main-visual-con").on('beforeChange', function(event, slick, currentSlide, nextSlide) {	
         $(".main-visual-item").removeClass("active-item");
-		$(this).find(".main-visual-item").eq(currentSlide).addClass("active-item")
+		$(this).find(".main-visual-item").eq(nextSlide).addClass("active-item")
     });
 
 	// 메인 비주얼 슬라이드

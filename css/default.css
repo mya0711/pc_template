@@ -146,7 +146,7 @@ select::-ms-expand{ display: none; }
  * description : editor.css
  * date : 2019-11-12
 ******************* */
-.editor {font-size:13px; line-height:1.5; color:#111; }
+.editor {font-size:13.3333px; line-height:1.5; color:#333; }
 .editor html {
 	display:block;
 	overflow-y:auto;

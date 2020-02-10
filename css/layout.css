@@ -219,11 +219,23 @@ body { background-color:#fff; }
 .foot-logo{display:block; padding-bottom:20px;}
 .footer-right-con .foot-logo{text-align:right;}
 /* Footer :: 왼쪽정보 */
-.footer-address p{color:#2c2c2c; font-size:14.5px; line-height:22px; padding-bottom:10px;}
-.footer-address span{display:inline-block; margin-right:15px}
+.footer-address{margin-bottom:15px; letter-spacing:-0.5px;}
+.footer-address .footer-address-txt{color:#444; font-size:14px; line-height:1.7; margin:0 -8px;}
+.footer-address p{display:inline-block; vertical-align:middle; position:relative; margin:0 8px;}
+.footer-address p:before{position:absolute; top:50%; left:-8px; width:1px; height:10px; margin-top:-5px; background-color:#ccc; content:"";}
+.footer-address p:first-child:before{display:none;}
 .footer-address a{color:inherit}
-.footer-caution-txt{color:#888; font-size:12.5px; padding-bottom:10px;}
-.footer-copyright{font-size:13px;}
+/* Footer :: 왼쪽정보 style02 */
+.footer-address-info-box{margin-bottom:15px; letter-spacing:-0.5px;}
+.footer-address-list dl{display:inline-block; vertical-align:middle; color:#aaa; font-size:14px; line-height:1.7; margin-left:15px; }
+.footer-address-list dl:first-child{margin-left:0}
+.footer-address-list dl dt,
+.footer-address-list dl dd{vertical-align:middle; display:inline-block;}
+.footer-address-list dl dt{margin-right:7px; color:#666;}
+.footer-address-list span{display:inline-block; margin-right:15px}
+.footer-address-list a{color:inherit}
+/* Footer :: Copyright */
+.footer-copyright{font-size:13px; letter-spacing:-0.5px;}
 .footer-copyright b{color:#f57f20}
 /* Footer :: 오른쪽정보 :: 패밀리사이트 */
 .family-site-box{/* position:absolute; top:20px; right:0;*/ position:relative; width:215px; text-align:left; letter-spacing:-0.25px;}

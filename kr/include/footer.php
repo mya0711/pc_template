@@ -88,12 +88,48 @@
 					<article class="footer-left-con">
 						<span class="foot-logo"><img src="<?=$site_host?>/images/common/footer_logo.jpg" alt="<?=$site_head_title?>" /></span>
 						<div class="footer-address">
-							<p>
-								<span>대표 : 권순일</span><span>주소 : 서울시 영등포구 경인로 775, 3-507</span><span>사업자등록번호 : 107-87-18398</span> <br>
-								<span>TEL : 02.2678.0031</span><span>FAX : 02.2678.0039</span><a href="mailto:webmaster@giantsoft.co.kr">MAIL : webmaster@giantsoft.co.kr</a>
-							</p>
-							<div class="footer-copyright">COPYRIGHT &copy; <b>퍼블팀</b> ALL RIGHTS RESERVED.</div>
+							<div class="footer-address-txt">
+								<p>대표 : ○○○</p>
+								<p>주소 : 서울시 영등포구 경인로 775, 3-507 </p>
+								<p>사업자등록번호 : 107-87-18398</p>
+							</div>
+							<div class="footer-address-txt">
+								<p>TEL : 02.1234.5678</p>
+								<p>FAX : 02.1234.5678</p>
+								<p><a href="mailto:webmaster@giantsoft.co.kr">MAIL : webmaster@giantsoft.co.kr</a></p>
+							</div>
 						</div>
+						<div class="footer-address-info-box">
+							<div class="footer-address-list">
+								<dl>
+									<dt>대표</dt>
+									<dd>○○○</dd>
+								</dl>
+								<dl>
+									<dt>주소</dt>
+									<dd>서울시 영등포구 경인로 775, 3-507</dd>
+								</dl>
+								<dl>
+									<dt>사업자등록번호</dt>
+									<dd>107-87-18398</dd>
+								</dl>
+							</div>
+							<div class="footer-address-list">
+								<dl>
+									<dt>TEL</dt>
+									<dd>02.1234.5678</dd>
+								</dl>
+								<dl>
+									<dt>FAX</dt>
+									<dd>02.1234.5678</dd>
+								</dl>
+								<dl>
+									<dt>MAIL</dt>
+									<dd><a href="mailto:webmaster@giantsoft.co.kr">webmaster@giantsoft.co.kr</a></dd>
+								</dl>
+							</div>
+						</div>
+						<div class="footer-copyright">COPYRIGHT &copy; <b>퍼블팀</b> ALL RIGHTS RESERVED.</div>
 					</article>
 					<!-- 푸터 하단 오른쪽 -->
 					<article class="footer-right-con">
