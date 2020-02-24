@@ -1,49 +1,38 @@
 /* *******************************************************
  * filename : main.js
  * description : 메인에만 사용되는 JS
- * date : 2017-05-30
+ * date : 2020-02-24
 ******************************************************** */
 
 
 jQuery(function($){
 	/* *********************** 메인 비주얼 ************************ */
-	// 임의의 영역을 만들어 스크롤바 크기 측정
-	function getScrollBarWidth(){
-		if($(document).height() > $(window).height()){
-			$('body').append('<div id="fakescrollbar" style="width:50px;height:50px;overflow:hidden;position:absolute;top:-200px;left:-200px;"></div>');
-			fakeScrollBar = $('#fakescrollbar');
-			fakeScrollBar.append('<div style="height:100px;">&nbsp;</div>');
-			var w1 = fakeScrollBar.find('div').innerWidth();
-			fakeScrollBar.css('overflow-y', 'scroll');
-			var w2 = $('#fakescrollbar').find('div').html('html is required to init new width.').innerWidth();
-			fakeScrollBar.remove();
-			return (w1-w2);
-		}
-		return 0;
-	}
-
 	// 메인 비주얼 높이값 설정
-	if ( $("#mainVisual.full-height").length > 0 ) {
+	if ($.exists('#mainVisual.full-height')) {
 		mainVisualHeight();
+		$(window).on('resize', mainVisualHeight);
+
 		function mainVisualHeight () {
-			scrollWidth = getScrollBarWidth();
-			var win_width = $(window).outerWidth() + scrollWidth;
-			var visual_height = $(window).height()	- $("#header").height();	// header가 fixed or absolute일경우 - $("#header").height() 삭제
-			$("#mainVisual").height(visual_height);
+			var visual_height = getWindowHeight()	- $("#header").height();	// header가 fixed or absolute일경우 - $("#header").height() 삭제
+			if ( getWindowWidth() > 800 ) {
+				$("#mainVisual").height(visual_height);
+			}else {
+				$("#mainVisual").css("height","auto");
+			}
 		}
 	}
 	
-	// 메인 비주얼 zoom-out 효과
-	$(".main-visual-con").on('init', function(event, slick) {
+	// 메인 비주얼 슬라이드
+	var $mainVisualItem = $(".main-visual-con");
+
+	$mainVisualItem.on('init', function(event, slick) {
 		$(".main-visual-item").eq(0).addClass("active-item");
 	});
-	$(".main-visual-con").on('beforeChange', function(event, slick, currentSlide, nextSlide) {	
-        $(".main-visual-item").removeClass("active-item");
+	$mainVisualItem.on('beforeChange', function(event, slick, currentSlide, nextSlide) {	
+		$(".main-visual-item").removeClass("active-item");
 		$(this).find(".main-visual-item").eq(nextSlide).addClass("active-item")
-    });
-
-	// 메인 비주얼 슬라이드
-	$('.main-visual-con').slick({
+	});
+	$mainVisualItem.slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: true,
@@ -57,13 +46,14 @@ jQuery(function($){
 		pauseOnHover:false,
 		zIndex:1
 	});
-	
+
 	// 스크롤 아이콘 모션
-	var $moveIcon = $('.main-scroll-icon');
-	var moveIcon = setInterval(function() {
-		$moveIcon.animate({opacity:'.5',"margin-bottom":'-=10px'}).animate({opacity:'1',"margin-bottom":'+=10px'})
-	}, 1000);
-	
+	if ($.exists('.main-scroll-icon')) {
+		var $moveIcon = $('.main-scroll-icon');
+		var moveIcon = setInterval(function() {
+			$moveIcon.animate({opacity:'.5',"margin-bottom":'-=10px'}).animate({opacity:'1',"margin-bottom":'+=10px'})
+		}, 1000);
+	}
 	
 	/* *********************** 메인 갤러리 슬라이드 ************************ */
 	$('.main-gallery-rolling-con > ul').slick({
@@ -131,14 +121,15 @@ jQuery(function($){
 	});	
 
 	/* *********************** 사이드바 FIXED ************************ */
-	$(window).scroll(function  () {
-		var scrollHeight = $(window).scrollTop();
-		var rightStartTop = $(window).height() / 2;
+	if ($.exists('#rightBar')) {
+		$(window).scroll(function  () {
+			var rightStartTop = $(window).height() / 2;
 
-		if ( scrollHeight > rightStartTop ) {
-			$("#rightBar").addClass("fixed");
-		}else {
-			$("#rightBar").removeClass("fixed");
-		}
-	});
+			if ( getScrollTop() > rightStartTop ) {
+				$("#rightBar").addClass("fixed");
+			}else {
+				$("#rightBar").removeClass("fixed");
+			}
+		});
+	}
 });

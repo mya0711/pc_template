@@ -3,11 +3,89 @@ PC Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate : 2020-02-10
+* UpDate : 2020-02-24
   
 
 
 ## 업데이트 내역
+- #### 2020/02/24
+    
+  #### * php 파일
+	<code> <b>1. /kr/index.php </b></code>
+	* 상단 조건부주석 변경
+	
+	<code> <b>2. /kr/company/sample.php</b></code>
+	* magnific popup 예시추가
+	
+	<code> <b>3. /kr/include/dtd.php</b></code>
+	* 기존 ie8.css => ie9.css 수정
+	* 스크롤바커스텀, 인증서확대모달 등의 스크립트 삭제
+
+
+  #### * css 파일
+	<code> <b>1. /css/defulat.css </b></code>
+	* line133  :  textarea 스타일초기화 추가 / input,select,textarea => box-sizing:border-box; 추가
+	
+	<code> <b>2. /css/ie8.css 삭제 후, /css/ie9.css 변경 </b></code>
+	* ie9 이하부터 작동되는 CSS로 추가
+
+	<code> <b>3. /css/common/cm_bbs_common.css </b></code>
+	* paging 버튼 흰색배경 추가
+	* 체크박스, 라디오박스 커스텀 추가
+	* 공통 버튼 800,480사이즈에서 min-width추가 / width :auto 수정
+
+	<code> <b>4. /css/common/cm_member.css </b></code>
+	* 회원폼 레이아웃 수정(max-width:620 => 480px수정)
+	* SNS 로그인버튼 Short 버전 
+	* Join Step 01단계 CSS수정 및 체크박스 커스텀
+	* Join Step 02단계 반응형 최적화작업
+
+	<code> <b>5. /css/plugin/magnific-popup.css </b></code>
+	* z-index 수정
+
+	<code> <b>6. /css/plugin/aos.css 추가 </b></code>
+
+	<code> <b>7. /css/plugin/jquery.fullPage.css 추가</b></code>
+
+	<code> <b>8. /css/plugin/swiper.css 추가</b></code>
+
+
+  #### * js 파일
+	<code> <b>1. /js/common.js</b></code>
+	* 전체적으로 많이사용하는부분은 함수화시킴(★) => 함수관련 사용법 숙지해야함
+	* 서브에서 사용하는부분은 sub.js로 이동
+
+	<code> <b>2. /js/main.js</b></code>
+	* 메인비주얼 selector 변수화
+
+	<code> <b>3. /js/nav.js</b></code>
+	* 함수추가로 인한 수정
+
+	<code> <b>4. /js/nav.js</b></code>
+	* 함수추가로 인한 수정 및 common.js에서 이동해야할부분 이동(editor, table 등)
+
+	<code> <b>5. /js/ie8_popup.js</b></code>
+	* 파일갯수 줄이기위해 삭제 => index.php에 직접선언
+
+	```winPopupOpen("<?=$site_url?>/service/ie8_popup.php","","width=800, height=600, left=0, top=0, resizable=no, scrollbars=no, status=no;");```
+
+	
+	<code> <b>6. /js/plugin/aos.js 추가 </b></code>
+
+	<code> <b>7. /js/plugin/jquery.fullPage.js 추가</b></code>
+
+	<code> <b>8. /js/plugin/scrolloverflow.min.js 추가</b></code>
+
+	<code> <b>9. /js/plugin/swiper.min.js 추가</b></code>
+
+	<code> <b>10. /js/plugin/TweenMax.min.js 추가</b></code>
+
+	
+ #### * image 파일
+	<code> <b>1. /images/content/ci_bg.jpg</b></code>
+	* CI 백그라운드(격자무늬) 추가
+
+***************************
 
 - #### 2020/02/10
     

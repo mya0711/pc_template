@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* *******************************************************
+ * filename : ie9.css
+ * description : 하위브라우저에서만 사용되는 CSS
+ * date : 2020-02-24
+******************************************************** */
+
+/* aos 초기화 css */
+@media screen{
+	html:not(.no-js) [data-aos^=fade][data-aos^=fade],
+	html:not(.no-js) [data-aos^=zoom][data-aos^=zoom]{opacity:1.0 !important;}
+}

@@ -2,7 +2,7 @@
 /* *******************************************************
  * filename : board.css
  * description : paging, 버튼, 게시판 뷰, 쓰기 등 게시판에 관련된 통합 CSS
- * date : 2019-10-08
+ * date : 2020-02-21
 ******************************************************** */
 
 /* ******************   게시판 :: 공통  ********************** */
@@ -23,7 +23,7 @@
 /* 공통 :: PAGING */
 .paging{width:100%; text-align:center; margin:30px 0;}
 .paging a{
-display:inline-block; vertical-align:middle; width:30px; height:30px; border:1px solid #ddd; text-align:center; font-size:12px; line-height:30px; color:#868686; letter-spacing:-0.25px; 
+display:inline-block; vertical-align:middle; width:30px; height:30px; border:1px solid #ddd; text-align:center; font-size:12px; line-height:30px; color:#868686; letter-spacing:-0.25px; background-color:#fff; 
 }
 .paging a.cur{border:1px solid #4b4b4b; background-color:#4b4b4b; color:#fff;}
 .paging a.paging-arrow{line-height:28px;}
@@ -47,19 +47,47 @@ display:inline-block; vertical-align:middle; width:30px; height:30px; border:1px
 .bbs-no-list{padding:100px 0; text-align:center; color:#777; font-size:15px; border-top:1px solid #333; border-bottom:1px solid #ddd; }
 .bbs-list-tbl + .bbs-no-list{margin-top:-1px;}
 
+/* 공통 :: 체크박스 */
+.custom-check-item-box{margin:0 -5px}
+.custom-check-item-box .custom-check-item{margin:2px 5px}
+.custom-check-item{display:inline-block; vertical-align:middle;}
+.custom-check-item input[type="checkbox"]{display:none; display/*\**/: inline-block\9;} /* ie7, ie8 display:inline-block */
+.custom-check-item label .check-icon{position:relative; top:1px;display:inline-block; width:16px; height:16px; border:1px solid #ddd; vertical-align:middle; display/*\**/: none\9;}
+.custom-check-item label .check-icon i{position:absolute; top:0px; left:0px; display:none; font-size:16px;}
+.custom-check-item label strong{display:inline-block; vertical-align:middle; font-weight:400; margin-left:8px; font-size:15px; color:#333;}
+.custom-check-item input[type="checkbox"]:checked + label .check-icon {border-color:#000}
+.custom-check-item input[type="checkbox"]:checked + label .check-icon i{display:block; color:#000}
+
+/* 공통 :: 라디오 */
+.custom-radio-item-box{margin:0 -5px}
+.custom-radio-item-box .custom-radio-item{margin:2px 5px}
+.custom-radio-item{display:inline-block; vertical-align:middle;}
+.custom-radio-item input[type="radio"]{display:none; display/*\**/: inline-block\9;} /* ie7, ie8 display:inline-block */
+.custom-radio-item label{display:inline-block; position:relative; padding-left:22px; color:#333; font-size:14.5px; letter-spacing:-0.3px; line-height:15px; }
+.custom-radio-item label::before{content:""; position:absolute; top:2px; left:0px; width:14px; height:14px; border:1px solid #cfcfcf; background-color:#fff; -webkit-border-radius:16px;-moz-border-radius:16px;-o-border-radius:16px;border-radius:16px;}
+.custom-radio-item label::after{display:none; content:""; position:absolute; top:6px; left:4px; width:8px; height:8px; background:#000; -webkit-border-radius:8px;-moz-border-radius:8px;-o-border-radius:8px;border-radius:8px;}
+.custom-radio-item label strong{display:inline-block; vertical-align:middle; font-weight:400; font-size:15px; color:#333;}
+.custom-radio-item input[type="radio"]:checked + label::before{border-color:#000}
+.custom-radio-item input[type="radio"]:checked + label::after{display:block; }
+
 @media all and (max-width:800px) {
 	/* 공통 :: 버튼  */
-	.cm-btn-controls button,.cm-btn-controls a{width:110px; height:36px; font-size:14px;}
+	.cm-btn-controls button,.cm-btn-controls a{min-width:110px; width:auto; padding:0 10px; height:36px; font-size:14px; -webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		 box-sizing: border-box; }
 	.cm-btn-controls a{line-height:36px;}
 	/* 공통 :: NO LIST */
 	.bbs-no-list{padding:60px 0; font-size:14px; font-weight:500;}
 	/* 공통 :: TOTAL NUMBER 및 카테고리 검색 */
 	.top-search-box select{width:150px}
+	/* 공통 :: 체크박스, 라디오*/	
+	.custom-check-item label strong,
+	.custom-radio-item label strong{font-size:13px; }
 }
 
 @media all and (max-width:480px) {
 	/* 공통 :: 버튼  */
-	.cm-btn-controls button,.cm-btn-controls a{width:80px; height:32px; font-size:13px;}
+	.cm-btn-controls button,.cm-btn-controls a{min-width:80px; height:32px; font-size:13px;}
 	.cm-btn-controls a{line-height:32px;}
 	/* 공통 :: SEARCH BOX */
 	.board-search-box{padding:15px;}

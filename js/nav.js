@@ -1,7 +1,7 @@
 /* *******************************************************
  * filename : nav.js
  * description : 네비게이션 및 사이드바 on 등 메뉴에 관련된 JS
- * date : 2018-01-16
+ * date : 2020-02-24
 ******************************************************** */
 
 var dep1;
@@ -17,6 +17,21 @@ jQuery(function($){
 	var $gnb_dep2 = $("#gnb > ul > li .gnb-2dep");
 	var $gnbBg = $('.gnb-overlay-bg');
 	var $snb = $(".snb");
+	// 모바일
+	var $menuBtn = $("#header .nav-open-btn");
+	var $gnbM = $("#gnbM");
+	var $gnbMList = $gnbM.find("#navigation").children("li");
+	var $gnbMBg = $('.gnb-overlay-bg-m');
+	var menuState = false;
+	
+	// 모바일 gnb열린 후 창 크게했을때 스크롤바 생성
+	$(window).resize(function  () {
+		if ( menuState  ) {
+			if ( getWindowWidth() > 1200 ) {
+				$("body").css({'height':'auto', 'overflow':'auto'});
+			}
+		}
+	});
 
 	if ( $gnb.is(".total-menu") ) {
 		gnb_total_on();
@@ -58,8 +73,7 @@ jQuery(function($){
 			$(this).parent("li").addClass("on").children(".gnb-2dep").stop().addClass("open"); //.slideDown(500);
 		})
 
-		
-		$gnbList.on("mouseleave",gnb_return);
+		$gnbList.children("li").on("mouseleave",gnb_return);
 		$gnbList.find("a").last().on("focusout",gnb_return);
 		
 		function gnb_return () {
@@ -79,37 +93,94 @@ jQuery(function($){
 		$gnb_dep1.removeClass("on");
 	});
 
-	/* *********************** SUB MENU ************************ */
 	// 서브메뉴에서 해당메뉴 on
 	if ( dep1 > 0 && dep2 > 0) {
 		$gnbList.children("li").eq(dep1-1).addClass("active");
+		$gnbMList.eq(dep1-1).addClass("on");
 		$snb.each(function  () {
-			$(this).children("li").eq(dep2-1).addClass("on").children(".snb-2dep").show();
+			$(this).find("li").eq(dep2-1).addClass("on");
 		});
 	}
 	
-	/* 서브메뉴가 2차메뉴를 가지고있으면 클래스 붙이기  */ 
-	$("#sideMenu > ul > li:has('ul')").addClass("has-2dep");
-	$("#sideMenu > ul > li:has('ul')").each(function  () {
-		$(this).children("a").append("<em class='snb-icon close-icon'><i class='material-icons'>&#xE145;</i></em><em class='snb-icon open-icon'><i class='material-icons'>&#xE15B;</i></em>");
-	});
-
-	/* SNB 2DEPTH 열기 */ 
-	$("#sideMenu .snb > li:has('ul')").children("a").click(function(event){
-		if( $(this).parent("li").hasClass("open")) {
-			$(this).parent("li").removeClass("open");
-			$(this).siblings(".snb-2dep").slideUp(400);
-		}else{
-			$("#sideMenu .snb > li").has(".snb-2dep").each(function(){
-				$(this).removeClass("open");
-				$(this).children(".snb-2dep").slideUp(400);
-			});
-			$(this).parent("li").addClass("open");
-			$(this).siblings(".snb-2dep").slideDown(400);
-			return false;
+	/* *********************** MOBILE NAV ************************ */
+	$menuBtn.click(function  () {
+		if ( menuState ) {
+			menuClose();
+			menuState = false;
+			$(this).removeClass("active");
+		}else {
+			menuOpen();
+			menuState = true;
+			$(this).addClass("active");
 		}
 		return false;
 	});
+
+	$gnbMBg.click(function  () {
+		menuClose();
+		menuState = false;
+		$menuBtn.removeClass("active");
+	});
+
+	/* 메뉴열기 */ 
+	function menuOpen () {
+		$gnbM.addClass("open");
+		$gnbMBg.fadeIn();
+		$("body").css({'height':$(window).height(), 'overflow':'hidden'});
+	}
+	/* 메뉴닫기 */ 
+	function menuClose () {
+		$gnbM.removeClass("open");
+		$gnbMBg.hide();
+		$("body").css({'height':'auto', 'overflow':'auto'});
+	}
+	
+	/* GNB MOBILE 2DEPTH 클래스 붙이기  */ 
+	$("#navigation > li:has('.gnb-2dep')").addClass("has-2dep");
+	$("#navigation > li:has('.gnb-2dep')").each(function  () {
+		$(this).children("a").append("<span class='gnb-icon close-icon'><i class='material-icons'>&#xE145;</i></span><span class='gnb-icon open-icon' style='display:none;'><i class='material-icons'>&#xE15B;</i></span>");
+	});
+
+	/* GNB MOBILE 2DEPTH 오픈 */ 
+	$("#navigation > li:has('.gnb-2dep')").children("a").click(function(event){
+		/* 2dep가 열려있을때 */		
+		if ( $(this).parent("li").hasClass("active") ){
+			$(this).parent("li").removeClass("active");
+			$(this).children(".open-icon").hide();
+			$(this).children(".close-icon").show();
+			$(this).siblings(".gnb-2dep").slideUp(400);					
+		}
+		/* 2dep가 닫혀있을때 */ 
+		else{	  
+			$("#navigation > li").has(".gnb-2dep").each(function() {
+				if ( $(this).hasClass("active") ){
+					$(this).removeClass("active");
+					$(this).find(".open-icon").hide();
+					$(this).find(".close-icon").show();
+					$(this).children(".gnb-2dep").slideUp(400);
+				}
+			});	
+			$(this).parent("li").addClass("active");
+			$(this).children(".close-icon").hide();
+			$(this).children(".open-icon").show();
+			$(this).siblings(".gnb-2dep").slideDown(400);
+		}
+		return false;
+	});
+	
+	/* 해당페이지의 GNB 모바일 2depth 열기 & ON  */
+	if ( dep1> 0 && dep2> 0 ) {
+		$("#navigation > li").eq(dep1-1).addClass("active").children(".gnb-2dep").show().children("li").eq(dep2-1).addClass("on");
+		$("#navigation > li").eq(dep1-1).find(".close-icon").hide();
+		$("#navigation > li").eq(dep1-1).find(".open-icon").show(); // 모바일 네비 on
+	}
+	
+	
+	/* *********************** Full Navgation ************************ */
+	/* 회원메뉴가 있는 full style  메뉴 */ 
+	if ( ( $(".gnb-style-full").length > 0 ) && ( $(".member-menu-box").length > 0 ) ) {
+		$(".gnb-style-full").addClass("gnb-style-full-member");
+	}
 
 	/* *********************** PC, 모바일 공통 ************************ */
 	/* ------------------------

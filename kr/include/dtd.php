@@ -39,67 +39,41 @@
 <!-- // -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="<?=$site_host?>/js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+<script src="<?=$site_host?>/js/vendor/jquery.easing.1.3.js"></script>
 
 <!--[if lt IE 9]>
 	<script src="<?=$site_host?>/js/vendor/html5shiv.js"></script>
 	<script src="<?=$site_host?>/js/vendor/respond.min.js"></script>
-	<link rel="stylesheet" href="<?=$site_host?>/css/ie8.css">
+<![endif]-->
+<!--[if lte IE 9]>
+	<link rel="stylesheet" href="<?=$site_host?>/css/ie9.css">
 <![endif]-->
 
-<script src="<?=$site_host?>/js/vendor/jquery.easing.1.3.js"></script>
 <script src="<?=$site_host?>/js/common.js"></script>
 <script src="<?=$site_host?>/js/layer_popup.js"></script>
 
-<!-- 아이콘폰트 -->
+<!-- Icon Font -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet"><!-- google -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"><!-- naver -->
 
-<!-- 슬라이드 플러그인 -->
+<!-- Slick Plugin -->
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/slick.css">
 <script src="<?=$site_host?>/js/plugin/slick.js"></script>
 
-<!-- 스크롤바 커스텀 -->
+<!-- CustomScrollbar Plugin -->
 <link rel="stylesheet" href="<?=$site_host?>/css/plugin/jquery.mCustomScrollbar.css">
 <script src="<?=$site_host?>/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-<script>
-	(function($){
-		$(window).on("load",function(){
-			$(".custom-scrollbar-wrapper .scroll-object-box").mCustomScrollbar({
-				axis:"x",
-				theme:"dark"
-			});
-			
-		});
-	})(jQuery);
-</script>
 
-<!-- 인증서 확대 모달 -->
+<!-- Magnific Plugin (인증서 확대 모달) -->
 <link rel="stylesheet" href="<?=$site_host?>/css/plugin/magnific-popup.css">
 <script src="<?=$site_host?>/js/plugin/jquery.magnific-popup.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-	$('.popup-gallery').magnificPopup({
-		delegate: 'a',
-		type: 'image',
-		closeOnContentClick: true,
-		closeBtnInside: true,
-		fixedContentPos: true,
-		mainClass: 'mfp-with-zoom',
-		removalDelay: 500, //delay removal by X to allow out-animation
-		  callbacks: {
-			beforeOpen: function() {
-			  // just a hack that adds mfp-anim class to markup 
-			   this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
-			   this.st.mainClass = this.st.el.attr('data-effect');
-			}
-		  },
-		closeOnContentClick: true,
-		midClick: true, // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+
+<!-- Aos Plugin -->
+<link rel="stylesheet" href="<?=$site_host?>/css/plugin/aos.css" />
+<script src="<?=$site_host?>/js/plugin/aos.js"></script>
+<script>
+	$(window).load(function() {
+		/* AOS Plugin */ 
+		aosInit ();
 	});
-	
-});
 </script>
-
-<!-- Board Skin -->
-
-<!-- // -->

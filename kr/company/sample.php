@@ -43,7 +43,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						</aside>
 						<div class="fixed-move-content-wrapper">
 							<div class="fixed-tab-content" id="fixedContent1">
-								내용1
+								<div class="popup-gallery">
+									MagnificPopup Sample<br><br>
+									<a href="/images/main/main_visual_01.jpg"><img src="/images/main/main_visual_01.jpg" alt="" width="100" /></a><br><br>
+									<a href="/images/main/main_visual_02.jpg"><img src="/images/main/main_visual_02.jpg" alt="" width="100" /></a>
+								</div>
 							</div>
 							<div class="fixed-tab-content" id="fixedContent2">
 								내용2
