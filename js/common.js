@@ -152,6 +152,22 @@ function customScrollY (scrollObject) {
 	});
 }
 
+/* PHP Get Parameter  */
+function getParameter(strParamName){
+	var arrResult = null;
+	if(strParamName){
+		 arrResult = location.search.match(new RegExp("[&?]" + strParamName + "=(.*?)(&|$)"));
+	}
+	return arrResult && arrResult[1] ? arrResult[1] : null;
+}
+function toAnchorParameter (anchor) {
+	if ( getParameter(anchor) ) {
+		var anchorConTop = $("#"+getParameter(anchor)+"").offset().top;
+		var headerHeight = $("#header").height();
+		moveScrollTop(anchorConTop-headerHeight);
+	}
+}
+
 jQuery(function($){
 	/* *********************** 상단 :: 헤더 FIXED ************************ */
 	if ($.exists('#header')) {
@@ -277,4 +293,9 @@ jQuery(function($){
 			return false;
 		});
 	});
+});
+
+/* *********************** 한페이지 내에서의 주소 이동 ************************ */
+$(window).load(function  () {
+	toAnchorParameter("anchor");	/* 주소~?anchor=content */ 
 });

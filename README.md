@@ -3,11 +3,57 @@ PC Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate : 2020-02-24
+* UpDate : 2020-02-27
   
 
-
 ## 업데이트 내역
+
+- #### 2020/02/27
+    
+  #### * php 파일
+	<code> <b>1. /kr/index.php </b></code>
+	* 외부 서버에서 가져오는 이미지 삭제 후 테스트이미지로 변경
+
+
+  #### * css 파일
+	<code> <b>1. /css/defulat.css </b></code>
+	* 이미지 가운데정렬(.img-center) / 이미지 Cover채우기 (.img-cover) / position 모든방향 0px (.pos-full) 추가
+	``` 
+		.img-center{
+			position:absolute;
+			top:0px;
+			left:0px;
+			right:0px;
+			bottom:0px;
+			max-width:100%;
+			max-height:100%;
+			margin:auto;
+		}
+		.img-cover{
+			position:absolute;
+			top:0px;
+			left:0px;
+			width:100%;
+			height:100%;
+		}
+		.pos-full{
+			position:absolute; 
+			top:0px; 
+			left:0px; 
+			bottom:0px; 
+			right:0px;
+		} 
+	```
+
+	<code> <b>2. /css/common/cm_faq.css </b></code>
+	* .faq-list-con .faq-item dd padding값 조정
+
+  #### * js 파일
+	<code> <b>1. /js/common.js</b></code>
+	* 파라미터받아온 후 원페이지에서 움직이는 함수추가 ( getParameter() )
+
+***************************
+
 - #### 2020/02/24
     
   #### * php 파일

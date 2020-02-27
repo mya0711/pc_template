@@ -137,7 +137,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					<ul class="main-news-list clearfix">
 						<li>
 							<a href="">
-								<span class="bbs-inner-thumb"><img src="http://design.giantsoft.co.kr/images/test/thum/test14.jpg" alt="" /></span>
+								<span class="bbs-inner-thumb over-img"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" class="img-full" /></span>
 								<div class="bbs-inner-con">
 									<strong class="bbs-category">카테고리</strong>
 									<strong class="bbs-tit line2">Giantsoft Sttand in the world</strong>
@@ -149,7 +149,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						</li>
 						<li>
 							<a href="">
-								<span class="bbs-inner-thumb"></span>
+								<span class="bbs-inner-thumb over-img"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" class="img-full" /></span>
 								<div class="bbs-inner-con">
 									<strong class="bbs-category">카테고리</strong>
 									<strong class="bbs-tit line2">Giantsoft Sttand in the world</strong>
@@ -161,7 +161,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						</li>
 						<li>
 							<a href="">
-								<span class="bbs-inner-thumb"></span>
+								<span class="bbs-inner-thumb over-img"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" class="img-full" /></span>
 								<div class="bbs-inner-con">
 									<strong class="bbs-category">카테고리</strong>
 									<strong class="bbs-tit">제목이 길어도 한줄로 표시됩니다</strong>
@@ -182,7 +182,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						<ul class="bbs-basic-gallery-con">
 							<li>
 								<a href="">
-									<div class="gallery-thum-box"><span class="gallery-thum"><img src="http://design.giantsoft.co.kr/images/test/thum/test1.jpg" alt="" /></span></div>
+									<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
 									<div class="gallery-txt-con">
 										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
 										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
@@ -192,7 +192,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</li>
 							<li>
 								<a href="">
-									<div class="gallery-thum-box"><span class="gallery-thum"><img src="http://design.giantsoft.co.kr/images/test/thum/test2.jpg" alt="" /></span></div>
+									<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
 									<div class="gallery-txt-con">
 										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
 										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
@@ -202,7 +202,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</li>
 							<li>
 								<a href="">
-									<div class="gallery-thum-box"><span class="gallery-thum"><img src="http://design.giantsoft.co.kr/images/test/thum/test14.jpg" alt="" /></span></div>
+									<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
 									<div class="gallery-txt-con">
 										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
 										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
@@ -212,7 +212,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</li>
 							<li>
 								<a href="">
-									<div class="gallery-thum-box"><span class="gallery-thum"><img src="http://design.giantsoft.co.kr/images/test/thum/test4.jpg" alt="" /></span></div>
+									<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
 									<div class="gallery-txt-con">
 										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
 										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
@@ -222,7 +222,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</li>
 							<li>
 								<a href="">
-									<div class="gallery-thum-box"><span class="gallery-thum"><img src="http://design.giantsoft.co.kr/images/test/thum/test5.jpg" alt="" /></span></div>
+									<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
 									<div class="gallery-txt-con">
 										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
 										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
@@ -232,7 +232,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</li>
 							<li>
 								<a href="">
-									<div class="gallery-thum-box"><span class="gallery-thum"><img src="http://design.giantsoft.co.kr/images/test/thum/test13.jpg" alt="" /></span></div>
+									<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
 									<div class="gallery-txt-con">
 										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
 										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
@@ -242,7 +242,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</li>
 							<li>
 								<a href="">
-									<div class="gallery-thum-box"><span class="gallery-thum"><img src="http://design.giantsoft.co.kr/images/test/thum/test7.jpg" alt="" /></span></div>
+									<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
 									<div class="gallery-txt-con">
 										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
 										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
@@ -252,7 +252,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</li>
 							<li>
 								<a href="">
-									<div class="gallery-thum-box"><span class="gallery-thum"><img src="http://design.giantsoft.co.kr/images/test/thum/test8.jpg" alt="" /></span></div>
+									<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
 									<div class="gallery-txt-con">
 										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
 										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
@@ -334,7 +334,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					<ul class="main-banner-list-con">
 						<li>
 							<a href="">
-								<div class="banner-thumb over-img"><img src="http://design.giantsoft.co.kr/images/test/thum/test5.jpg" alt="" /></div>
+								<div class="banner-thumb over-img"><img src="<?=$site_host?>/images/test/test_img4.jpg" alt="" /></div>
 								<div class="banner-inner-box">
 									<p class="banner-tit">giantsoft Stand in the world</p>
 									<strong class="banner-sub-tit">거인소프트 베너</strong>
@@ -344,73 +344,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						</li>
 						<li>
 							<a href="">
-								<div class="banner-thumb over-img"><img src="" alt="" /></div>
+								<div class="banner-thumb over-img"></div>
 								<div class="banner-inner-box">
 									<p class="banner-tit">giantsoft Stand in the world</p>
 									<strong class="banner-sub-tit">거인소프트 베너</strong>
 									<span class="banner-sub-txt">오버시 이미지 확대</span>
-								</div>
-							</a>
-						</li>
-					</ul>
-					<ul class="custom-gallery-list-con04 clearfix">
-						<li>
-							<a href="" class="circle-item">
-								<span class="circle-thumb"><img src="http://design.giantsoft.co.kr/images/test/thum/test14.jpg" alt=""></span>
-								<div class="circle-info">
-									<strong class="circle-cate">카테고리</strong>
-									<p class="off-txt circle-tit">
-										제목이 들어갑니다
-									</p>
-									<div class="on-txt">
-										<p class="circle-tit">제목 or 서브타이틀이 들어갑니다</p>
-									</div>
-									<span class="more-btn"><i class="material-icons"></i></span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="" class="circle-item">
-								<span class="circle-thumb"><img src="http://design.giantsoft.co.kr/images/test/thum/test5.jpg" alt=""></span>
-								<div class="circle-info">
-									<strong class="circle-cate">카테고리</strong>
-									<p class="off-txt circle-tit">
-										제목이 들어갑니다
-									</p>
-									<div class="on-txt">
-										<p class="circle-tit">제목 or 서브타이틀이 들어갑니다</p>
-									</div>
-									<span class="more-btn"><i class="material-icons"></i></span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="" class="circle-item">
-								<span class="circle-thumb"><img src="http://design.giantsoft.co.kr/images/test/thum/test12.jpg" alt=""></span>
-								<div class="circle-info">
-									<strong class="circle-cate">카테고리</strong>
-									<p class="off-txt circle-tit">
-										제목이 들어갑니다
-									</p>
-									<div class="on-txt">
-										<p class="circle-tit">제목 or 서브타이틀이 들어갑니다</p>
-									</div>
-									<span class="more-btn"><i class="material-icons"></i></span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="" class="circle-item">
-								<span class="circle-thumb"><img src="http://design.giantsoft.co.kr/images/test/thum/test1.jpg" alt=""></span>
-								<div class="circle-info">
-									<strong class="circle-cate">카테고리</strong>
-									<p class="off-txt circle-tit">
-										제목이 들어갑니다
-									</p>
-									<div class="on-txt">
-										<p class="circle-tit">제목 or 서브타이틀이 들어갑니다</p>
-									</div>
-									<span class="more-btn"><i class="material-icons"></i></span>
 								</div>
 							</a>
 						</li>
@@ -442,7 +380,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						<span class="main-sub-tit">에니메이션 위치 이동시 퍼블리셔에게 문의 또는 각자 해결/ 지도이미지는 자유롭게 편집</span>
 					</h3>
 					<div class="global-map-con">
-						<img src="<?=$site_host?>/images/content/global_map.png" alt="세계지도" />
+						<img src="<?=$site_host?>/images/test/test_img4.jpg" alt="세계지도" />
 						<div class="global-nation-box">
 							<!-- 기준은 left :50%; top:0; 이며, margin-left값과 top으로 위치 조정해주셔야 합니다. -->
 							<div class="nation-circle" title="국가1" style="margin-left:344px; top:222px"><span></span><span></span><span></span><span></span><i></i><p>giantsoft Global Network 국가1</p></div>
@@ -451,9 +389,6 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							<div class="nation-circle" title="국가4" style="margin-left:-501px; top:69px"><span></span><span></span><span></span><span></span><i></i><p>giantsoft Global Network 국가4</p></div>
 							<div class="nation-circle" title="국가5" style="margin-left:-59px; top:166px"><span></span><span></span><span></span><span></span><i></i><p>giantsoft Global Network 국가5</p></div>
 						</div>
-					</div>
-					<div class="global-map-con-m">
-						<img src="<?=$site_host?>/images/content/global_map_m.jpg" alt="세계지도" />
 					</div>
 				</div>
 			</article>
@@ -475,7 +410,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						<ul>
 							<li>
 								<a href="">
-									<span class="main-board-banner-thumb"><img src="http://design.giantsoft.co.kr/images/test/thum/gallery_test_img1.jpg" alt="" /></span>
+									<span class="main-board-banner-thumb"><img src="<?=$site_host?>/images/test/test_img3.jpg" alt="" /></span>
 									<div class="main-board-thumb-cover">
 										<p><strong>Giantsoft News</strong></p>
 									</div>

@@ -14,7 +14,7 @@
 .faq-list-con .faq-item dt i{color:#666; font-size:26px;}
 .faq-list-con .faq-item.open dt .arrow i{margin-top:-2px; transform:rotate(-180deg);}
 .faq-list-con .faq-item.open dt .faq-title{white-space:normal; text-overflow:unset;}
-.faq-list-con .faq-item dd{display:none; position:relative; border-top:1px solid #d7d7d7; padding:15px 30px 15px 55px; background:#f0f0f0; }
+.faq-list-con .faq-item dd{display:none; position:relative; border-top:1px solid #d7d7d7; padding:18px 30px 15px 55px; background:#f0f0f0; }
 .faq-list-con .faq-item dd .answer-txt-con{line-height:24px; font-size:14px; color:#333; }
 .faq-list-con .faq-item dt .question-icon,.faq-list-con .faq-item dd .answer-icon{
     position:absolute; top:13px; left:10px; width:30px; height:30px; line-height:30px; text-align:center; color:#fff; font-size:13px; font-weight:400;
