@@ -3,10 +3,27 @@ PC Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate : 2020-02-27
+* UpDate : 2020-02-28
   
 
 ## 업데이트 내역
+
+- #### 2020/02/28
+    
+  #### * php 파일
+	<code> <b>1. /kr/include/header.php </b></code>
+	* 검색버튼 구글아이콘에서 네이버아이콘으로 변경
+
+	<code> <b>1. /kr/include/top.php </b></code>
+	* 서브메뉴 display:table 스타일 추가( #topMenu03 )
+
+
+  #### * css 파일
+	<code> <b>1. /css/layout.css </b></code>
+	* .header-util-box{right:30px} 변경
+	* 검색창 디자인변경 및 탑메뉴03 추가
+	
+***************************
 
 - #### 2020/02/27
     
