@@ -1,19 +1,23 @@
 /* *******************************************************
  * filename : layer_popup.js
  * description : 모달레이어를 띄울때 사용되는 ajax JS
- * date : 2017-05-30
+ * date : 2020-03-18
 ******************************************************** */
 
 
 function layerLoad(strUrl){
 	var $modalWrap = $(".modal-fixed-pop-wrapper");
-
-	$("html").css({
-		"margin-right":"17px",
-		"overflow-y":"hidden"
-	});
-	$modalWrap.fadeIn();
 	
+	if ($.exists('#fullpage')) {
+		$.fn.fullpage.setAllowScrolling(false);
+		$.fn.fullpage.setKeyboardScrolling(false);
+	}else {
+		$("html").css({
+			"margin-right":"17px",
+			"overflow-y":"hidden"
+		});
+	}
+	$modalWrap.fadeIn();
 	$.ajax({
 		type: "POST",
 		url: strUrl,
@@ -24,10 +28,15 @@ function layerLoad(strUrl){
 		error: function() {
 			alert("호출에 실패했습니다.");
 			$(".modal-fixed-pop-wrapper").hide();
-			$("html").css({
-				"margin-right":"0",
-				"overflow-y":"scroll"
-			});
+			if ($.exists('#fullpage')) {
+				$.fn.fullpage.setAllowScrolling(true);
+				$.fn.fullpage.setKeyboardScrolling(true);
+			}else {
+				$("html").css({
+					"margin-right":"0",
+					"overflow-y":"scroll"
+				});
+			}
 		},
 		beforeSend:function(){ 
 			$('.modal-loading').fadeIn(); 
@@ -42,10 +51,17 @@ $(document).ready(function  () {
 	$(".modal-close-btn").click(function  () {
 		$(".modal-inner-content").empty();
 		$modalWrap.css("display","none");
-		$("html").css({
-			"margin-right":"0",
-			"overflow-y":"scroll"
-		});
+
+		if ($.exists('#fullpage')) {
+			$.fn.fullpage.setAllowScrolling(true);
+			$.fn.fullpage.setKeyboardScrolling(true);
+		}else {
+			$("html").css({
+				"margin-right":"0",
+				"overflow-y":"scroll"
+			});
+		}
+
 		$modalWrap.fadeOut();
 		return false;
 	});

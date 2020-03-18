@@ -3,10 +3,33 @@ PC Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate : 2020-02-28
+* UpDate : 2020-03-18
   
 
 ## 업데이트 내역
+
+- #### 2020/03/18
+    
+  #### * php 파일
+	<code> <b>1. /kr/include/dtd.php </b></code>
+	* 제이쿼리소스 외부서버 가져오는방식 => 내부서버 가져오는방식으로 변경
+	* 외부에서 가져오는 폰트 : 기존 http 에서 // 방식으로 변경 ( 생갹하고 지정해주면, 현재 문서의 프로토콜에따라 적합한 리소스 사용 )
+	* aos 호출 => common.js로 이동
+
+
+  #### * css 파일
+	<code> <b>1. /css/default.css </b></code>
+	* input / select / textarea margin:0, padding:0 추가
+	
+	<code> <b>2. /css/common/cm_history.css </b></code>
+	* 연혁 수정
+
+ #### * js 파일
+	<code> <b>1. /js/common.js </b></code>
+	* AOS 호출 추가
+
+
+***************************
 
 - #### 2020/02/28
     
