@@ -216,7 +216,11 @@ jQuery(function($){
 		}
 		// top버튼 클릭
 		$(this).on("click",function  () {
-			moveScrollTop(0);
+			if ($.exists('#fullpage')) {
+				$.fn.fullpage.moveTo(1);
+			}else {
+				moveScrollTop(0);
+			}
             
 			return false;
 		});

@@ -1,6 +1,11 @@
 <?
 /* sub seo */
-if($page_info && $sub_info){
+if($page_info && $sub_info && $bbs_title){
+	$site_title .= " - ".$page_info." - ".$sub_info." - ".$bbs_title;
+	$og_title = $site_title;
+	$sns_title = $site_title;
+	$site_subject = $sub_info;
+}else if($page_info && $sub_info){
 	$site_title .= " - ".$page_info." - ".$sub_info;
 	$og_title = $site_title;
 	$sns_title = $site_title;

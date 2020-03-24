@@ -3,7 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title><?=$site_head_title?><? if($page_info){ ?> - <?=$page_info?><? } ?><? if($sub_info){ ?> - <?=$sub_info?><? } ?></title>
+<?
+if($bgu=="view" and $idx){ 
+	$idx = $tools->filter($idx);
+	$row = $db->object("cs_bbs_data","where idx='$idx'");
+	$bbs_title = $row->subject;
+}
+?>
+<title><?=$site_head_title?><? if($page_info){ ?> - <?=$page_info?><? } ?><? if($sub_info){ ?> - <?=$sub_info?><? } ?><? if($bbs_title){ ?> - <?=$bbs_title?><? } ?></title>
 <meta name="Title" content="<?=$site_title?>">
 <meta name="Subject" content="<?=$site_subject?>">
 <meta name="Author" content="<?=$site_author?>">

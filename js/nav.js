@@ -42,10 +42,8 @@ jQuery(function($){
 	// gnb 전체메뉴
 	function gnb_total_on () {
 		$gnbList.children("li").children("a").on("mouseenter focus",function  () {
-			if( $gnb_dep2.css('display') == 'none'){
-				$("#header").addClass("over");		/* 헤더배경 흰색으로 변경될 경우에만 */
-				$gnb_dep2.stop().slideDown("fast");
-				$gnb.find('#gnbBg').stop().slideDown("fast");
+			if (!($gnb.is(".open"))) {
+				$("#gnb").addClass("open");
 				$gnbBg.stop().fadeIn();
 			}
 		})
@@ -54,12 +52,8 @@ jQuery(function($){
 		$gnbList.find("a").last().on("focusout",gnb_return);
 		
 		function gnb_return () {
-			if( $gnb_dep2.css('display') == 'block'){
-				$("#header").removeClass("over");	/* 헤더배경 흰색으로 변경될 경우에만 */
-				$gnb_dep2.stop().slideUp("fast");
-				$gnb.find('#gnbBg').stop().slideUp("fast");
-				$gnbBg.hide();
-			}
+			$("#gnb").removeClass("open");
+			$gnbBg.hide();
 			if ( dep1 > 0 && dep2 ) {
 				$gnbList.children("li").eq(dep1-1).addClass("active");
 			}

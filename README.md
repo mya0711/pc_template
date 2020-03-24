@@ -3,11 +3,36 @@ PC Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate : 2020-03-18
+* UpDate : 2020-03-24
   
 
 ## 업데이트 내역
 
+- #### 2020/03/24
+    
+  #### * php 파일
+	<code> <b>1. /kr/include/dtd.php </b></code>
+	* SEO 이슈로 게시물 타이틀 들어갈 수 있게 수정
+
+	<code> <b>2. /kr/lib/sub.php </b></code>
+	* SEO이슈로 수정
+
+
+  #### * css 파일
+	<code> <b>1. /css/layout.css </b></code>
+	* #header.over #headerInnerWrap{background-color:#fff } 제거
+	* GNB Total Menu transition으로 over 되도록 수정
+	
+
+  #### * js 파일
+	<code> <b>1. /js/common.js </b></code>
+	* Top버튼 fullpage 사용할때 사용가능하게 수정
+
+	<code> <b>2. /js/nav.js </b></code>
+	* gnb_total_on() 수정
+
+
+***************************
 - #### 2020/03/18
     
   #### * php 파일
@@ -24,7 +49,7 @@ PC Website Template
 	<code> <b>2. /css/common/cm_history.css </b></code>
 	* 연혁 수정
 
- #### * js 파일
+  #### * js 파일
 	<code> <b>1. /js/common.js </b></code>
 	* AOS 호출 추가
 
