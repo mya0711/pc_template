@@ -149,7 +149,6 @@ body { background-color:#fff; }
 #gnb.total-menu > ul > li .gnb-2dep ul li a:hover{color:#f57f20;}
 
 /* GNB :: 2차메뉴 Over (높이변경) */
-#gnb.open,
 #gnb.open #gnbBg{height:350px}
 #gnb.open > ul > li .gnb-2dep{
 	height:250px; opacity:1.0;filter:Alpha(opacity=100);

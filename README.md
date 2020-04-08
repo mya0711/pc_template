@@ -3,10 +3,18 @@ PC Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2020-04-07
+* UpDate :  2020-04-08
   
 
 ## 업데이트 내역
+
+- #### 2020/04/08
+
+  #### * css 파일
+	<code> <b>1. /css/layout.css</b></code>
+	* gnb.open{height:350px; } 삭제
+
+***************************
 
 - #### 2020/04/07
     
