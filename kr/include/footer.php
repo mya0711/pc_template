@@ -134,9 +134,9 @@
 					<!-- 푸터 하단 오른쪽 -->
 					<article class="footer-right-con">
 						<span class="foot-logo"><img src="<?=$site_host?>/images/common/footer_logo.jpg" alt="<?=$site_head_title?>" /></span>
-						<div class="family-site-box">
-							<a href="javascript:;" class="family-site-open-btn">FAMILY SITE <span class="arrow"><i class="material-icons">&#xE313;</i></span></a>
-							<ul class="family-site-list">
+						<div class="family-site-box cm-drop-menu-box">
+							<a href="javascript:;" class="family-site-open-btn cm-drop-open-btn">FAMILY SITE <span class="arrow"><i class="material-icons">&#xE313;</i></span></a>
+							<ul class="family-site-list cm-drop-list">
 								<li><a href="">FAMILY SITE1</a></li>
 								<li><a href="">FAMILY SITE2</a></li>
 								<li><a href="">FAMILY SITE3</a></li>
@@ -148,14 +148,12 @@
 		</div>
 	</footer>
 
-	<!-- 모달 레이어팝업 -->
-	<article class="modal-fixed-pop-wrapper">
+	<!-- 모달 레이어팝업 (common.js로 이동/ 필요시 사용) -->
+	<!-- <article class="modal-fixed-pop-wrapper">
 		<div class="modal-fixed-pop-inner">
 			<div class="modal-loading"><span class="loading"></span></div>
 			<div class="modal-inner-box">
-				<div class="modal-inner-content">
-					<!-- ajax 내용 -->
-				</div>
+				<div class="modal-inner-content"></div>
 			</div>
 		</div>
-	</article>
+	</article> -->

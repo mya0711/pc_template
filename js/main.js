@@ -6,6 +6,41 @@
 
 
 jQuery(function($){
+	if ($.exists('#fullpage')) {
+		$('#fullpage').fullpage({
+			css3: true,
+			fitToSection: false,
+			navigation: true,
+			scrollBar:false,
+			navigationPosition: 'right',
+			navigationTooltips: ['Content01', 'Content02', 'Content03', 'Content04'],
+			responsiveWidth: 1024,
+			responsiveHeight : 750,
+			onLeave : function(index, nextIndex, direction){
+				if( nextIndex == 2 ){
+					/* 2번째 섹션 */
+				}else if( nextIndex == 3 ){
+					/* 3번째 섹션 */
+				}else if( nextIndex == 4 ){
+					/* 4번째 섹션 */
+
+				}else if( nextIndex == 5 ){
+					/* 5번째 섹션 */
+					setTimeout(function  () {
+						$('.footer-partner-list').slick("play");
+					},600);
+
+				}
+				
+				// 왼쪽leftBar 색상변경
+				if( nextIndex > 1 ){
+					$("#fp-nav").addClass("black");
+				}else {
+					$("#fp-nav").removeClass("black");
+				}
+			}
+		});
+	}
 	/* *********************** 메인 비주얼 ************************ */
 	// 메인 비주얼 높이값 설정
 	if ($.exists('#mainVisual.full-height')) {
@@ -44,7 +79,9 @@ jQuery(function($){
 		autoplaySpeed: 4000,
 		easing: 'easeInOutQuint',
 		pauseOnHover:false,
-		zIndex:1
+		zIndex:1,
+		prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Prev" tabindex="0" role="button"><i class="xi-angle-left-thin"></i></button>',
+		nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="xi-angle-right-thin"></i></button>'
 	});
 
 	// 스크롤 아이콘 모션

@@ -101,4 +101,33 @@ jQuery(function($){
 			}
 		});
 	}
+
+	
+	/* *********************** 리스트의 높이값 맞추기 ************************ */
+	$(".auto-height-list-con").each(function  () {
+		var $autoList = $(this).find(".auto-height-item");	// ul > li
+		var $autoListInner = $autoList.children(".inner-box");	 // ul > li 안에 높이값을 넣는영역
+		var heightDiv = ".inner";				// 높이값을 결정하는 영역		
+		var listNum = $autoList.length;			
+		var resetWidth = $(this).data("reset-width") ; // 높이값을 해제하는 구간
+		
+		autoHeight();
+		$(window).on('resize', autoHeight);
+
+		function  autoHeight(){
+			maxHeight = 0;
+			for (var i=0; i<listNum; i++) {
+				var curHeight = $autoList.eq(i).find(heightDiv).innerHeight();
+				if ( curHeight > maxHeight ) {
+					maxHeight = curHeight;
+				}
+			}
+			//console.log(maxHeight);
+			$autoListInner.height(maxHeight);
+			
+			if ( getWindowWidth() < resetWidth + 1 ){
+				$autoListInner.css('height','auto');
+			}
+		}
+	});
 });

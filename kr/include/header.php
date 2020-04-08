@@ -21,9 +21,9 @@
 						</div>
 					</div>
 					<!-- 외국어선택 -->
-					<div class="header-lang">
-						<a href="javascript:;" class="lang-open-btn"><i class="material-icons">&#xE894;</i><strong>LANGUAGE</strong><span class="arrow"><i class="material-icons">&#xE313;</i></span></a>
-						<ul>
+					<div class="header-lang cm-drop-menu-box">
+						<a href="javascript:;" class="lang-open-btn cm-drop-open-btn"><i class="xi-globus"></i><strong>LANGUAGE</strong><span class="arrow"><i class="material-icons">&#xE313;</i></span></a>
+						<ul class="cm-drop-list">
 							<li><a href="<?=$site_host?>/en/">ENGLISH</a></li>
 							<li><a href="<?=$site_host?>/jp/">JAPANESE</a></li>
 							<li><a href="<?=$site_host?>/cn/">CHINESE</a></li>

@@ -102,7 +102,7 @@ html.fp-enabled,
     -webkit-transition: none !important;
     transition: none !important;
 }
-#fp-nav {
+/* #fp-nav {
     position: fixed;
     z-index: 100;
     margin-top: -32px;
@@ -161,10 +161,6 @@ html.fp-enabled,
 .fp-slidesNav ul li a.active span,
 #fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li:hover a.active span{
-    /* height: 12px;
-    width: 12px;
-    margin: -6px 0 0 -6px;
-    border-radius: 100%; */
  }
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
@@ -182,12 +178,6 @@ html.fp-enabled,
     -moz-transition: all 0.1s ease-in-out;
     -o-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
-}
-#fp-nav ul li:hover a span,
-.fp-slidesNav ul li:hover a span{
-   /*  width: 10px;
-    height: 10px;
-    margin: -5px 0px 0px -5px; */
 }
 #fp-nav ul li .fp-tooltip {
     position: absolute;
@@ -215,7 +205,7 @@ html.fp-enabled,
 }
 #fp-nav ul li .fp-tooltip.left {
     left: 20px;
-}
+} */
 .fp-auto-height.fp-section,
 .fp-auto-height .fp-slide,
 .fp-auto-height .fp-tableCell{

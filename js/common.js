@@ -29,6 +29,31 @@ function ieVersionCheck () {
 	}
 }
 
+/* 브라우저 체크 */
+function detectBrowser () {
+	var agent = navigator.userAgent.toLowerCase(); 
+	var browser; 
+	
+	if (agent.indexOf('msie') > -1) { 
+		browser = 'ie' + agent.match(/msie (\d+)/)[1] 
+	}else if(agent.indexOf('trident') > -1) { 
+		browser = 'ie11' 
+	}else if(agent.indexOf('edge') > -1) { 
+		browser = 'edge' 
+	}else if(agent.indexOf('firefox') > -1) { 
+		browser = 'firefox' 
+	}else if(agent.indexOf('opr') > -1) { 
+		browser = 'opera' 
+	}else if(agent.indexOf('chrome') > -1) { 
+		browser = 'chrome' 
+	}else if(agent.indexOf('safari') > -1) { 
+		browser = 'safari'
+	}
+
+	return browser;
+
+}
+
 /* Window Popup Open */ 
 function winPopupOpen(src,title,option){
 	window.open(src,title,option);
@@ -168,7 +193,46 @@ function toAnchorParameter (anchor) {
 	}
 }
 
+
+/* Active cycle */ 
+function rollingActive (activeList) {
+	$(activeList).each(function  (index) {
+		$itemList = $(this);
+		$item = $itemList.find("li");
+		itemLength = $item.length;
+		startNum = 0;
+		rollingSpeed = $itemList.data("rolling-time");
+		
+		function visualTime(){
+			if(startNum < ( itemLength - 1)){
+				startNum++;
+			}else{
+				startNum = 0;
+			}
+			visualPlay();
+		}
+		function visualPlay(){
+			$item.each(function(id){
+				if(id == startNum){
+					$(this).addClass("active"); // li에 클래스 붙이기
+				}else{
+					$(this).removeClass("active");
+				}
+			});
+		};
+		visualPlay();
+		visual_timer = setInterval(visualTime,rollingSpeed);
+	});
+}
+
 jQuery(function($){
+	/* *********************** 브라우저 체크 및 기기체크 ************************ */
+	if ( isMobile() ) {
+		$("body").addClass("is-mobile").addClass(detectBrowser()+"-browser");
+	}else {
+		$("body").addClass("is-pc").addClass(detectBrowser()+"-browser");
+	}
+
 	/* *********************** 상단 :: 헤더 FIXED ************************ */
 	if ($.exists('#header')) {
 		$(window).scroll(function  () {
@@ -181,12 +245,6 @@ jQuery(function($){
 		});
 	}
 
-	/* *********************** 상단 :: 언어 목록 ************************ */
-	$(".header-lang").click(function  () {
-		$(this).toggleClass("open");
-	}).mouseleave(function  () {
-		$(this).removeClass("open");
-	});
 
 	/* *********************** 상단 :: 검색 toggle ************************ */
 	$(".header-search-box").each(function  () {
@@ -257,19 +315,39 @@ jQuery(function($){
 				  ]
 	});
 
-	/* *********************** 하단 :: 패밀리사이트 ************************ */
-	$(".family-site-box").each(function  () {
-		var $familyBox = $(this);
-		var $familyListOpenBtn = $(this).children(".family-site-open-btn");
-		var $familyList = $(this).children(".family-site-list");
-		$familyListOpenBtn.click(function  () {
-			$familyList.slideToggle(500);
-			$familyBox.toggleClass("open");
+	/* *********************** 하단 :: 모달영역 붙이기 ************************ */
+	$("body").append(" <article class='modal-fixed-pop-wrapper'><div class='modal-fixed-pop-inner'><div class='modal-loading'><span class='loading'></span></div><div class='modal-inner-box'><div class='modal-inner-content'></div></div></div></article>");
+
+	/* *********************** 드롭메뉴 공통 ************************ */
+	$(".cm-drop-menu-box").each(function  () {
+		var $dropBox = $(this);
+		var $dropOpenBtn = $(this).children(".cm-drop-open-btn");
+		var $dropList = $(this).children(".cm-drop-list");
+
+		$dropOpenBtn.click(function  () {
+			$dropList.slideToggle(500);
+			$dropBox.toggleClass("open");
 			return false;
 		});
-		$(this).mouseleave(function  () {
-			$familyList.slideUp(500);
-			$familyBox.removeClass("open");
+		$("body").click(function  () {
+			if ( $dropBox.data("drop-width") ) {
+				if ( getWindowWidth () < $dropBox.data("drop-width")+1 ) {
+					dropClose ();
+				}
+			}else {
+				dropClose ();
+			}
+		});
+		function dropClose () {
+			$dropList.slideUp(500);
+			$dropBox.removeClass("open");
+		}
+		$(window).resize(function  () {
+			if ( getWindowWidth () > $dropBox.data("drop-width") ) {
+				$dropList.show();
+			}else {
+				$dropList.hide();
+			}
 		});
 	});
 
@@ -283,6 +361,7 @@ jQuery(function($){
 		
 		// 탭 영역 숨기고 selected 클래스가 있는 영역만 보이게
 		var $selectCon = $cmTabList.find("li.selected").find("a").attr("href");
+		var selectTxt = $cmTabList.find("li.selected").find("em").text();
 		$cmContent.hide();
 		$($selectCon).show();
 
@@ -296,6 +375,38 @@ jQuery(function($){
 			}
 			return false;
 		});
+
+		// 모바일 버튼이 있을때 추가
+		var $cmTabMobileBtn = $(this).find(".cm-tab-m-btn");
+		if ($.exists($cmTabMobileBtn)) {
+			$cmTabMobileBtn.find("span").text(selectTxt);
+			// Mobile Btn Click
+			$cmTabMobileBtn.click(function  () {
+				$(this).toggleClass("open").siblings().slideToggle();
+				return false;
+			});
+
+			// Mobile List Click
+			$cmTabListli.children("a").click(function  () {
+				$cmTabMobileBtn.find("span").text($(this).find("em").text());
+				tabListClose();
+			});
+			$("body").click(function  () {
+				tabListClose();
+			});
+			function tabListClose () {
+				if ( getWindowWidth () < 801 ) {
+					$cmTabMobileBtn.removeClass("open").siblings().slideUp();
+				}
+			}
+			$(window).resize(function  () {
+				if ( getWindowWidth () > 800 ) {
+					$cmTabMobileBtn.siblings().show()//.css("display","inline-block");
+				}else {
+					$cmTabMobileBtn.siblings().hide()//.css("display","none");
+				}
+			});
+		}
 	});
 });
 

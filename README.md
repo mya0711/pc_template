@@ -3,10 +3,71 @@ PC Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate : 2020-03-24
+* UpDate :  2020-04-07
   
 
 ## 업데이트 내역
+
+- #### 2020/04/07
+    
+  #### * php 파일
+	<code> <b>1. /kr/include/dtd.php </b></code>
+	* prefixfree.min.js 추가
+
+	<code> <b>2. /kr/include/footer.php </b></code>
+	* family site open 공통 js로 변경
+	* 모달레이어팝업 주석처리 후 common.js로 이동
+
+	<code> <b>3. /kr/include/header.php </b></code>
+	* language open 공통 js로 변경
+
+	<code> <b>4. /kr/company/sample.php </b></code>
+	* 전체적으로 정리 및 샘플추가
+
+	<code> <b>5. /kr/service/agreement.php, /kr/service/privacy.php, /kr/service/sitemap.php </b></code>
+	* X버튼 네이버아이콘으로 수정
+
+	<code> <b>6. /kr/service/ie8_popup.php </b></code>
+	* css경로 reset.css => default.css로 수정
+	* 제이쿼리 스크립트 경로 외부 => 서버 경로로 수정
+	
+	<code> <b>7. /kr/index_fullpage.php </b></code>
+	* fullpage 샘플추가
+	
+
+  #### * css 파일
+	<code> <b>1. /css/layout.css</b></code>
+	* fullpage 예시페이지 추가에 따른 header fixed 추가
+	* language open 공통 js로 변경에따른 css 수정
+	* GNB 전체메뉴 오류 수정 -> visibility : visible 추가
+	* 모달 스타일 수정 -> 배경색 삭제 및 버튼위치조정
+
+	<code> <b>2. /css/main.css </b></code>
+	* 메인비주얼 화살표 이미지->폰트로변경
+	* Fullpage 추가에 따른 추가사항 수정(rightbar ...)
+	
+	<code> <b>3. /css/content.css </b></code>
+	* 탭 샘플 추가에따른 css 추가
+
+  #### * js 파일
+	<code> <b>1. /js/common.js </b></code>
+	* 브라우저 체크 함수 추가 (detectBrowser())
+	* 순차적으로 active가 붙는 함수 추가 (rollingActive());
+	* 브라우저 체크 및 기기체크 클래스 추가
+	* 상단 언어 오픈 및 하단 패밀리사이트 js 삭제 => 드롭메뉴 공통 js 추가
+	* 공통 tab js 모바일버튼 추가
+
+	<code> <b>2. /js/main.js </b></code>
+	* fullpage js 추가
+	* 메인비주얼 화살표 추가
+
+	<code> <b>3. /js/sub.js </b></code>
+	* 리스트 높이값 맞추는 js 추가
+
+	<code> <b>4. /js/vendor/prefixfree.min.js </b></code>
+	* 벤더프리픽스 자동 삽입가능 플러그인 추가
+
+***************************
 
 - #### 2020/03/24
     

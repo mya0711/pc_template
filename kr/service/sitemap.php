@@ -4,7 +4,7 @@ include "../lib/config.php";
 ?>
 <script type="text/javascript" src="/js/layer_popup.js"></script>
 <section id="siteMapCon" class="footer-modal-content">
-	<a href="#none" class="modal-close-btn" title="레이어팝업 닫기"><i class="material-icons">&#xE14C;</i></a>
+	<a href="#none" class="modal-close-btn" title="레이어팝업 닫기"><i class="xi-close-thin"></i></a>
 	<h1>사이트맵</h1>
 	<article class="sitemap-wrapper">
 		<ul>

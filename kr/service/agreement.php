@@ -2,7 +2,7 @@
 
 
 <section class="footer-modal-content">
-	<a href="javascript:;" class="modal-close-btn" title="팝업 닫기"><i class="material-icons">&#xE14C;</i></a>
+	<a href="javascript:;" class="modal-close-btn" title="팝업 닫기"><i class="xi-close-thin"></i></a>
 	<h1>이용약관</h1>
 	<div class="footer-inner-box">
 		<div class="footer-inner editor">

@@ -121,9 +121,9 @@
 .main-visual-con .slick-dots li.slick-active button{background-color:#000;}		/* 버튼 active */
 
 /* 메인 비주얼 :: 화살표 */
-.main-visual-con .slick-arrow{	position:absolute; width:84px; height:71px; top:50%; margin-top:-35px; cursor:pointer; border:0; cursor:pointer; z-index:9; font-size:0;}
-.main-visual-con .slick-arrow.slick-prev{left:10px; background:url(/images/button/main_prev_btn.png) no-repeat}
-.main-visual-con .slick-arrow.slick-next{right:10px; background:url(/images/button/main_next_btn.png) no-repeat}
+.main-visual-con .slick-arrow{	position:absolute; width:50px; height:50px; top:50%; margin-top:-25px; border:0; cursor:pointer; z-index:9; font-size:50px; color:#fff; text-shadow:1px 1px 1px rgba(0,0,0,0.2)}
+.main-visual-con .slick-arrow.slick-prev{left:10px;}
+.main-visual-con .slick-arrow.slick-next{right:10px;}
 
 /* 메인 비주얼 :: 스크롤아이콘 */
 .main-scroll-icon{position:absolute; bottom:55px; left:50%; margin-left:-41px; text-align:center; z-index:9}	/* width값에 맞게 margin-left수정 */
@@ -377,3 +377,42 @@
 }
 #rightBar > ul > li > a:hover{background-color:#7f7f7f}
 
+/* ******************  메인 오른쪽 퀵메뉴 (Fullpage) ********************** */
+#fp-nav{
+	position: fixed;
+    z-index: 100;
+    margin-top: -32px;
+    top: 50%;
+	right:50px;
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+}
+#fp-nav ul li{position:relative; width:20px; margin:10px 0;}
+#fp-nav ul li:last-child{display:none} /* 마지막 섹션이 footer일경우 */
+#fp-nav ul li a{display:block; position:relative; width:100%; height:20px; box-sizing:border-box; padding:5px; }
+#fp-nav ul li a span{display:block; width:10px; height:10px; background-color:#fff; border-radius:50%; opacity:0.2;filter:Alpha(opacity=20);}
+#fp-nav ul li .fp-tooltip{
+	position:absolute; 
+	overflow:hidden; 
+	right:20px; top:0; 
+	opacity:0;filter:Alpha(opacity=0); 
+	line-height:20px; 
+	letter-spacing:-0.75px; 
+	font-size:12px; 
+	color:#fff; 
+	margin-right:5px; 
+	text-align:right; 
+	-webkit-transition:all 0.3s;
+	-moz-transition:all 0.3s;
+	-o-transition:all 0.3s;
+	-ms-transition:all 0.3s;
+	transition:all 0.3s;
+}
+#fp-nav ul li .fp-tooltip span{display:block; transform:translateX(100%); transition:all 0.5s;}
+#fp-nav ul li a.active span{opacity:1.0;filter:Alpha(opacity=100);}
+#fp-nav ul li a.active + .fp-tooltip{opacity:1.0;filter:Alpha(opacity=100);}
+#fp-nav ul li a.active + .fp-tooltip span{transform:translateX(0%)}
+
+/* Black Style */
+#fp-nav.black ul li a span{background-color:#000}
+#fp-nav.black ul li .fp-tooltip{color:#222;}

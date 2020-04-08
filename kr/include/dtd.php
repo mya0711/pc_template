@@ -47,6 +47,7 @@ if($bgu=="view" and $idx){
 
 <script src="<?=$site_host?>/js/vendor/jquery-1.8.3.min.js"></script>
 <script src="<?=$site_host?>/js/vendor/jquery.easing.1.3.js"></script>
+<script src="<?=$site_host?>/js/vendor/prefixfree.min.js"></script>
 
 <!--[if lt IE 9]>
 	<script src="<?=$site_host?>/js/vendor/html5shiv.js"></script>
