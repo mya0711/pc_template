@@ -77,7 +77,10 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 			<!-- ****************** 메인컨텐츠 1 (퀵메뉴) ********************** -->
 			<article id="mainContent1">
 				<div class="area-box">
-					<h3 class="main-tit"><strong>Giantsoft News</strong></h3>
+					<div class="main-tit-box">
+						<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
+						<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span>타이틀 서브 텍스트가 들어갑니다</span></p>
+					</div>
 					<ul class="main-quick-menu-list clearfix">
 						<li class="quick-menu-item quick-menu-item1">
 							<a href="">
@@ -133,7 +136,10 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 			<!-- ****************** 메인컨텐츠 2 (갤러리) ********************** -->
 			<article id="mainContent2">
 				<div class="area">
-					<h3 class="main-tit"><strong>Giantsoft News</strong></h3>
+					<div class="main-tit-box">
+						<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
+						<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span>타이틀 서브 텍스트가 들어갑니다</span></p>
+					</div>
 					<ul class="main-news-list clearfix">
 						<li>
 							<a href="">
@@ -177,7 +183,10 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 			<!-- ****************** 메인컨텐츠 3 (갤러리 슬라이드) ********************** -->
 			<article id="mainContent3">
 				<div class="area">
-					<h3 class="main-tit"><strong>Giantsoft News</strong></h3>
+					<div class="main-tit-box">
+						<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
+						<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span>타이틀 서브 텍스트가 들어갑니다</span></p>
+					</div>
 					<article class="main-gallery-rolling-con">
 						<ul class="bbs-basic-gallery-con">
 							<li>
@@ -267,7 +276,10 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 			<!-- ****************** 메인컨텐츠 4 (갤러리 + 설명 슬라이드) ********************** -->
 			<article id="mainContent3">
 				<div class="area">
-					<h3 class="main-tit"><strong>Giantsoft News</strong></h3>
+					<div class="main-tit-box">
+						<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
+						<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span>타이틀 서브 텍스트가 들어갑니다</span></p>
+					</div>
 					<div class="main-slide-box clearfix">
 						<div class="main-slide-photo-con">
 							<div class="main-slide-photo-item"><div class="slide-photo-inner"><img src="" alt="" /><p style="position:absolute; top:0; left:0; color:#fff; font-size:50px;">1 삭제하세여</p></div></div>
@@ -375,10 +387,10 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 			<!-- ****************** 메인컨텐츠 8 (Global Network)********************** -->
 			<article id="mainContent8">
 				<div class="area">
-					<h3 class="main-tit">
-						<strong>giantsoft Global Network</strong>
-						<span class="main-sub-tit">에니메이션 위치 이동시 퍼블리셔에게 문의 또는 각자 해결/ 지도이미지는 자유롭게 편집</span>
-					</h3>
+					<div class="main-tit-box">
+						<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
+						<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span>타이틀 서브 텍스트가 들어갑니다</span></p>
+					</div>
 					<div class="global-map-con">
 						<img src="<?=$site_host?>/images/test/test_img4.jpg" alt="세계지도" />
 						<div class="global-nation-box">

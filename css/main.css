@@ -7,7 +7,8 @@
 
 /* ******************  메인 비주얼 ********************** */
 #mainVisual{overflow:hidden; width:100%; height:500px; position:relative;}	/* 비주얼높이값 이미지에맞게 수정 */
-#mainVisual.full-height{height:1030px;}
+#mainVisual.full-height,
+#fullpage #mainVisual{height:1000px;}
 .main-visual-con .slick-track,
 .main-visual-con .slick-list {
 	 -webkit-perspective: 2000;
@@ -131,11 +132,11 @@
 
 /* ******************  메인 컨텐츠 ********************** */
 /* -------- 메인 컨텐츠 :: 공통 -------- */
-#mainContent > article{padding:65px 0;}
 /* 공통 :: 타이틀 */
-.main-tit{margin-bottom:55px; letter-spacing:-0.5px; text-align:center;}
-.main-tit strong{display:block; color:#040404; font-size:30px; font-weight:500; }
-.main-tit .main-sub-tit{display:block; margin-top:15px; color:#727272; font-size:14px; letter-spacing:-0.75px; line-height:22px;}
+.main-tit-box{margin-bottom:55px; letter-spacing:-0.75px; text-align:center;}
+.main-tit-box .main-tit{color:#040404; font-size:40px; font-weight:300; }
+.main-tit-box .main-tit strong{font-weight:600;}
+.main-tit-box .main-sub-tit{display:block; margin-top:15px; color:#aaa; font-size:15px; letter-spacing:-0.75px; font-weight:300; line-height:1.5; }
 
 /* -------- 메인 컨텐츠 :: 컨텐츠1(퀵메뉴) -------- */
 .main-quick-menu-list{margin:0 -0.2%;}

@@ -79,7 +79,10 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 		<!-- ****************** 메인 컨텐츠1 ********************** -->
 		<section id="" class="section">
 			<div class="area-box">
-				<h3 class="main-tit"><strong>Giantsoft News</strong></h3>
+				<div class="main-tit-box">
+					<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
+					<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span>타이틀 서브 텍스트가 들어갑니다</span></p>
+				</div>
 				<ul class="main-quick-menu-list clearfix">
 					<li class="quick-menu-item quick-menu-item1">
 						<a href="">
@@ -135,7 +138,10 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 		<!-- ****************** 메인 컨텐츠2  ********************** -->
 		<section id="" class="section" style="background:#f2f2f2;">
 			<div class="area">
-				<h3 class="main-tit"><strong>Giantsoft News</strong></h3>
+				<div class="main-tit-box">
+					<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
+					<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span>타이틀 서브 텍스트가 들어갑니다</span></p>
+				</div>
 				<ul class="main-news-list clearfix">
 					<li>
 						<a href="">
@@ -179,7 +185,10 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 		<!-- ****************** 메인 컨텐츠3  ********************** -->
 		<section id="" class="section">
 			<div class="area">
-				<h3 class="main-tit"><strong>Giantsoft News</strong></h3>
+				<div class="main-tit-box">
+					<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
+					<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span>타이틀 서브 텍스트가 들어갑니다</span></p>
+				</div>
 				<article class="main-gallery-rolling-con">
 					<ul class="bbs-basic-gallery-con">
 						<li>
