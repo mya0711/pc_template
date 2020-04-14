@@ -621,12 +621,14 @@ a:hover .over-bg{
 }
 .line-clamp2{
 	overflow:hidden;
+	display:block;
 	display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 .line-clamp3{
 	overflow:hidden;
+	display:block;
 	display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;

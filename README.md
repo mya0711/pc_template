@@ -17,8 +17,11 @@ PC Website Template
 	<code> <b>2. /css/common/cm_history.php</b></code>
 	* history 3번 템플릿 추가
 
-	<code> <b>1. /css/plugin/swiper.css</b></code>
+	<code> <b>3. /css/plugin/swiper.css</b></code>
 	* 5.3.1 버전 => 5.3.7 버전으로 변경
+	
+	<code> <b>4. /css/default.css</b></code>
+	* .line-clamp2 / .line-clamp3 => display:block 추가 ( 익스에서 display: -webkit-box; 적용되지않는 이슈 )
 	
   #### * php 파일
 	<code> <b>1. /kr/index.php </b></code>
@@ -27,7 +30,7 @@ PC Website Template
 	<code> <b>1. /kr/service/sitemap.php, /kr/service/sitemap_html.php</b></code>
 	* 사이트맵 자동으로 삽입되게 수정
 
-  #### * php 파일
+  #### * js 파일
 	<code> <b>1. /js/plugin/swiper.min.js</b></code>
 	* 5.3.1 버전 => 5.3.7 버전으로 변경
 
