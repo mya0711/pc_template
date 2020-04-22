@@ -24,3 +24,11 @@ $google_verification = $admin_stat->google_meta;
 $naver_verification = $admin_stat->naver_meta;
 $script_content = $admin_stat->script_content;
 ?>
+
+<?
+if($bgu=="view" and $idx){ 
+	$idx = $tools->filter($idx);
+	$row = $db->object("cs_bbs_data","where idx='$idx'");
+	$bbs_title = $row->subject;
+}
+?>

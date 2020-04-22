@@ -3,13 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<?
-if($bgu=="view" and $idx){ 
-	$idx = $tools->filter($idx);
-	$row = $db->object("cs_bbs_data","where idx='$idx'");
-	$bbs_title = $row->subject;
-}
-?>
 <title><?=$site_head_title?><? if($page_info){ ?> - <?=$page_info?><? } ?><? if($sub_info){ ?> - <?=$sub_info?><? } ?><? if($bbs_title){ ?> - <?=$bbs_title?><? } ?></title>
 <meta name="Title" content="<?=$site_title?>">
 <meta name="Subject" content="<?=$site_subject?>">
@@ -47,7 +40,6 @@ if($bgu=="view" and $idx){
 
 <script src="<?=$site_host?>/js/vendor/jquery-1.8.3.min.js"></script>
 <script src="<?=$site_host?>/js/vendor/jquery.easing.1.3.js"></script>
-<script src="<?=$site_host?>/js/vendor/prefixfree.min.js"></script>
 
 <!--[if lt IE 9]>
 	<script src="<?=$site_host?>/js/vendor/html5shiv.js"></script>
