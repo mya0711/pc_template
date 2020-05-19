@@ -56,7 +56,7 @@ body { background-color:#fff; }
 	overflow:hidden; position:absolute; top:0px; right:0; width:200px; opacity:0;filter:Alpha(opacity=0); visibility:hidden;
 	-webkit-transition:all 0.5s;-moz-transition:all 0.5s;-o-transition:all 0.5s;-ms-transition:all 0.5s;transition:all 0.5s
 }	
-.header-search-inner .header-search-inner-box{overflow:hidden; height:30px; border:1px solid #333;  padding-right:64px; background-color:#fff; }
+.header-search-inner .header-search-inner-box{overflow:hidden; height:32px; border:1px solid #333;  padding-right:64px; background-color:#fff; }
 .header-search-inner .header-search-word{height:28px; width:100%; vertical-align:top; background-color:transparent; border:0; color:#333; font-size:13px; font-weight:300; text-indent:10px;}
 .header-search-inner .header-search-word::placeholder{color:#333;}
 .header-search-inner .header-search-btn{position:absolute; top:0px; right:32px; width:30px; height:30px;}
@@ -110,6 +110,7 @@ body { background-color:#fff; }
 	position:relative; z-index:100; display:block; height:100px; line-height:100px; text-align:center; color:#333; font-size:20px; letter-spacing:-0.55px; font-weight:500; -webkit-transition:all 0.5s;-moz-transition:all 0.5s;-o-transition:all 0.5s;-ms-transition:all 0.5s;transition:all 0.5s;
 }
 #gnb > ul > li > a:hover, #gnb > ul > li.on > a{color:#f57f20;}
+#gnb > ul > li .snb-2dep{display:none;}
 /* GNB :: 2차 전체메뉴 */
 #gnbBg{
 	overflow:hidden; position:absolute; left:0; top:0px; width:100%; height:0; background:#fff; z-index:98;
@@ -232,7 +233,7 @@ body { background-color:#fff; }
 /* Footer :: 푸터메뉴 */
 .foot-menu{float:left; }
 .foot-menu li{float:left; position:relative; padding-left:40px; line-height:35px;}
-/* .foot-menu li:before{display:inline-block; content:""; margin:-3px 10px 0 10px;  color:#ccc; width:5px; height:5px; background-color:#636363; vertical-align:middle; border-radius:5px; } */ /* dot 형태 */ 
+/* .foot-menu li:before{position:absolute; top:50%; left:18px; content:""; width:2px; height:2px; background-color:#636363; border-radius:50%; } */ /* dot 형태 */ 
 .foot-menu li:before{position:absolute; top:50%; left:18px; width:1px; height:10px; margin-top:-5px; background-color:#ddd;  content:"";} /* line 형태 */ 
 .foot-menu li:first-child{padding-left:0}
 .foot-menu li:first-child:before{display:none} 

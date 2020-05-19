@@ -59,6 +59,7 @@ jQuery(function($){
 	
 	// 메인 비주얼 슬라이드
 	var $mainVisualItem = $(".main-visual-con");
+	var visualPausePlay = true;		// Pause, play 사용시 변경
 
 	$mainVisualItem.on('init', function(event, slick) {
 		$(".main-visual-item").eq(0).addClass("active-item");
@@ -83,6 +84,24 @@ jQuery(function($){
 		prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Prev" tabindex="0" role="button"><i class="xi-angle-left-thin"></i></button>',
 		nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="xi-angle-right-thin"></i></button>'
 	});
+
+	$mainVisualItem.find(".slick-dots").wrap("<aside class='slick-dots-wrapper'><div class='area-box'></div></aside>");
+
+	if ( visualPausePlay ) {
+		$(".slick-dots-wrapper").children().append("<span class='slick-control-btns'><button class='slick-pause-btn' title='일시정지'><i class='xi-pause'></i></button><button class='slick-play-btn' title='재생'><i class='xi-play-circle-o'></i></button></span>");
+	
+		// 일시정지, 재생버튼
+		$(document).on("click",".slick-pause-btn",function  () {
+			$mainVisualItem.slick("slickPause");
+			$(this).hide();
+			$(".slick-play-btn").show();
+		});
+		$(document).on("click",".slick-play-btn",function  () {
+			$mainVisualItem.slick("slickPlay");
+			$(this).hide();
+			$(".slick-pause-btn").show();
+		});
+	}
 
 	// 스크롤 아이콘 모션
 	if ($.exists('.main-scroll-icon')) {
@@ -161,12 +180,7 @@ jQuery(function($){
 	if ($.exists('#rightBar')) {
 		$(window).scroll(function  () {
 			var rightStartTop = $(window).height() / 2;
-
-			if ( getScrollTop() > rightStartTop ) {
-				$("#rightBar").addClass("fixed");
-			}else {
-				$("#rightBar").removeClass("fixed");
-			}
+			objectFixed($("#rightBar"), rightStartTop);
 		});
 	}
 });

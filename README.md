@@ -3,10 +3,45 @@ PC Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2020-04-22
+* UpDate :  2020-05-19
   
 
 ## 업데이트 내역
+
+- #### 2020/05/19
+
+  #### * css 파일
+	<code> <b>1. /css/layout.css </b></code>
+	* 헤더 serchBox 높이값 빈공간생겨 변경
+	* footer 메뉴 dot형태 오류 -> 변경
+	* gnb 3차메뉴 숨김
+
+	<code> <b>2. /css/main.css</b></code>
+	* Slick dots 를 감싸주는 태그 생성 
+	``` 
+		$mainVisualItem.find(".slick-dots").wrap("<aside class='slick-dots-wrapper'><div class='area-box'></div></aside>");
+	```
+	* Pause, Play 버튼 생성
+	
+  #### * php 파일
+	<code> <b>1. /kr/index.php, /kr/include/header.php, /kr/include/footer.php</b></code>
+	* 개인정보처리방침, 사이트맵 등이 있는 service 폴더를 etc로 변경 => 그에따른 경로변경으로 인한 수정
+
+  #### * js 파일
+	<code> <b>1. /js/common.js</b></code>
+	* objectFixed(클래스이름, 시작되는지점) 함수 추가 => 어느지점에서 object가 fixed될때 사용하는 함수 ( 윈10 익스11 스크롤 오류로 인한 변경 )
+	* Header Fixed / Top button Fixed 수정
+
+	<code> <b>2. /js/main.js</b></code>
+	* Slick dots 를 감싸주는 기능 추가
+	* Pause, Play 기능 추가
+	* Rightbar Fixed 수정
+
+	<code> <b>2. /js/sub.js</b></code>
+	* SubMenu Fixed 수정
+	* FixedMoveTab Fixed 수정
+
+***************************
 
 - #### 2020/04/22
 

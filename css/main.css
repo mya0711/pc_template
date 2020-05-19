@@ -112,14 +112,22 @@
 }
 
 
-/* 메인 비주얼 :: 버튼 */
-.main-visual-con .slick-dots{position:absolute; width:100%; text-align:center; bottom:20px;}
-.main-visual-con .slick-dots li{display:inline-block; margin:0 5px ; }
+/* 메인 비주얼 :: Dots */
+.main-visual-con .slick-dots-wrapper{position:absolute; left:0; bottom:20px; width:100%; text-align:left; z-index:11; }
+.main-visual-con .slick-dots{display:inline-block; vertical-align:top; *display:inline;*zoom:1; }
+.main-visual-con .slick-dots li{float:left; margin-left:5px; }
+.main-visual-con .slick-dots li:first-child{margin-left:0}
 .main-visual-con .slick-dots li button{
-	cursor:pointer; margin:0px; padding:0px; background:none; font-size:0; width:12px; height:12px; background-color:#fff; 
+	cursor:pointer; margin:0px; padding:0px; background:none; vertical-align:top; width:12px; height:12px; background-color:#fff; font-size:0; opacity:0.8;
 	-webkit-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;border-radius:50%;
 }
-.main-visual-con .slick-dots li.slick-active button{background-color:#000;}		/* 버튼 active */
+.main-visual-con .slick-dots li.slick-active button{background-color:#000; opacity:1.0; }
+
+/* 메인 비주얼 :: pause,play */
+.main-visual-con .slick-control-btns{display:inline-block; vertical-align:top; margin-left:5px; }
+.main-visual-con .slick-control-btns button{color:#fff; vertical-align:top;}
+.main-visual-con .slick-control-btns button i{vertical-align:top; font-size:14px; position:relative; top:-1px;}
+.main-visual-con .slick-control-btns .slick-play-btn{display:none;}
 
 /* 메인 비주얼 :: 화살표 */
 .main-visual-con .slick-arrow{	position:absolute; width:50px; height:50px; top:50%; margin-top:-25px; border:0; cursor:pointer; z-index:9; font-size:50px; color:#fff; text-shadow:1px 1px 1px rgba(0,0,0,0.2)}

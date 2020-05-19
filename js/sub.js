@@ -28,44 +28,39 @@ jQuery(function($){
 	
 		$(window).scroll(function  () {
 			var topMenuStart =  $fixedSubMenu.offset().top;
-
-			if ( getScrollTop() > topMenuStart ) {
-				$fixedSubMenu.addClass("fixed");
-			}else {
-				$fixedSubMenu.removeClass("fixed");
-			}
+			objectFixed($fixedSubMenu, topMenuStart);
 		});
 	}
 
 	/* *********************** 메뉴 FIXED 및 해당영역 이동 ************************ */
-	if ($.exists(".fixed-move-tab-list-wrapper")) {
+	if ($.exists(".fixed-move-tab-list")) {
 		var $fixedMoveTab = $(".fixed-move-tab-list");
 		var $moveTabItem = $fixedMoveTab.find("li");
 		var menuCount= $moveTabItem.size();
+		
+		startPointCheck();
+		$(window).on('resize', startPointCheck); 
+		
+		// Fixed되는 시점, 탭 높이값 측정
+		function startPointCheck () {
+			if ( getWindowWidth() < 1025 ) {
+				fixedHeaderHeight = $("#header").height();
+			}else {
+				fixedHeaderHeight = 0
+			}
+			fixedTabHeight = $fixedMoveTab.height();
+			fixedStartPoint =  $(".fixed-move-tab-list-wrapper").offset().top - fixedHeaderHeight;	// 탭이 붙는 지점
 
-		// 서브메뉴가 같이 fixed될때와 안될때 구분
-		if ($.exists(".fixed-sub-menu")) {
-			var fixedStartTab =  $fixedMoveTab.offset().top - $(".fixed-sub-menu").height();
-			var fixedStartHeight = $fixedMoveTab.height() + $(".fixed-sub-menu").height();
-		}else {
-			var fixedStartTab =  $fixedMoveTab.offset().top;
-			var fixedStartHeight = $fixedMoveTab.height();
+			nav= new Array();
+			for(var i=0;i < menuCount;i++){
+				nav[i]="nav"+i;
+				nav[i]=$($moveTabItem.eq(i).children("a").attr("href")).offset().top - fixedTabHeight - fixedHeaderHeight;
+			}
 		}
 
 		$(window).scroll(function  () {
 			// 메뉴fixed
-			if ( getScrollTop() > fixedStartTab ) {
-				$fixedMoveTab.addClass("fixed");
-			}else {
-				$fixedMoveTab.removeClass("fixed");
-			}
-
-			// 메뉴이동
-			var nav= new Array();
-			for(var i=0;i < menuCount;i++){
-				nav[i]="nav"+i;
-				nav[i]=$($moveTabItem.eq(i).children("a").attr("href")).offset().top - fixedStartHeight;
-			}
+			objectFixed($fixedMoveTab, fixedStartPoint);
 			 
 			$moveTabItem.each(function  (idx) {
 				if( getScrollTop() >= nav[idx] ){
@@ -77,7 +72,7 @@ jQuery(function($){
 		});
 
 		$moveTabItem.find("a").click(function  () {
-            var goDiv = $($(this).attr("href")).offset().top - (fixedStartHeight-1);
+			var goDiv = $($(this).attr("href")).offset().top - (fixedTabHeight-1) - fixedHeaderHeight;
 			moveScrollTop(goDiv);
              
             return false;

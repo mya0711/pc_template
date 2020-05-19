@@ -63,8 +63,8 @@
 					<!-- 푸터상단 왼쪽 -->
 					<div class="footer-left-con">
 						<ul class="foot-menu clearfix">
-							<li><a href="javascript:;" onclick="javascript:layerLoad('<?=$site_url?>/service/privacy.php'); return false;"><b>개인정보처리방침</b></a></li>
-							<li><a href="javascript:;" onclick="javascript:layerLoad('<?=$site_url?>/service/agreement.php'); return false;">이용약관</a></li>
+							<li><a href="javascript:;" onclick="javascript:layerLoad('<?=$site_url?>/etc/privacy.php'); return false;"><b>개인정보처리방침</b></a></li>
+							<li><a href="javascript:;" onclick="javascript:layerLoad('<?=$site_url?>/etc/agreement.php'); return false;">이용약관</a></li>
 						</ul>
 					</div>
 					<!-- 푸터상단 오른쪽 -->

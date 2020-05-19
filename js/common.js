@@ -225,6 +225,18 @@ function rollingActive (activeList) {
 	});
 }
 
+function objectFixed ( object, fixedStartTop ) {		// $(클래스이름), 시작되는지점
+	if ( getScrollTop() >  fixedStartTop ) {
+		if (!($(object).hasClass("fixed"))) {	
+			$(object).addClass("fixed");
+		}
+	}else {
+		if ($(object).hasClass("fixed")) {
+			$(object).removeClass("fixed");
+		}
+	}
+}
+
 jQuery(function($){
 	/* *********************** 브라우저 체크 및 기기체크 ************************ */
 	if ( isMobile() ) {
@@ -237,11 +249,7 @@ jQuery(function($){
 	if ($.exists('#header')) {
 		$(window).scroll(function  () {
 			var startTop = $("#header").height();
-			if ( getScrollTop() > startTop ) {
-				$("#header").addClass("fixed");
-			}else {
-				$("#header").removeClass("fixed");
-			}
+			objectFixed($("#header"), startTop);
 		});
 	}
 
@@ -265,11 +273,7 @@ jQuery(function($){
 		// top버튼 나오게 (필요한 경우에만 넣으세요)
 		if ( $(this).length > 0 ) {
 			$(window).scroll(function  () {
-				if ( getScrollTop() > 0 ) {
-					$(".to-top-btn").addClass("fixed");
-				}else {
-					$(".to-top-btn").removeClass("fixed");
-				}
+				objectFixed($(".to-top-btn"), 0);
 			});
 		}
 		// top버튼 클릭

@@ -7,7 +7,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 	<script type="text/javascript">
 		$(document).ready(function  () {
 			/* 하위브라우저 popup */
-			winPopupOpen("<?=$site_url?>/service/ie8_popup.php","","width=800, height=600, left=0, top=0, resizable=no, scrollbars=no, status=no;");
+			winPopupOpen("<?=$site_url?>/etc/ie8_popup.php","","width=800, height=600, left=0, top=0, resizable=no, scrollbars=no, status=no;");
 		});
 	</script>
 <![endif]-->

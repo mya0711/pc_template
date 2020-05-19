@@ -30,7 +30,7 @@
 						</ul>
 					</div>
 					<!-- 사이트맵 버튼 ( 기본 라인 三 ) -->
-					<button  onclick="javascript:layerLoad('<?=$site_url?>/service/sitemap.php'); return false;" class="sitemap-line-btn sitemap-open-btn" title="사이트맵 열기">
+					<button  onclick="javascript:layerLoad('<?=$site_url?>/etc/sitemap.php'); return false;" class="sitemap-line-btn sitemap-open-btn" title="사이트맵 열기">
 						<span class="line line1"></span><span class="line line2"></span><span class="line line3"></span><!-- <span class="line line4"></span> -->
 					</button>
 					<!-- 사이트맵 버튼 2 ( 커스텀 버튼 ) -->
