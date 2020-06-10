@@ -96,10 +96,8 @@ body { background-color:#fff; }
 .header-lang.open .lang-open-btn .arrow i{transform:rotate(180deg); margin-top:-3px;}
 
 /* Header :: 사이트맵(기본형 or 커스텀) */
-.sitemap-line-btn{float:left; width:32px; height:32px; margin-left:10px}
+.sitemap-line-btn{float:left; width:32px; height:32px; margin-left:10px; padding-top:5px; box-sizing:border-box;}
 .sitemap-line-btn .line{display:block; width:18px; height:2px; background-color:#333; border-radius:5px; margin: 3px auto;}
-.sitemap-custom-btn{float:left; width:32px; height:32px; color:#333; border:1px solid #5c5c5c; border-color:#333; margin-left:10px}
-.sitemap-custom-btn i{font-size:30px;}
 
 /* -------- Header :: GNB(PC) -------- */
 .gnb-overlay-bg{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9997;}	/* gnb overlay BG */
@@ -499,7 +497,7 @@ body { background-color:#fff; }
 #topMenu04 .location-to-home-btn{float:left; width:69px; height:69px; background-color:#fff; text-align:center; border-right:1px solid #ddd; border-left:1px solid #ddd;}
 #topMenu04 .location-to-home-btn i{color:#f57f20; font-size:30px; line-height:69px;}
 #topMenu04 .menu-location{position:relative; float:left; width:260px;}
-#topMenu04 .menu-location > .cur-location{position:relative; display:block; height:69px; padding:0 35px 0 20px; border-right:1px solid #ddd; text-align:left}
+#topMenu04 .menu-location > .cur-location{position:relative; display:block; width:100%; text-align:left; height:69px; padding:0 35px 0 20px; border-right:1px solid #ddd; text-align:left}
 #topMenu04 .menu-location > .cur-location span{display:block; width:100%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; line-height:69px; color:#222; font-weight:400; font-size:18px; letter-spacing:-0.5px;}
 #topMenu04 .menu-location > .cur-location .arrow{position:absolute; top:50%; right:10px; width:20px; height:20px;margin-top:-8px; font-size:20px;}
 #topMenu04 .menu-location > .cur-location.open .arrow{transform:rotate(-180deg); margin-top:-10px;}

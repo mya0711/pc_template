@@ -270,24 +270,42 @@ jQuery(function($){
 		var $dropBox = $(this);
 		var $dropOpenBtn = $(this).children(".cm-drop-open-btn");
 		var $dropList = $(this).children(".cm-drop-list");
-
-		$dropOpenBtn.click(function  () {
-			$dropList.slideToggle(500);
-			$dropBox.toggleClass("open");
-			return false;
-		});
-		$("body").click(function  () {
+		var eventState = $dropBox.data("drop-event");
+		
+		if ( eventState === "click" ) {
+			$dropOpenBtn.click(function  () {
+				$dropList.slideToggle(500);
+				$dropBox.toggleClass("open");
+				$dropBox.on("mouseleave", function  () {
+					dropClose ();
+				});
+				return false;
+			});
+			$("body").click(function  () {
+				dropClose();
+			});
+		}else if ( eventState === "hover" ) {
+			$dropBox.hover(function  () {
+				$dropList.slideDown(500);
+				$dropBox.addClass("open");
+			},function  () {
+				dropClose ();
+			});
+		}
+		
+		
+		
+		function dropClose () {
 			if ( $dropBox.data("drop-width") ) {
 				if ( getWindowWidth () < $dropBox.data("drop-width")+1 ) {
-					dropClose ();
+					$dropList.slideUp(500);
+					$dropBox.removeClass("open");
 				}
 			}else {
-				dropClose ();
+				$dropList.slideUp(500);
+				$dropBox.removeClass("open");
 			}
-		});
-		function dropClose () {
-			$dropList.slideUp(500);
-			$dropBox.removeClass("open");
+			
 		}
 		$(window).resize(function  () {
 			if ( getWindowWidth () > $dropBox.data("drop-width") ) {
@@ -358,6 +376,10 @@ jQuery(function($){
 
 	/* *********************** 상단 :: 헤더 FIXED ************************ */
 	if ($.exists('#header')) {
+		$(window).scroll(function  () {
+			var startTop = $("#header").height();
+			objectFixed($("#header"), startTop);
+		});
 	}
 
 	/* *********************** 상단 :: 검색 toggle ************************ */
@@ -373,6 +395,31 @@ jQuery(function($){
 			$searchBox.removeClass("open");
 		});
 	});
+
+	/* *********************** 상단 :: 사이트맵 스타일 02************************ */
+	if ($.exists('.sitemap-open-btn')) {
+		var sitemapState = false;
+		$(".sitemap-open-btn").click(function  () {
+			if ( sitemapState ) {
+				$("#sitemapContent").removeClass("open");
+				$(".sitemap-open-btn").removeClass("active");
+				$("body").css({'height':'auto', 'overflow':'auto'});
+				if ($.exists('#fullpage')) {
+					$.fn.fullpage.setAllowScrolling(true);
+					$.fn.fullpage.setKeyboardScrolling(true);
+				}
+			}else {
+				$("#sitemapContent").addClass("open");
+				$(".sitemap-open-btn").addClass("active");
+				$("body").css({'height':$(window).height(), 'overflow':'hidden'});
+				if ($.exists('#fullpage')) {
+					$.fn.fullpage.setAllowScrolling(false);
+					$.fn.fullpage.setKeyboardScrolling(false);
+				}
+			}
+			sitemapState = !sitemapState;
+		});
+	}
 
 	/* *********************** 하단 :: top버튼 ************************ */
 	$(".to-top-btn").each(function  () {

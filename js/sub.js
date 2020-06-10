@@ -6,7 +6,9 @@
 
 jQuery(function($){
 	/* 서브 Visual Active */ 
-	setTimeout(addActive($("#visual")));
+	setTimeout(function  () {
+		addActive($("#visual"));
+	});
 
 	/* 서브 MagnificPopup */
 	magnificPopup($(".popup-gallery"));

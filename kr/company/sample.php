@@ -201,18 +201,22 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					</p>
 					<!-- 기본탭 + 모바일 드롭메뉴(링크이동) -->					
 					<aside class="sub-cm-tab-wrapper">
-							<div class="sub-tab-cm-style cm-drop-tab-list cm-drop-menu-box" data-drop-width="800"><!-- drop이 되어야하는 가로값 / 없을시 삭제 -->
-								<a href="javascript:;" class="cm-tab-m-btn cm-drop-open-btn"><span>링크이동 1</span><i class="xi-caret-down-min arrow"></i></a>
-								<ul class="clearfix cm-drop-list">
-									<li class="selected"><a href="<?=$site_url?>/company/sample.php"><em>링크이동 1</em></a></li>
-									<li><a href="<?=$site_url?>/company/sample.php"><em>링크이동 2</em></a></li>
-									<li><a href="<?=$site_url?>/company/sample.php"><em>링크이동 3</em></a></li>
-									<li><a href="<?=$site_url?>/company/sample.php"><em>링크이동 4</em></a></li>
-									<li><a href="<?=$site_url?>/company/sample.php"><em>링크이동 5</em></a></li>
-								</ul>
-							</div>
-						</aside>
-						<!-- // -->
+						<div class="sub-tab-cm-style cm-drop-tab-list cm-drop-menu-box" data-drop-width="800" data-drop-event="click">
+						<!-- 
+							data-drop-width: drop이 시작되어야하는 가로값 / 없을시 삭제 
+							data-drop-event : click / hover 선택
+						-->
+							<a href="javascript:;" class="cm-tab-m-btn cm-drop-open-btn"><span>링크이동 1</span><i class="xi-caret-down-min arrow"></i></a>
+							<ul class="clearfix cm-drop-list">
+								<li class="selected"><a href="<?=$site_url?>/company/sample.php"><em>링크이동 1</em></a></li>
+								<li><a href="<?=$site_url?>/company/sample.php"><em>링크이동 2</em></a></li>
+								<li><a href="<?=$site_url?>/company/sample.php"><em>링크이동 3</em></a></li>
+								<li><a href="<?=$site_url?>/company/sample.php"><em>링크이동 4</em></a></li>
+								<li><a href="<?=$site_url?>/company/sample.php"><em>링크이동 5</em></a></li>
+							</ul>
+						</div>
+					</aside>
+					<!-- // -->
 					<br><br>
 					<p style="line-height:30px; font-size:16px; color:#222; padding:10px; background-color:#f2f2f2; border:1px solid #aaa; margin:30px auto 15px"><i class="xi-message-o" style="font-size:20px; position:relative; top:3px; margin-right:5px; color:red;"></i>메뉴가 fixed되고 누르면 <b>해당영역</b>으로 가는 샘플입니다.</p>
 					<!-- Start -->

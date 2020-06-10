@@ -104,23 +104,23 @@
 			<div class="side-menu-inner">
 				<div class="cm-top-menu area clearfix">
 					<a href="<?=$site_url?>/" class="location-to-home-btn" title="메인으로"><i class="material-icons">&#xE88A;</i></a>
-					<div class="menu-location location1">
-						<a href="javascript:;" class="cur-location">
+					<div class="menu-location location1 cm-drop-menu-box" data-drop-event="click">
+						<button class="cur-location cm-drop-open-btn">
 							<span><?=$page_info?></span>
 							<i class="material-icons arrow">&#xE313;</i>
-						</a>
-						<ul class="location-menu-con">
+						</button>
+						<ul class="location-menu-con cm-drop-list">
 							<li><a href="<?=$site_url?>/">대메뉴1</a></li>
 							<li><a href="<?=$site_url?>/">대메뉴2</a></li>
 							<li><a href="<?=$site_url?>/">대메뉴3</a></li>
 						</ul>
 					</div>
-					<div class="menu-location location2">
-						<a href="javascript:;" class="cur-location">
+					<div class="menu-location location2 cm-drop-menu-box" data-drop-event="click">
+						<button class="cur-location cm-drop-open-btn">
 							<span><?=$sub_info?></span>
 							<i class="material-icons arrow">&#xE313;</i>
-						</a>
-						<ul class="location-menu-con">
+						</button>
+						<ul class="location-menu-con cm-drop-list">
 							<?  include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_".$page_section.".php"; ?>
 						</ul>
 					</div>

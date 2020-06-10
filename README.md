@@ -20,6 +20,7 @@ PC Website Template
 	* 헤더 언어선택 button으로 변경
 	* 탑버튼 아이콘변경
 	* 푸터 familysite button으로 변경
+	* 서브메뉴 a태그-> button수정
 
 	<code> <b>3. /css/content.css</b></code>
 	* 서브 탭 스타일 공통으로 수정
@@ -54,26 +55,31 @@ PC Website Template
 
 	* 언어선택 오픈버튼 a태그 -> button태그
 	* 사이트맵 커스텀버튼 사용안해서 삭제
+	* (★) cm-drop-menu-box 에 data-drop-event 수정 ( click / hover )
 
 	<code> <b>3. /kr/include/footer.php</b></code>
-
+	* 패밀리사이트 오픈버튼 a태그 -> button태그로 변경
 	* (★) 네이버웹마스터도구 링크관리 -> 링크 구조 개선필요 요망으로 떠 전체적으로 <a href="javascript:;" onclick="함수"></a> 사용을 지양함
 	* 개인정보처리방침/이용약관 수정 
 		```
 		<a href="<?=$site_url?>/etc/privacy.php" class="cm-modal-open-btn">개인정보처리방침</a>
 		```
 
-	<code> <b>4. /kr/index.php</b></code>
+	
+	<code> <b>4. /kr/include/top.php</b></code>
+	* 서브메뉴 2차메뉴 오픈버튼 a태그 -> button태그
+
+	<code> <b>5. /kr/index.php</b></code>
 
 	* Skip 네비게이션 링크 수정 ( #mainContainer -> #mainVisual )
 	* 메인비주얼 배경이미지 경로 수정 
 
-	<code> <b>5. /kr/index_fullpage.php</b></code>
+	<code> <b>6. /kr/index_fullpage.php</b></code>
 
 	* Skip 네비게이션 링크 수정 ( #mainContainer -> #mainVisual )
 	* AOS 예시 추가
 
-	<code> <b>6. /kr/lib/config.php</b></code>
+	<code> <b>7. /kr/lib/config.php</b></code>
 
 	* $site_author = $seo->author; 삭제
 
@@ -111,6 +117,9 @@ PC Website Template
 	<code> <b>4. /js/sub.js</b></code>
 
 	* 메뉴 Fixed 탭 링크이동일때 추가
+
+	<code> <b>5. /js/nav.js</b></code>
+	* 서브메뉴 open 삭제 / 일부수정
 
 
 ***************************

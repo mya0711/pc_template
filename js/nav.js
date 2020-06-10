@@ -9,7 +9,7 @@ var dep2;
 
 jQuery(function($){
 	/* *********************** PC NAV ************************ */
-	var $openMenu = $(".cm-top-menu");
+	var $snbMenu = $(".cm-top-menu");
 	// PC
 	var $gnb = $("#gnb");
 	var $gnbList = $("#gnb > ul");
@@ -178,28 +178,14 @@ jQuery(function($){
 
 	/* *********************** PC, 모바일 공통 ************************ */
 	/* ------------------------
-	*** 서브 상단 location (1차, 2차) 하위메뉴 ON & 열기 *** 
+	*** 서브 상단 location (1차, 2차) 하위메뉴 ON *** 
 	------------------------ */ 
-	$openMenu.find(".menu-location").each(function  () {
-		// 클릭할때 펼치기
-		$(this).find(".cur-location").click(function  () {
-			$(this).toggleClass("open");
-			$(this).siblings(".location-menu-con").slideToggle();
-
-			return false;
-		});
+	$snbMenu.find(".menu-location").each(function  () {
 		// 2depth ON
 		if ( $(this).is(".location1") ) {
 			$(this).find(".location-menu-con").find("li").eq(dep1-1).addClass("on");
 		}else {
 			$(this).find(".location-menu-con").find("li").eq(dep2-1).addClass("on");
-		}
-	});
-	
-	$(".menu-location").mouseleave(function  () {
-		if ( $(this).find(".location-menu-con").css("display") == "block" ) {
-			$(this).find(".cur-location").removeClass("open");
-			$(this).find(".location-menu-con").slideUp(300);
 		}
 	});
 
