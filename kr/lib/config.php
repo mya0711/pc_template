@@ -1,12 +1,11 @@
-<? include $_SERVER["DOCUMENT_ROOT"]."/common.php"; ?>
-<? $admin_stat = $db->object("cs_seo", ""); ?>
+<? // include $_SERVER["DOCUMENT_ROOT"]."/common.php"; ?>
+<? // $admin_stat = $db->object("cs_seo", ""); ?>
 <?
 $site_directory = "/kr";
 $site_url = $site_host.$site_directory;
 $site_head_title = $admin_stat->title;
 $site_title = $admin_stat->title;
 $site_subject = $admin_stat->title;
-$site_author = $admin_stat->author;
 $site_keywords = $admin_stat->keywords;
 $site_description = $admin_stat->description;
 $site_robots = "INDEX,FOLLOW";

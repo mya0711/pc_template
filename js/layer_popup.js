@@ -1,9 +1,22 @@
 /* *******************************************************
  * filename : layer_popup.js
  * description : 모달레이어를 띄울때 사용되는 ajax JS
- * date : 2020-03-18
+ * date : 2020-06-04
 ******************************************************** */
 
+$(document).ready(function  () {
+	// Modal Open
+	$(".cm-modal-open-btn").click(function  () {
+		if ( $(this).data("url")) {
+			var strUrl = $(this).data("url");	// button Tag
+		}else {
+			var strUrl = $(this).attr("href");	// a Tag
+		}
+		layerLoad(strUrl);
+
+		return false;
+	});
+});
 
 function layerLoad(strUrl){
 	var $modalWrap = $(".modal-fixed-pop-wrapper");

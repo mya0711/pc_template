@@ -33,8 +33,13 @@ jQuery(function($){
 	}
 
 	/* *********************** 메뉴 FIXED 및 해당영역 이동 ************************ */
-	if ($.exists(".fixed-move-tab-list")) {
-		var $fixedMoveTab = $(".fixed-move-tab-list");
+	if ($.exists(".cm-fixed-tab-container")) {
+		if ( $.exists(".cm-fixed-link-tab-wrapper")) {
+			var menuFunc = "linkTab";	// 링크이동일때
+		}else {
+			var menuFunc = "moveTab";	// 영역이동일때
+		}
+		var $fixedMoveTab = $(".cm-fixed-move-tab-list");
 		var $moveTabItem = $fixedMoveTab.find("li");
 		var menuCount= $moveTabItem.size();
 		
@@ -49,35 +54,41 @@ jQuery(function($){
 				fixedHeaderHeight = 0
 			}
 			fixedTabHeight = $fixedMoveTab.height();
-			fixedStartPoint =  $(".fixed-move-tab-list-wrapper").offset().top - fixedHeaderHeight;	// 탭이 붙는 지점
-
-			nav= new Array();
-			for(var i=0;i < menuCount;i++){
-				nav[i]="nav"+i;
-				nav[i]=$($moveTabItem.eq(i).children("a").attr("href")).offset().top - fixedTabHeight - fixedHeaderHeight;
+			fixedStartPoint =  $(".cm-fixed-move-tab-wrapper").offset().top - fixedHeaderHeight;	// 탭이 붙는 지점
+			
+			if ( menuFunc === "moveTab" ) {
+				nav= new Array();
+				for(var i=0;i < menuCount;i++){
+					nav[i]="nav"+i;
+					nav[i]=$($moveTabItem.eq(i).children("a").attr("href")).offset().top - fixedTabHeight - fixedHeaderHeight;
+				}
 			}
 		}
 
 		$(window).scroll(function  () {
 			// 메뉴fixed
 			objectFixed($fixedMoveTab, fixedStartPoint);
-			 
-			$moveTabItem.each(function  (idx) {
-				if( getScrollTop() >= nav[idx] ){
-					$moveTabItem.removeClass('selected');
-					$moveTabItem.eq(idx).addClass('selected');
-				};
-			});
+			if ( menuFunc === "moveTab" ) { 
+				$moveTabItem.each(function  (idx) {
+					if( getScrollTop() >= nav[idx] ){
+						$moveTabItem.removeClass('selected');
+						$moveTabItem.eq(idx).addClass('selected');
+					};
+				});
+			}
 			
 		});
-
-		$moveTabItem.find("a").click(function  () {
-			var goDiv = $($(this).attr("href")).offset().top - (fixedTabHeight-1) - fixedHeaderHeight;
-			moveScrollTop(goDiv);
-             
-            return false;
-        });
+		
+		if ( menuFunc === "moveTab" ) { 
+			$moveTabItem.find("a").click(function  () {
+				var goDiv = $($(this).attr("href")).offset().top - (fixedTabHeight-1) - fixedHeaderHeight;
+				moveScrollTop(goDiv);
+				 
+				return false;
+			});
+		}
 	}
+
 
 	/* *********************** 에디터 관련 ************************ */
 	if ($.exists(".editor")) {
@@ -86,7 +97,7 @@ jQuery(function($){
 			$(this).wrap("<div class='editor-table-box'></div>");
 		});
 		
-		/* ifrmae 태그 감싸기 */ 
+		/* iframe 태그 감싸기 */ 
 		$(".editor iframe").each(function  () {
 			var iframeSrc = $(this).attr("src");
 			var findStr = "https://www.youtube.com/embed"; 
@@ -96,8 +107,10 @@ jQuery(function($){
 			}
 		});
 	}
+});
 
-	
+
+$(window).load(function  () {	
 	/* *********************** 리스트의 높이값 맞추기 ************************ */
 	$(".auto-height-list-con").each(function  () {
 		var $autoList = $(this).find(".auto-height-item");	// ul > li

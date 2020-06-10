@@ -51,12 +51,21 @@ function detectBrowser () {
 	}
 
 	return browser;
-
 }
 
-/* Window Popup Open */ 
-function winPopupOpen(src,title,option){
-	window.open(src,title,option);
+function detectOS(){
+    var agent = navigator.userAgent.toLowerCase(); 
+	var browser; 
+ 
+    if ( agent.indexOf('android') > -1) {
+        return "android";
+    } else if ( agent.indexOf("iphone") > -1|| agent.indexOf("ipad") > -1|| agent.indexOf("ipod") > -1 ) {
+        return "ios";
+    } else {
+        return "other";
+    }
+
+	return browser;
 }
 
 /* 모바일/PC 체크 */ 
@@ -68,6 +77,13 @@ function isMobile(){
 	}else{
 		return false;
 	}
+}
+
+
+
+/* Window Popup Open */ 
+function winPopupOpen(src,title,option){
+	window.open(src,title,option);
 }
 
 /* 임의의 영역을 만들어 스크롤바 크기 측정 */ 
@@ -225,6 +241,7 @@ function rollingActive (activeList) {
 	});
 }
 
+/* Fixed Object */ 
 function objectFixed ( object, fixedStartTop ) {		// $(클래스이름), 시작되는지점
 	if ( getScrollTop() >  fixedStartTop ) {
 		if (!($(object).hasClass("fixed"))) {	
@@ -240,19 +257,108 @@ function objectFixed ( object, fixedStartTop ) {		// $(클래스이름), 시작�
 jQuery(function($){
 	/* *********************** 브라우저 체크 및 기기체크 ************************ */
 	if ( isMobile() ) {
-		$("body").addClass("is-mobile").addClass(detectBrowser()+"-browser");
+		$("body").addClass("is-mobile").addClass(detectOS()+"-os");
 	}else {
 		$("body").addClass("is-pc").addClass(detectBrowser()+"-browser");
 	}
 
+	/* *********************** 모달영역 붙이기 ************************ */
+	$("body").append(" <article class='modal-fixed-pop-wrapper'><div class='modal-fixed-pop-inner'><div class='modal-loading'><span class='loading'></span></div><div class='modal-inner-box'><div class='modal-inner-content'></div></div></div></article>");
+
+	/* *********************** 드롭메뉴 공통 ************************ */
+	$(".cm-drop-menu-box").each(function  () {
+		var $dropBox = $(this);
+		var $dropOpenBtn = $(this).children(".cm-drop-open-btn");
+		var $dropList = $(this).children(".cm-drop-list");
+
+		$dropOpenBtn.click(function  () {
+			$dropList.slideToggle(500);
+			$dropBox.toggleClass("open");
+			return false;
+		});
+		$("body").click(function  () {
+			if ( $dropBox.data("drop-width") ) {
+				if ( getWindowWidth () < $dropBox.data("drop-width")+1 ) {
+					dropClose ();
+				}
+			}else {
+				dropClose ();
+			}
+		});
+		function dropClose () {
+			$dropList.slideUp(500);
+			$dropBox.removeClass("open");
+		}
+		$(window).resize(function  () {
+			if ( getWindowWidth () > $dropBox.data("drop-width") ) {
+				$dropList.show();
+			}else {
+				$dropList.hide();
+			}
+		});
+	});
+
+	/* *********************** 탭 공통 ************************ */
+	$(".cm-tab-container").each(function  () {
+		var $cmTabList = $(this).find(".cm-tab-list");
+		var $cmTabListli = $cmTabList.find("li");
+		var $cmConWrapper = $(this).children(".cm-tab-content-wrapper");
+		var $cmContent = $cmConWrapper.children(".cm-tab-con");
+		
+		
+		// 탭 영역 숨기고 selected 클래스가 있는 영역만 보이게
+		var $selectCon = $cmTabList.find("li.selected").find("a").attr("href");
+		var selectTxt = $cmTabList.find("li.selected").find("em").text();
+		$cmContent.hide();
+		$($selectCon).show();
+
+		$cmTabListli.children("a").click(function  () {
+			if ( !$(this).parent().hasClass("selected")) {
+				var visibleCon = $(this).attr("href");
+				$cmTabListli.removeClass("selected");
+				$(this).parent("li").addClass("selected");
+				$cmContent.hide();
+				$(visibleCon).fadeIn();
+			}
+			return false;
+		});
+
+		// 모바일 버튼이 있을때 추가
+		var $cmTabMobileBtn = $(this).find(".cm-tab-m-btn");
+		if ($.exists($cmTabMobileBtn)) {
+			$cmTabMobileBtn.find("span").text(selectTxt);
+			// Mobile Btn Click
+			$cmTabMobileBtn.click(function  () {
+				$(this).toggleClass("open").siblings().slideToggle();
+				return false;
+			});
+
+			// Mobile List Click
+			$cmTabListli.children("a").click(function  () {
+				$cmTabMobileBtn.find("span").text($(this).find("em").text());
+				tabListClose();
+			});
+			$("body").click(function  () {
+				tabListClose();
+			});
+			function tabListClose () {
+				if ( getWindowWidth () < 801 ) {
+					$cmTabMobileBtn.removeClass("open").siblings().slideUp();
+				}
+			}
+			$(window).resize(function  () {
+				if ( getWindowWidth () > 800 ) {
+					$cmTabMobileBtn.siblings().show()//.css("display","inline-block");
+				}else {
+					$cmTabMobileBtn.siblings().hide()//.css("display","none");
+				}
+			});
+		}
+	});
+
 	/* *********************** 상단 :: 헤더 FIXED ************************ */
 	if ($.exists('#header')) {
-		$(window).scroll(function  () {
-			var startTop = $("#header").height();
-			objectFixed($("#header"), startTop);
-		});
 	}
-
 
 	/* *********************** 상단 :: 검색 toggle ************************ */
 	$(".header-search-box").each(function  () {
@@ -317,100 +423,6 @@ jQuery(function($){
 					  }
 					}
 				  ]
-	});
-
-	/* *********************** 하단 :: 모달영역 붙이기 ************************ */
-	$("body").append(" <article class='modal-fixed-pop-wrapper'><div class='modal-fixed-pop-inner'><div class='modal-loading'><span class='loading'></span></div><div class='modal-inner-box'><div class='modal-inner-content'></div></div></div></article>");
-
-	/* *********************** 드롭메뉴 공통 ************************ */
-	$(".cm-drop-menu-box").each(function  () {
-		var $dropBox = $(this);
-		var $dropOpenBtn = $(this).children(".cm-drop-open-btn");
-		var $dropList = $(this).children(".cm-drop-list");
-
-		$dropOpenBtn.click(function  () {
-			$dropList.slideToggle(500);
-			$dropBox.toggleClass("open");
-			return false;
-		});
-		$("body").click(function  () {
-			if ( $dropBox.data("drop-width") ) {
-				if ( getWindowWidth () < $dropBox.data("drop-width")+1 ) {
-					dropClose ();
-				}
-			}else {
-				dropClose ();
-			}
-		});
-		function dropClose () {
-			$dropList.slideUp(500);
-			$dropBox.removeClass("open");
-		}
-		$(window).resize(function  () {
-			if ( getWindowWidth () > $dropBox.data("drop-width") ) {
-				$dropList.show();
-			}else {
-				$dropList.hide();
-			}
-		});
-	});
-
-	/* *********************** 탭 공통 ************************ */
-	$(".cm-tab-container").each(function  () {
-		var $cmTabList = $(this).children(".cm-tab-list");
-		var $cmTabListli = $cmTabList.find("li");
-		var $cmConWrapper = $(this).children(".cm-tab-content-wrapper");
-		var $cmContent = $cmConWrapper.children(".cm-tab-con");
-		
-		
-		// 탭 영역 숨기고 selected 클래스가 있는 영역만 보이게
-		var $selectCon = $cmTabList.find("li.selected").find("a").attr("href");
-		var selectTxt = $cmTabList.find("li.selected").find("em").text();
-		$cmContent.hide();
-		$($selectCon).show();
-
-		$cmTabListli.children("a").click(function  () {
-			if ( !$(this).parent().hasClass("selected")) {
-				var visibleCon = $(this).attr("href");
-				$cmTabListli.removeClass("selected");
-				$(this).parent("li").addClass("selected");
-				$cmContent.hide();
-				$(visibleCon).fadeIn();
-			}
-			return false;
-		});
-
-		// 모바일 버튼이 있을때 추가
-		var $cmTabMobileBtn = $(this).find(".cm-tab-m-btn");
-		if ($.exists($cmTabMobileBtn)) {
-			$cmTabMobileBtn.find("span").text(selectTxt);
-			// Mobile Btn Click
-			$cmTabMobileBtn.click(function  () {
-				$(this).toggleClass("open").siblings().slideToggle();
-				return false;
-			});
-
-			// Mobile List Click
-			$cmTabListli.children("a").click(function  () {
-				$cmTabMobileBtn.find("span").text($(this).find("em").text());
-				tabListClose();
-			});
-			$("body").click(function  () {
-				tabListClose();
-			});
-			function tabListClose () {
-				if ( getWindowWidth () < 801 ) {
-					$cmTabMobileBtn.removeClass("open").siblings().slideUp();
-				}
-			}
-			$(window).resize(function  () {
-				if ( getWindowWidth () > 800 ) {
-					$cmTabMobileBtn.siblings().show()//.css("display","inline-block");
-				}else {
-					$cmTabMobileBtn.siblings().hide()//.css("display","none");
-				}
-			});
-		}
 	});
 });
 

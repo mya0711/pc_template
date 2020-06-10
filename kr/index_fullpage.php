@@ -33,7 +33,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 <![endif]-->
 <!-- accessibility -->
 <div class="cm-accessibility">
-	<a href="#mainContainer">본문바로가기</a>
+	<a href="#mainVisual">본문바로가기</a>
 </div>
 <!-- //accessibility -->
 
@@ -48,8 +48,8 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 		<section id="mainVisual" class="section">
 			<div class="main-visual-con">
 				<div class="main-visual-item">
-					<div class="main-visual-pc-img" style="background:#fff url(/images/main/main_visual_01.jpg) no-repeat 50% 50%;"></div>
-					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_01_m.jpg" alt="" /></div>	<!-- 모바일이미지 -->
+					<div class="main-visual-pc-img" style="background:#fff url(<?=$site_host?>/images/main/main_visual_01.jpg) no-repeat 50% 50%;"></div>
+					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_01_m.jpg" alt="메인비주얼 모바일 이미지 1" /></div>	<!-- 모바일이미지 -->
 					<div class="main-visual-txt-con">
 						<div class="main-visual-txt-inner area-box">
 							<strong class="main-visual-txt1">giantsoft Stand in the world 11</strong>
@@ -60,8 +60,8 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					</div>
 				</div>
 				<div class="main-visual-item">
-					<div class="main-visual-pc-img" style="background:#fff url(/images/main/main_visual_02.jpg) no-repeat 50% 50%;"></div>
-					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_02_m.jpg" alt="" /></div>	<!-- 모바일이미지 -->
+					<div class="main-visual-pc-img" style="background:#fff url(<?=$site_host?>/images/main/main_visual_02.jpg) no-repeat 50% 50%;"></div>
+					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_02_m.jpg" alt="메인비주얼 모바일 이미지 2" /></div>	<!-- 모바일이미지 -->
 					<div class="main-visual-txt-con">
 						<div class="main-visual-txt-inner area-box">
 							<strong class="main-visual-txt1">giantsoft Stand in the world 22</strong>
@@ -77,13 +77,13 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 			</div>
 		</section>
 		<!-- ****************** 메인 컨텐츠1 ********************** -->
-		<section id="" class="section">
+		<section id="mainContent1" class="section">
 			<div class="area-box">
-				<div class="main-tit-box">
+				<div class="main-tit-box" data-aos="fade-up" data-aos-duration="1000">
 					<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
 					<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span>타이틀 서브 텍스트가 들어갑니다</span></p>
 				</div>
-				<ul class="main-quick-menu-list clearfix">
+				<ul class="main-quick-menu-list clearfix" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
 					<li class="quick-menu-item quick-menu-item1">
 						<a href="">
 							<div class="quick-menu-item-inner">
@@ -136,13 +136,13 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 			</div>
 		</section>
 		<!-- ****************** 메인 컨텐츠2  ********************** -->
-		<section id="" class="section" style="background:#f2f2f2;">
+		<section id="mainContent2" class="section" style="background:#f2f2f2;">
 			<div class="area">
-				<div class="main-tit-box">
+				<div class="main-tit-box" data-aos="fade-up" data-aos-duration="1000">
 					<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
 					<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span>타이틀 서브 텍스트가 들어갑니다</span></p>
 				</div>
-				<ul class="main-news-list clearfix">
+				<ul class="main-news-list clearfix" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
 					<li>
 						<a href="">
 							<span class="bbs-inner-thumb over-img"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" class="img-full" /></span>
@@ -183,13 +183,13 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 			</div>
 		</section>
 		<!-- ****************** 메인 컨텐츠3  ********************** -->
-		<section id="" class="section">
+		<section id="mainContent3" class="section">
 			<div class="area">
-				<div class="main-tit-box">
+				<div class="main-tit-box" data-aos="fade-up" data-aos-duration="1000">
 					<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
 					<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span>타이틀 서브 텍스트가 들어갑니다</span></p>
 				</div>
-				<article class="main-gallery-rolling-con">
+				<article class="main-gallery-rolling-con" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
 					<ul class="bbs-basic-gallery-con">
 						<li>
 							<a href="">
@@ -275,7 +275,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 				</article>
 			</div>
 		</section>
-		<section id="" class="section fp-auto-height">
+		<section id="mainFooter" class="section fp-auto-height">
 			<!-- footer -->
 			<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/footer.php"; ?>
 			<!-- //footer -->

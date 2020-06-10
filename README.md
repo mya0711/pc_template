@@ -3,10 +3,117 @@ PC Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2020-05-19
+* UpDate :  2020-06-10
   
 
 ## 업데이트 내역
+
+- #### 2020/06/10
+
+  #### * css 파일
+	<code> <b>1. /css/default.css </b></code>
+
+	* (★) input/select/textarea -> 기본스타일 수정 ( margin:0, padding:0 등 )
+	* line-clamp3 수정 / line-clamp4 추가
+	
+	<code> <b>2. /css/layout.css </b></code>
+	* 헤더 언어선택 button으로 변경
+	* 탑버튼 아이콘변경
+	* 푸터 familysite button으로 변경
+
+	<code> <b>3. /css/content.css</b></code>
+	* 서브 탭 스타일 공통으로 수정
+
+	<code> <b>4. /css/main.css</b></code>
+	* 벤더프리픽스 -ms-,-o-,-moz- 삭제
+	
+	<code> <b>5. /css/common/ ~~.css </b></code>
+
+	* 온라인문의 및 게시판 수정 / 스킨추가 등 전반적인수정
+
+	<code> <b>6. /css/plugin/magnific-popup.css </b></code>
+
+	* 모달뜰때 타이틀 font-size 수정
+	
+  #### * php 파일
+	<code> <b>1. /kr/include/dtd.php</b></code>
+
+	* <meta name="Author"> 삭제 
+	* (★) SEO를 위한 <meta>태그 추가 
+		```
+		<meta name="NaverBot" content="All"/>
+		<meta name="NaverBot" content="<?=$site_robots?>"/>
+		<meta name="Yeti" content="All"/>
+		<meta name="Yeti" content="<?=$site_robots?>"/>
+		<meta name="Googlebot" content="All" />
+		<meta name="Googlebot" content="<?=$site_robots?>" />
+		<meta name="Robots" content="<?=$site_robots?>">
+		```
+
+	<code> <b>2. /kr/include/header.php</b></code>
+
+	* 언어선택 오픈버튼 a태그 -> button태그
+	* 사이트맵 커스텀버튼 사용안해서 삭제
+
+	<code> <b>3. /kr/include/footer.php</b></code>
+
+	* (★) 네이버웹마스터도구 링크관리 -> 링크 구조 개선필요 요망으로 떠 전체적으로 <a href="javascript:;" onclick="함수"></a> 사용을 지양함
+	* 개인정보처리방침/이용약관 수정 
+		```
+		<a href="<?=$site_url?>/etc/privacy.php" class="cm-modal-open-btn">개인정보처리방침</a>
+		```
+
+	<code> <b>4. /kr/index.php</b></code>
+
+	* Skip 네비게이션 링크 수정 ( #mainContainer -> #mainVisual )
+	* 메인비주얼 배경이미지 경로 수정 
+
+	<code> <b>5. /kr/index_fullpage.php</b></code>
+
+	* Skip 네비게이션 링크 수정 ( #mainContainer -> #mainVisual )
+	* AOS 예시 추가
+
+	<code> <b>6. /kr/lib/config.php</b></code>
+
+	* $site_author = $seo->author; 삭제
+
+
+  #### * js 파일
+	<code> <b>1. /js/common.js</b></code>
+
+	* (★) detectOS() 함수추가 -> ios와 android 구분을 위해
+
+	* (★) 탭 공통 js 일부수정
+		
+
+	<code> <b>2. /js/layer_popup.js</b></code>
+
+	* (★) modal open 이벤트 추가
+
+		```
+		// Modal Open
+		$(".cm-modal-open-btn").click(function  () {
+			if ( $(this).data("url")) {
+				var strUrl = $(this).data("url");	// button Tag
+			}else {
+				var strUrl = $(this).attr("href");	// a Tag
+			}
+			layerLoad(strUrl);
+
+			return false;
+		});
+		```
+
+	<code> <b>3. /js/main.js</b></code>
+
+	* (★) Fullpage AOS 효과 추가
+
+	<code> <b>4. /js/sub.js</b></code>
+
+	* 메뉴 Fixed 탭 링크이동일때 추가
+
+
+***************************
 
 - #### 2020/05/19
 

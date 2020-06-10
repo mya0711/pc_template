@@ -28,7 +28,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 <![endif]-->
 <!-- accessibility -->
 <div class="cm-accessibility">
-	<a href="#mainContainer">본문바로가기</a>
+	<a href="#mainVisual">본문바로가기</a>
 </div>
 <!-- //accessibility -->
 
@@ -43,8 +43,8 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 		<section id="mainVisual" class="full-height">	<!-- 메인 비주얼 full 높이 해제 : full-height 클래스 빼주세요  -->
 			<div class="main-visual-con">
 				<div class="main-visual-item">
-					<div class="main-visual-pc-img" style="background:#fff url(/images/main/main_visual_01.jpg) no-repeat 50% 50%;"></div>
-					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_01_m.jpg" alt="" /></div>	<!-- 모바일이미지 -->
+					<div class="main-visual-pc-img" style="background:#fff url(<?=$site_host?>/images/main/main_visual_01.jpg) no-repeat 50% 50%;"></div>
+					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_01_m.jpg" alt="메인비주얼 모바일 이미지 1" /></div>	<!-- 모바일이미지 -->
 					<div class="main-visual-txt-con">
 						<div class="main-visual-txt-inner area-box">
 							<strong class="main-visual-txt1">giantsoft Stand in the world 11</strong>
@@ -55,8 +55,8 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					</div>
 				</div>
 				<div class="main-visual-item">
-					<div class="main-visual-pc-img" style="background:#fff url(/images/main/main_visual_02.jpg) no-repeat 50% 50%;"></div>
-					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_02_m.jpg" alt="" /></div>	<!-- 모바일이미지 -->
+					<div class="main-visual-pc-img" style="background:#fff url(<?=$site_host?>/images/main/main_visual_02.jpg) no-repeat 50% 50%;"></div>
+					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_02_m.jpg" alt="메인비주얼 모바일 이미지 2" /></div>	<!-- 모바일이미지 -->
 					<div class="main-visual-txt-con">
 						<div class="main-visual-txt-inner area-box">
 							<strong class="main-visual-txt1">giantsoft Stand in the world 22</strong>

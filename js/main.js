@@ -18,14 +18,20 @@ jQuery(function($){
 			responsiveHeight : 750,
 			onLeave : function(index, nextIndex, direction){
 				if( nextIndex == 2 ){
-					/* 2번째 섹션 */
+					setTimeout(function  () {
+						$("#mainContent1").find(".aos-init").addClass('aos-animate');
+					},300);
 				}else if( nextIndex == 3 ){
-					/* 3번째 섹션 */
+					setTimeout(function  () {
+						$("#mainContent2").find(".aos-init").addClass('aos-animate');
+					},300);
 				}else if( nextIndex == 4 ){
-					/* 4번째 섹션 */
+					setTimeout(function  () {
+						$("#mainContent3").find(".aos-init").addClass('aos-animate');
+					},300);
 
 				}else if( nextIndex == 5 ){
-					/* 5번째 섹션 */
+					/* 5번째 섹션 ( 영역 도달했을때 Slick autoplay 재생시킬때 ) */
 					setTimeout(function  () {
 						$('.footer-partner-list').slick("play");
 					},600);

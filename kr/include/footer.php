@@ -55,7 +55,7 @@
 		</div>
 	</article>
 	<footer id="footer">
-		<a href="#wrap" class="to-top-btn"><i class="material-icons">&#xE316;</i></a>
+		<a href="#wrap" class="to-top-btn"><i class="xi-arrow-up"></i></a>
 		<div id="footerInner" class="clearfix">
 			<!-- 푸터 상단 -->
 			<article id="footerTop">
@@ -63,8 +63,8 @@
 					<!-- 푸터상단 왼쪽 -->
 					<div class="footer-left-con">
 						<ul class="foot-menu clearfix">
-							<li><a href="javascript:;" onclick="javascript:layerLoad('<?=$site_url?>/etc/privacy.php'); return false;"><b>개인정보처리방침</b></a></li>
-							<li><a href="javascript:;" onclick="javascript:layerLoad('<?=$site_url?>/etc/agreement.php'); return false;">이용약관</a></li>
+							<li><a href="<?=$site_url?>/etc/privacy.php" class="cm-modal-open-btn"><b>개인정보처리방침</b></a></li>
+							<li><a href="<?=$site_url?>/etc/agreement.php" class="cm-modal-open-btn">이용약관</a></li>
 						</ul>
 					</div>
 					<!-- 푸터상단 오른쪽 -->
@@ -135,7 +135,7 @@
 					<article class="footer-right-con">
 						<span class="foot-logo"><img src="<?=$site_host?>/images/common/footer_logo.jpg" alt="<?=$site_head_title?>" /></span>
 						<div class="family-site-box cm-drop-menu-box">
-							<a href="javascript:;" class="family-site-open-btn cm-drop-open-btn">FAMILY SITE <span class="arrow"><i class="material-icons">&#xE313;</i></span></a>
+							<button class="family-site-open-btn cm-drop-open-btn">FAMILY SITE <span class="arrow"><i class="material-icons">&#xE313;</i></span></button>
 							<ul class="family-site-list cm-drop-list">
 								<li><a href="">FAMILY SITE1</a></li>
 								<li><a href="">FAMILY SITE2</a></li>

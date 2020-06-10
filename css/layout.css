@@ -2,7 +2,7 @@
 /* *******************************************************
  * filename : layout.css
  * description : 전체 레이아웃 CSS
- * date : 2019-09-03
+ * date : 2020-06-10
 ******************************************************** */
 
 /* ****************** LAYOUT ********************** */
@@ -86,7 +86,7 @@ body { background-color:#fff; }
 
 /* Header :: 언어선택 */
 .header-lang {position:relative; float:left; width:124px; height:30px; border:1px solid #5c5c5c; border-color:#333; z-index:100; margin-left:10px; }
-.header-lang .lang-open-btn {overflow:hidden; position:relative; display:block; height:100%; padding:0 10px; font-size:10px; line-height: 30px; color:#333; }
+.header-lang .lang-open-btn {overflow:hidden; position:relative; display:block; width:100%; text-align:left; height:100%; padding:0 10px; font-size:10px; line-height: 30px; color:#333; }
 .header-lang .lang-open-btn i {display:inline-block; margin-right: 6px; vertical-align: middle; font-size:20px; margin-top:-2px; }
 .header-lang .lang-open-btn .arrow{position:absolute; top:0px; right:0px;}
 .header-lang .lang-open-btn .arrow i{font-size:16px;}
@@ -223,12 +223,14 @@ body { background-color:#fff; }
 #footerTop{background-color:#f2f2f2; border-top:1px solid #ddd; border-bottom:1px solid #ddd; padding:15px 0; }
 /* Footer :: TOP버튼 */
 .to-top-btn{
-	position:fixed; bottom:-100px; right:15px; display:block; width:46px; height:46px; background-color:#f57f20; text-align:center; line-height:46px; color:#fff; z-index:99;
+	position:fixed; bottom:-100px; right:15px; display:block; width:46px; height:46px; background-color:#f57f20; text-align:center; color:#fff; z-index:99;
 	opacity:0;filter:Alpha(opacity=0);
 	-webkit-transition:all 0.6s;-moz-transition:all 0.6s;-o-transition:all 0.6s;-ms-transition:all 0.6s;transition:all 0.6s
-	/* -webkit-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;border-radius:50%; */
+	-webkit-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;border-radius:50%;
 }
 .to-top-btn.fixed{bottom:15px; opacity:1.0;filter:Alpha(opacity=100);}
+.to-top-btn i{display:inline-block; font-size:16px; line-height:46px; transition:all 0.3s}
+.to-top-btn:hover i{transform:translateY(-3px)}
 
 /* Footer :: 푸터메뉴 */
 .foot-menu{float:left; }
@@ -274,7 +276,7 @@ body { background-color:#fff; }
 .footer-copyright b{color:#f57f20}
 /* Footer :: 오른쪽정보 :: 패밀리사이트 */
 .family-site-box{/* position:absolute; top:20px; right:0;*/ position:relative; width:215px; text-align:left; letter-spacing:-0.25px;}
-.family-site-box .family-site-open-btn{display:block; height:50px; line-height:50px; text-indent:10px; font-size:14.3px; border:1px solid #111; background-color:#111; color:#fff; }
+.family-site-box .family-site-open-btn{display:block; width:100%; text-align:left; height:50px; line-height:50px; text-indent:10px; font-size:14.3px; border:1px solid #111; background-color:#111; color:#fff; }
 .family-site-box .family-site-open-btn i{position:absolute; right:3px; top:50%; margin-top:-12px;}
 .family-site-box.open .family-site-open-btn i{transform:rotate(180deg); right:-5px}
 .family-site-list{position:absolute; bottom:52px; left:0px; width:100%;  padding:10px 0; background-color:#fff; border:1px solid #ddd; border-bottom:0;  z-index:11; display:none; box-sizing:border-box;}

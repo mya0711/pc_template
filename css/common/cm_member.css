@@ -75,7 +75,7 @@
 .form-box-list a:first-child:before{display:none;}
 .form-box-list a:hover{color:#000}
 
-/* ******************   LOGIN ::  SNS/SHOP  ********************** */
+/* ******************   LOGIN ::  SNS 로그인  ********************** */
 /* LOGIN :: SNS LOGIN (Short Ver) */
 .member-form-short-sns-con{margin-top:30px; border-top:1px solid #ddd; padding-top:30px;}
 .member-form-short-sns-con .short-sns-tit{float:left; color:#333; font-size:18px; letter-spacing:-0.75px; font-weight:400; line-height:45px;}
@@ -98,8 +98,10 @@
 .member-con-inner-sns .member-form-con .sns-login-list li button{display:block; width:100%; height:50px; background-color:#888; color:#fff; font-size:16px; text-align:left; text-indent:70px; }
 .member-con-inner-sns .member-form-con .sns-login-list .sns-icon{position:absolute; width:50px; height:50px; border-right:1px solid rgba(255,255,255,0.5); text-align:center; line-height:50px;}
 .member-con-inner-sns .member-form-con .sns-login-list .sns-icon i{color:#fff; font-size:20px; line-height:50px}
-/* LOGIN :: SHOP LOGIN */
-.member-con-inner-shop{overflow:hidden;padding:75px 40px; border:1px solid #ddd; }
+
+/* ******************   LOGIN ::  SHOP 로그인  ********************** */
+/* LOGIN :: SHOP LOGIN ( 가로Ver ) */
+.member-con-inner-shop{overflow:hidden;padding:75px 40px; border:1px solid #ddd;}
 .member-con-inner-shop .member-form-con{display:inline-block; vertical-align:middle; width:44%; padding-left:20px;}	/* 오른쪽영역 */
 .member-con-inner-shop .member-form-con:first-child{width:51.5%; border-right:1px solid #ddd; padding-right:20px; padding-left:0;}	/* 왼쪽영역 */ 
 .member-con-inner-shop .member-form-con .cm-btn-controls{padding-top:10px;}
@@ -109,6 +111,15 @@
 .member-con-inner-shop .member-form-nonmember-con:last-child{padding-right:0;}
 .member-con-inner-shop .member-form-nonmember-con:last-child:before{display:inline-block; content:""; width:1px; height:100%; position:absolute;  top:0px; left:-1px; background-color:#ddd;}
 .member-con-inner-shop .member-form-sub-txt{font-size:13px; line-height:20px; color:#333; word-break:keep-all;}
+
+/* LOGIN :: SHOP LOGIN 2 ( 세로 Ver ) */
+.nonmember-service-con{overflow:hidden;border-top:1px solid #ddd; padding:15px 0; }
+.nonmember-service-con:first-child{margin-top:30px;}
+.nonmember-service-con > p{float:left; width:200px; font-size:15px; line-height:20px; color:#444; font-weight:300; letter-spacing:-0.3px; word-break:keep-all;}
+.nonmember-service-buttons{float:right;  width:calc(100% - 220px); text-align:right;}
+.nonmember-service-buttons a{display:inline-block; width:45%; margin-left:10px; height:40px; line-height:40px; text-align:center; border:1px solid #333; color:#fff; background-color:#333; font-size:14px; letter-spacing:-0.3px;}
+.nonmember-service-buttons .non-member-btn{background-color:#fff; color:#333;}
+.nonmember-service-buttons a.nonmember-buy-btn{width:94%; margin-left:0;}
 
 /* ******************  아이디, 비번 찾기  ********************** */
 /* -------- 아이디 찾기 -------- */
@@ -136,7 +147,7 @@
 .join-form-tbl th{text-align:left; color:#333; font-weight:400; font-size:15px; letter-spacing:-0.5px;line-height:20px; word-break:keep-all;}
 .join-form-tbl .input-basic,
 .join-form-tbl .select-basic{
-	height:34px; border:0px; width:50%; max-width:160px; background-color:#fff; border:1px solid #d2d2d2; font-size:14px; vertical-align:middle;
+	height:38px; border:0px; width:50%; max-width:300px; background-color:#fff; border:1px solid #d2d2d2; font-size:14px; vertical-align:middle;
 }
 .join-form-tbl .input-basic{text-indent:10px;}
 .join-form-tbl .width100{max-width:none;}
@@ -150,15 +161,17 @@
 .join-form-tbl .font-caution{color:#ff3800; font-weight:400;}
 .join-form-tbl .hypen{display:inline-block; vertical-align:middle;width:12px; margin:0 5px; text-align:center;}
 /* JOIN :: 추가스타일 */
-.birth-input .select-basic, .tel-input .input-basic, .tel-input .select-basic{max-width:100px}
-.birth-input br{display:none;}
-.email-input .input-basic, .email-input .select-basic{margin-bottom:3px;}
-.address-input .input-basic{margin-top:6px;}
-.address-input .input-basic:first-child{margin-top:0;}
 .join-form-tbl fieldset{padding:8px 0;}
 .join-form-tbl .email-input, .join-form-tbl .birth-input, .join-form-tbl .address-input, .join-form-tbl .tel-input{padding:0;} 
 .join-form-tbl label,.join-form-tbl input[type="checkbox"],.join-form-tbl input[type="radio"]{vertical-align:bottom;}
 .join-form-tbl .read-only-data{padding:10px 0; font-size:15px; color:#333;}
+.join-form-tbl .id-input{padding:0;}
+.birth-input .select-basic, .tel-input .input-basic, .tel-input .select-basic{max-width:100px}
+.birth-input br{display:none;}
+.email-input .input-basic, 
+.email-input .select-basic{width:30%; max-width:150px; margin-bottom:3px;}
+.address-input .input-basic{margin-top:6px;}
+.address-input .input-basic:first-child{margin-top:0;}
 
 /* -------- JOIN FINISH  -------- */
 /* JOIN FINISH :: 01 */
@@ -204,6 +217,7 @@
 	/* 공통 :: 회원폼레이아웃 */
 	.member-con-inner{padding:30px 0;}
 	.member-form-con{padding:30px 0;}
+	.member-form-con:last-child{padding-top:0}
 	.member-form-con-txt{padding-bottom:30px; }
 	.member-form-con-txt strong{font-size:20px; font-weight:bold; word-break:keep-all; line-height:24px;}
 	.member-form-con-txt p{width:80%; margin:0px auto; font-size:11px; line-height:16px; word-break:keep-all;}
@@ -238,15 +252,12 @@
 	.form-box-list a:before{margin:-2px 10px 0 10px;}
 }
 
-/* ******************   LOGIN ::  SNS/SHOP  ********************** */
+/* ******************   LOGIN ::  SNS  ********************** */
 @media all and (max-width:1220px){
 	.member-con-inner-shop, .member-con-inner-sns{padding:25px}
 	/* LOGIN :: SNS LOGIN */
 	.member-con-inner-sns .member-form-con{padding-left:15px;}
 	.member-con-inner-sns .member-form-con:first-child{padding-right:15px;}
-	/* LOGIN :: SHOP LOGIN */
-	.member-con-inner-shop .member-form-con, .member-con-inner-shop .member-form-con:first-child{display:block; width:100%; padding:0; }
-	.member-con-inner-shop .member-form-con:first-child{border-right:0; padding-bottom:30px;}
 }
 @media all and (max-width:800px){
 	.member-con-inner-sns .member-con-inner{padding:35px 20px}
@@ -268,15 +279,36 @@
 	.member-con-inner-sns .member-form-con .sns-login-list li button{height:40px; text-indent:50px; font-size:14px;}
 	.member-con-inner-sns .member-form-con .sns-login-list .sns-icon{width:40px; height:40px; line-height:40px;}
 	.member-con-inner-sns .member-form-con .sns-login-list .sns-icon i{line-height:40px;}
-	/* LOGIN :: SHOP LOGIN */
-	.member-con-inner-shop .member-form-shop-con{width:100%; }
-	.member-con-inner-shop .member-form-shop{text-align:center; padding:20px 0;}
-	.member-con-inner-shop .member-form-shop a{max-width:none; width:100%;}
-	.member-con-inner-shop .member-form-nonmember{border-top:0; margin-top:0; padding-top:0;}
-	.member-con-inner-shop .member-form-nonmember-con{float:none; width:100%; padding:20px 0; border-top:1px solid #ddd;}
-	.member-con-inner-shop .member-form-nonmember-con:last-child:before{display:none;}
 }
 
+/* ******************   LOGIN ::  SHOP 로그인  ********************** */
+@media all and (max-width:1220px){
+	/* LOGIN :: SHOP LOGIN ( 가로Ver ) */
+	.member-con-inner-shop .member-form-con, 
+	.member-con-inner-shop .member-form-con:first-child{display:block; width:auto; padding:20px; }
+	.member-con-inner-shop .member-form-con:first-child{border-right:0; padding-bottom:30px;}
+}
+@media all and (max-width:800px){
+	/* LOGIN :: SHOP LOGIN ( 가로Ver ) */
+	.nonmember-form-con{text-align:center;}
+	.nonmember-form-con .form-tit{margin-bottom:15px;}
+	.nonmember-form-con .cm-btn-controls button, 
+	.nonmember-form-con .cm-btn-controls a{min-width:none; width:100%; margin:0;}
+	.member-con-inner-shop .member-form-nonmember{border-top:0; margin-top:20px; padding-top:0;}
+	.member-con-inner-shop .member-form-nonmember-con{float:none; width:100%; padding:20px 0; border-top:1px solid #ddd;}
+	.member-con-inner-shop .member-form-nonmember-con:last-child:before{display:none;}
+
+	/* LOGIN :: SHOP LOGIN 2 ( 세로Ver ) */
+	.nonmember-service-con{text-align:center;}
+	.nonmember-service-con:first-child{margin-top:0}
+	.nonmember-service-con > p,
+	.nonmember-service-buttons{float:none; width:auto;}
+	.nonmember-service-con > p{margin-bottom:10px; font-size:13px; }
+	.nonmember-service-con > p br{display:none;}
+	.nonmember-service-buttons{margin:0 -1%;}
+	.nonmember-service-buttons a{float:left; width:48%; margin:0 1%; box-sizing:border-box; font-size:13px;}
+	.nonmember-service-buttons a.nonmember-buy-btn{float:none; display:block; width:auto; margin:0 1%;}
+}
 /* ******************  아이디, 비번 찾기  ********************** */
 @media all and (max-width:800px){
 	/* 아이디 찾기 :: 결과 */
@@ -291,26 +323,29 @@
 	.join-agreement-con{height:150px; padding:15px}
 	/* JOIN 02 */
 	.essential-txt{font-size:11px; top:-20px; font-weight:300;}
-	.join-form-tbl th,.join-form-tbl td{padding:5px;}
+	.join-form-tbl th,.join-form-tbl td{padding:5px; padding-right:0}
 	.join-form-tbl th{width:30%; font-size:13px; }
 	.join-form-tbl td{width:70%;}
 	.join-form-tbl .input-basic,
-	.join-form-tbl .select-basic{height:30px; font-size:13px; text-indent:4px; max-width:none; }
+	.join-form-tbl .select-basic{width:100%; height:34px; font-size:13px; text-indent:4px; max-width:none; }
 	.join-form-tbl .select-basic{height:34px;}
-	.join-form-tbl .join-sub-btn{min-width:auto; width:45%; height:32px; max-width:150px;  margin-left:5px; font-size:12px; padding:0;}
+	.join-form-tbl .join-sub-btn{min-width:auto; width:80px; height:34px; margin-left:5px; font-size:12px; padding:0; box-sizing:border-box;}
 	.join-form-tbl .join-sub-txt, .join-form-tbl .join-sub-txt2{display:block; margin-left:0; margin-top:5px; word-break:keep-all; line-height:15px; }
-	.birth-input br{display:block;}
-	.birth-input .select-basic:first-child{margin-bottom:3px;}
+	
+	/* JOIN 02::기타 */
+	.id-input .input-basic,
+	.address-input .input-basic:first-of-type{float:left; width:calc(100% - 85px) !important;}
+	.birth-input .select-basic{width:calc(33.33% - 30px) !important;}
+	.birth-input .select-basic:first-child{width:calc(33.33% - 4px) !important;}
 	.tel-input .input-basic,
-    .tel-input .select-basic{width:calc(33.33% - 16px) !important;}
-	.email-input .input-basic{width:calc(50% - 13px) !important;}
+    .tel-input .select-basic{width:calc(33.33% - 15px) !important;}
+	.email-input .input-basic{width:calc(50% - 11px) !important;}
 	.email-input .select-basic{width:100% !important; margin-top:5px;}
 	.address-input .input-basic{margin-top:3px;}
 	.join-form-tbl .hypen{margin:0 2px;}
 }
 @media all and (max-width:359px){
-	.join-form-tbl .join-sub-btn{max-width:70px; font-size:11px;}
-	.email-input .input-basic{width:30% !important;}
+	.join-form-tbl .join-sub-btn{font-size:11px;}
 }
 
 

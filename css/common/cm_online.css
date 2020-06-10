@@ -360,7 +360,7 @@
 }
 
 
-/* ******************  온라인 문의 :: 문의하기 01 ********************** */
+/* ******************  온라인 문의 :: 문의하기 07 ********************** */
 /* 문의하기 01 :: 개인정보취급방침 */
 .inquiry-style07-agree-con{margin-bottom:50px;}
 .inquiry-style07-agree-con .agree-tit{color:#696969; font-size:22px; letter-spacing:-0.75px; font-weight:500; padding-bottom:15px;}
@@ -415,4 +415,45 @@
 	.inquiry-tbl-style07 .write-textarea{height:120px; padding:10px; -webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	 box-sizing: border-box;  }
+}
+
+/* ******************  온라인 문의 :: 문의하기 08 ********************** */
+.inquiry-style08{padding:50px 15px; background:#333 url(/images/content/main_inquiry_bg.jpg) no-repeat 50% 50%; background-size:cover;}
+.inquiry-style08 .inquiry-style08-tit{color:#fff; margin-bottom:30px; font-size:32px; font-weight:500; letter-spacing:-1px;}
+/* 온라인문의 08 :: 내용 */
+.inquiry-style08 .inquiry-form{width:46.5%; }
+.inquiry-style08 .inquiry-form.cm-fr{width:50%;}
+.inquiry-style08 .inquiry-form ul li{position:relative; height:62px; padding-left:100px; border-bottom:1px solid #867a77; border-bottom-color:rgba(255,255,255,0.2); }
+.inquiry-style08 .inquiry-form ul li:first-child{margin-top:0;}
+.inquiry-style08 .inquiry-form .inquiry-data-tit{position:absolute; top:0px; left:0px; width:100px; font-size:16px; font-weight:400; line-height:62px; letter-spacing:-0.5px; color:#fff; opacity:0.5;filter:Alpha(opacity=50);}
+.inquiry-style08 .inquiry-form .inquiry-textarea-con .inquiry-data-tit{display:block; position:static; width:auto; line-height:normal; margin-bottom:15px}
+.inquiry-style08 .inquiry-form ul li input[type="text"]{height:60px; width:100%;  background:none; border:0; color:#fff; font-size:15px;}
+.inquiry-style08 .inquiry-form textarea{width:100%; height:210px ; border:1px solid #867a77; border-color:rgba(255,255,255,0.2); color:#fff; font-size:15px; background-color:rgba(255,255,255,0.2); resize:none; box-sizing:border-box; padding:20px;}
+/* 온라인문의 08 :: 하단 */
+.inquiry-style08 .inquiry-form-bottom-box{clear:both; padding-top:30px; text-align:center;}
+.inquiry-style08 .agree-check-box{margin-bottom:30px;}
+.inquiry-style08 .agree-check-box label{display:inline-block; vertical-align:middle; color:#fff; font-size:15px; letter-spacing:-0.5px; font-weight:400; margin-right:2px;}
+.inquiry-style08 .agree-check-box label a{color:inherit; display:inline-block; border-bottom:1px solid #fff;}
+.inquiry-style08 .agree-check-box label i{display:inline-block; vertical-align:middle; width:18px; height:18px; font-size:18px; position:relative; top:-1px; border:1px solid #fff; line-height:18px; opacity:0.2;filter:Alpha(opacity=20); margin-right:5px;}
+.inquiry-style08 .agree-check-box input{display:none}
+.inquiry-style08 .agree-check-box input:checked + label i{opacity:1.0;filter:Alpha(opacity=100);}
+.inquiry-style08 .inquiry-form ul li .inquiry-agree-btn{position:absolute; top:0px; right:0px; width:160px; height:44px; line-height:44px; padding:0 12px 0 20px; background-color:#f0612a; color:#fff;}
+.inquiry-style08 .inquiry-form ul li .inquiry-agree-btn em{float:left; font-size:13px; font-weight:500;}
+.inquiry-style08 .inquiry-form ul li .inquiry-agree-btn i{float:right; line-height:44px; opacity:0.75;filter:Alpha(opacity=75);}
+.inquiry-style08 .inquiry-submit-btn{display:inline-block; background-color:#fff; width:250px; height:50px; color:#f0612a; line-height:50px; font-size:18px; -webkit-transition:background-color 0.5s, color 0.5s;-moz-transition:background-color 0.5s, color 0.5s;-o-transition:background-color 0.5s, color 0.5s;-ms-transition:background-color 0.5s, color 0.5s;transition:background-color 0.5s, color 0.5s; }
+.inquiry-style08 .inquiry-submit-btn:hover{background-color:#f0612a; color:#fff;}
+
+@media all and ( max-width: 800px ){
+	.inquiry-style08 .inquiry-style08-tit{font-size:20px; margin-bottom:20px;}
+	.inquiry-style08 .inquiry-form,
+	.inquiry-style08 .inquiry-form.cm-fr{float:none; width:auto;}
+	.inquiry-style08 .inquiry-form.cm-fr{margin-top:10px;}
+	/* 온라인문의 08 :: 내용 */
+	.inquiry-style08 .inquiry-form ul li{height:50px; padding-left:70px; }
+	.inquiry-style08 .inquiry-form .inquiry-data-tit{width:70px; font-size:13px; line-height:50px;}
+	.inquiry-style08 .inquiry-form ul li input[type="text"]{height:48px; font-size:12px;}
+	.inquiry-style08 .inquiry-form textarea{height:120px;}
+	/* 온라인문의 08 :: 하단 */
+	.inquiry-style08 .agree-check-box label{font-size:12px;}
+	.inquiry-style08 .inquiry-submit-btn{width:100%; max-width:480px; font-size:15px;}
 }

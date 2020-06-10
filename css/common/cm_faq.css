@@ -16,12 +16,19 @@
 .faq-list-con .faq-item.open dt .faq-title{white-space:normal; text-overflow:unset;}
 .faq-list-con .faq-item dd{display:none; position:relative; border-top:1px solid #d7d7d7; padding:18px 30px 15px 55px; background:#f0f0f0; }
 .faq-list-con .faq-item dd .answer-txt-con{line-height:24px; font-size:14px; color:#333; }
-.faq-list-con .faq-item dt .question-icon,.faq-list-con .faq-item dd .answer-icon{
-    position:absolute; top:13px; left:10px; width:30px; height:30px; line-height:30px; text-align:center; color:#fff; font-size:13px; font-weight:400;
+.faq-list-con .faq-item dt .question-icon,
+.faq-list-con .faq-item dd .answer-icon{
+    position:absolute; top:11px; left:10px; 
+	width:30px; height:30px; line-height:30px; 
+	text-align:center; 
+	color:#fff; 
+	font-size:13px; 
+	font-weight:400;
+	border:1px solid #222;
     -webkit-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;border-radius:50%;
 }
-.faq-list-con .faq-item dt .question-icon{background-color:#0ab1d0}
-.faq-list-con .faq-item dd .answer-icon{background-color:#c42500; }
+.faq-list-con .faq-item dt .question-icon{background-color:#222}
+.faq-list-con .faq-item dd .answer-icon{background-color:transparent; color:#222; }
 
 /* FAQ :: 카테고리 */
 .faq-list-con.faq-category-list-con dl dt .faq-category{display:inline-block; width:110px; color:#aaa; margin-right:5px; font-size:13px; line-height:24px; vertical-align:top; }
@@ -40,4 +47,63 @@
 	.faq-list-con.faq-category-list-con dl dt .faq-category{position:absolute; top:13px; left:45px; right:30px; width:auto; margin-right:0; line-height:22px; }
 	.faq-list-con.faq-category-list-con dl dt .faq-title{display:block; width:100%; }
 	.faq-list-con.faq-category-list-con dl dt .arrow{top:23px;}
+}
+
+/* ******************   갤러리 게시판 :: FAQ 기본형 02 ********************** */
+.faq-list-con2 .faq-item{overflow:hidden; margin-bottom:10px;}
+.faq-list-con2 .faq-item dt,
+.faq-list-con2 .faq-item dd{
+	padding:20px 60px; 
+}
+.faq-list-con2 .faq-item dt{position:relative; cursor:pointer; border-radius:10px; background-color:#f2f4f4; }
+.faq-list-con2 .faq-item dt .faq-title{display:block; color:#56626a; font-size:18px; font-weight:400; letter-spacing:-0.5px; line-height:24px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; vertical-align:top;}
+.faq-list-con2 .faq-item dt .arrow{position:absolute; top:18px; right:35px; width:13px; height:9px; }
+.faq-list-con2 .faq-item dt i{color:#666; font-size:26px;}
+.faq-list-con2 .faq-item dd{display:none; position:relative; background:#fff; border:1px solid #31b6ba; border-top:0; border-radius:0 0 10px 10px}
+.faq-list-con2 .faq-item dd .answer-txt-con{line-height:1.875; font-size:16px; color:#777; letter-spacing:-0.75px;}
+.faq-list-con2 .faq-item dt .question-icon,
+.faq-list-con2 .faq-item dd .answer-icon{
+    position:absolute; 
+	top:16px; left:20px; 
+	width:30px; height:30px; line-height:30px; 
+	text-align:center; 
+	color:#fff; 
+	font-size:18px; 
+	font-weight:600;
+    -webkit-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;border-radius:50%;
+}
+.faq-list-con2 .faq-item dt .question-icon{color:#31b6ba}
+.faq-list-con2 .faq-item dd .answer-icon{color:#31b6ba;}
+
+/* FAQ2 :: 카테고리 */
+.faq-list-con2.faq-category-list-con dl dt .faq-category{display:inline-block; width:110px; color:#aaa; margin-right:5px; font-size:13px; line-height:24px; vertical-align:top; }
+.faq-list-con2.faq-category-list-con dl dt .faq-title{display:inline-block; width:calc(95% - 120px);}
+
+/* FAQ2 :: Open */
+.faq-list-con2 .faq-item.open dt{
+	border-radius:10px 10px 0 0; 
+	background-color:#31b6ba;
+}
+.faq-list-con2 .faq-item.open dt .faq-title{white-space:normal; text-overflow:unset; color:#fff;}
+.faq-list-con2 .faq-item.open dt .arrow i{margin-top:-2px; transform:rotate(-180deg); color:#fff;}
+.faq-list-con2 .faq-item.open dt .question-icon{color:#fff;}
+.faq-list-con2 .faq-item.open dt .faq-category{color:#fff;}
+
+@media all and ( max-width:800px ){
+	/*  FAQ2 게시판 */
+	.faq-list-con2 .faq-item{margin-bottom:5px}
+	.faq-list-con2 .faq-item dt{padding-left:45px; border-radius:5px;}
+	.faq-list-con2 .faq-item dt .faq-title{font-size:14px; line-height:18px; }
+	.faq-list-con2 .faq-item dt .arrow{top:15px;}
+	.faq-list-con2 .faq-item dd{padding:15px;}
+	.faq-list-con2 .faq-item dt .question-icon,
+	.faq-list-con2 .faq-item dd .answer-icon{top:15px; left:15px; width:20px; height:20px; line-height:20px; font-size:11px;}
+	.faq-list-con2 .faq-item dd .answer-icon{display:block; position:static; margin-bottom:10px;}
+	/* FAQ2 :: Open */
+	.faq-list-con2 .faq-item.open dt{border-radius:5px 5px 0 0; }
+	/* FAQ2 :: 카테고리 */
+	.faq-list-con2.faq-category-list-con dl dt{padding-top:40px;}
+	.faq-list-con2.faq-category-list-con dl dt .faq-category{position:absolute; top:13px; left:45px; right:30px; width:auto; margin-right:0; line-height:22px; }
+	.faq-list-con2.faq-category-list-con dl dt .faq-title{display:block; width:100%; }
+	.faq-list-con2.faq-category-list-con dl dt .arrow{top:23px;}
 }
