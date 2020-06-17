@@ -3,59 +3,59 @@
 			<ul class="footer-partner-list clearfix">
 				<li class="partner-item">
 					<div class="partner-item-inner">
-						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="" /></span>
+						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="파트너사 이름" /></span>
 					</div>
 				</li>
 				<li class="partner-item">
 					<div class="partner-item-inner">
-						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="" /></span>
+						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="파트너사 이름" /></span>
 					</div>
 				</li>
 				<li class="partner-item">
 					<div class="partner-item-inner">
-						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="" /></span>
+						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="파트너사 이름" /></span>
 					</div>
 				</li>
 				<li class="partner-item">
 					<div class="partner-item-inner">
-						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="" /></span>
+						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="파트너사 이름" /></span>
 					</div>
 				</li>
 				<li class="partner-item">
 					<div class="partner-item-inner">
-						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="" /></span>
+						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="파트너사 이름" /></span>
 					</div>
 				</li>
 				<li class="partner-item">
 					<div class="partner-item-inner">
-						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="" /></span>
+						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="파트너사 이름" /></span>
 					</div>
 				</li>
 				<li class="partner-item">
 					<div class="partner-item-inner">
-						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="" /></span>
+						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="파트너사 이름" /></span>
 					</div>
 				</li>
 				<li class="partner-item">
 					<div class="partner-item-inner">
-						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="" /></span>
+						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="파트너사 이름" /></span>
 					</div>
 				</li>
 				<li class="partner-item">
 					<div class="partner-item-inner">
-						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="" /></span>
+						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="파트너사 이름" /></span>
 					</div>
 				</li>
 				<li class="partner-item">
 					<div class="partner-item-inner">
-						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="" /></span>
+						<span><img src="<?=$site_host?>/images/common/footer_partner_img01.jpg" alt="파트너사 이름" /></span>
 					</div>
 				</li>
 			</ul>
 		</div>
 	</article>
 	<footer id="footer">
-		<a href="#wrap" class="to-top-btn"><i class="xi-arrow-up"></i></a>
+		<a href="#wrap" class="to-top-btn"><em class="blind">TOP</em><i class="xi-arrow-up"></i></a>
 		<div id="footerInner" class="clearfix">
 			<!-- 푸터 상단 -->
 			<article id="footerTop">
@@ -71,11 +71,11 @@
 					<div class="footer-right-con">
 						<div class="foot-sns-menu">
 							<ul class="clearfix">
-								<li><a href="" target="_blank"><i class="xi-facebook"></i></a></li>
-								<li><a href="" target="_blank"><i class="xi-instagram"></i></a></li>
-								<li><a href="" target="_blank"><i class="xi-kakaostory"></i></a></li>
-								<li><a href="" target="_blank"><i class="xi-twitter"></i></a></li>
-								<li><a href="" target="_blank"><i class="xi-naver"></i></a></li>
+								<li><a href="" target="_blank" title="새창으로열기"><i class="xi-facebook"></i></a></li>
+								<li><a href="" target="_blank" title="새창으로열기"><i class="xi-instagram"></i></a></li>
+								<li><a href="" target="_blank" title="새창으로열기"><i class="xi-kakaostory"></i></a></li>
+								<li><a href="" target="_blank" title="새창으로열기"><i class="xi-twitter"></i></a></li>
+								<li><a href="" target="_blank" title="새창으로열기"><i class="xi-naver"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -137,9 +137,9 @@
 						<div class="family-site-box cm-drop-menu-box" data-drop-event="click">
 							<button class="family-site-open-btn cm-drop-open-btn">FAMILY SITE <span class="arrow"><i class="material-icons">&#xE313;</i></span></button>
 							<ul class="family-site-list cm-drop-list">
-								<li><a href="">FAMILY SITE1</a></li>
-								<li><a href="">FAMILY SITE2</a></li>
-								<li><a href="">FAMILY SITE3</a></li>
+								<li><a href="" target="_blank" title="새창으로열기">FAMILY SITE1</a></li>
+								<li><a href="" target="_blank" title="새창으로열기">FAMILY SITE2</a></li>
+								<li><a href="" target="_blank" title="새창으로열기">FAMILY SITE3</a></li>
 							</ul>
 						</div>	
 					</article>

@@ -67,16 +67,16 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 										<col style="width:10%;"/>
 									</colgroup>
 									<tr>
-										<th>1</th>
-										<th>2</th>
-										<th>3</th>
-										<th>4</th>
-										<th>5</th>
-										<th>6</th>
-										<th>7</th>
-										<th>8</th>
-										<th>9</th>
-										<th>10</th>
+										<th scope="col">1</th>
+										<th scope="col">2</th>
+										<th scope="col">3</th>
+										<th scope="col">4</th>
+										<th scope="col">5</th>
+										<th scope="col">6</th>
+										<th scope="col">7</th>
+										<th scope="col">8</th>
+										<th scope="col">9</th>
+										<th scope="col">10</th>
 									</tr>
 									<tr>
 										<td>복잡한</td>

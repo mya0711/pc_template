@@ -3,7 +3,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include "./lib/config.php";
 include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 ?>
-<!--[if lt IE 9]>
+<!--[if lte IE 9]>
 	<script type="text/javascript">
 		$(document).ready(function  () {
 			/* 하위브라우저 popup */

@@ -4,7 +4,7 @@
 		<div id="headerInnerWrap">
 			<!-- ****************** 헤더상단 ********************** -->
 			<div id="headerInner" class="clearfix area">
-				<h1 class="logo"><a href="<?=$site_url?>/" title="메인으로"><img src="<?=$site_host?>/images/common/logo.png" alt="<?=$site_head_title?>" /></a></h1>
+				<h1 class="logo"><a href="<?=$site_url?>/"><em class="blind">메인으로</em><img src="<?=$site_host?>/images/common/logo.png" alt="<?=$site_head_title?>" /></a></h1>
 				<div class="header-util-box">
 					<!-- 통합검색 -->
 					<div class="header-search-box">

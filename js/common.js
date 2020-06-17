@@ -1,8 +1,28 @@
 /* *******************************************************
  * filename : common.js
  * description : 전체적으로 사용되는 JS
- * date : 2020-02-24
+ * date : 2020-06-16
 ******************************************************** */
+
+/* 브라우저 체크 */
+function detectBrowser () {
+	var agent = navigator.userAgent.toLowerCase(); 
+	var browser; 
+	
+	if ( (agent.indexOf('msie') > -1) || (agent.indexOf('trident') > -1) || (agent.indexOf('edge') > -1) ) { 
+		browser = 'ie'
+	}else if(agent.indexOf('firefox') > -1) { 
+		browser = 'firefox' 
+	}else if(agent.indexOf('opr') > -1) { 
+		browser = 'opera' 
+	}else if(agent.indexOf('chrome') > -1) { 
+		browser = 'chrome' 
+	}else if(agent.indexOf('safari') > -1) { 
+		browser = 'safari'
+	}
+
+	return browser;
+}
 
 /* IE 버전체크 */ 
 function ieVersionCheck () {
@@ -29,30 +49,7 @@ function ieVersionCheck () {
 	}
 }
 
-/* 브라우저 체크 */
-function detectBrowser () {
-	var agent = navigator.userAgent.toLowerCase(); 
-	var browser; 
-	
-	if (agent.indexOf('msie') > -1) { 
-		browser = 'ie' + agent.match(/msie (\d+)/)[1] 
-	}else if(agent.indexOf('trident') > -1) { 
-		browser = 'ie11' 
-	}else if(agent.indexOf('edge') > -1) { 
-		browser = 'edge' 
-	}else if(agent.indexOf('firefox') > -1) { 
-		browser = 'firefox' 
-	}else if(agent.indexOf('opr') > -1) { 
-		browser = 'opera' 
-	}else if(agent.indexOf('chrome') > -1) { 
-		browser = 'chrome' 
-	}else if(agent.indexOf('safari') > -1) { 
-		browser = 'safari'
-	}
-
-	return browser;
-}
-
+/* OS 체크 */ 
 function detectOS(){
     var agent = navigator.userAgent.toLowerCase(); 
 	var browser; 
@@ -78,8 +75,6 @@ function isMobile(){
 		return false;
 	}
 }
-
-
 
 /* Window Popup Open */ 
 function winPopupOpen(src,title,option){
@@ -399,26 +394,45 @@ jQuery(function($){
 	/* *********************** 상단 :: 사이트맵 스타일 02************************ */
 	if ($.exists('.sitemap-open-btn')) {
 		var sitemapState = false;
+		var $sitemapOpenbtn = $(".sitemap-open-btn");
+		
+		//  Toggle
 		$(".sitemap-open-btn").click(function  () {
-			if ( sitemapState ) {
-				$("#sitemapContent").removeClass("open");
-				$(".sitemap-open-btn").removeClass("active");
-				$("body").css({'height':'auto', 'overflow':'auto'});
-				if ($.exists('#fullpage')) {
-					$.fn.fullpage.setAllowScrolling(true);
-					$.fn.fullpage.setKeyboardScrolling(true);
-				}
+			if ( ! sitemapState ) {
+				sitemap_open();
 			}else {
-				$("#sitemapContent").addClass("open");
-				$(".sitemap-open-btn").addClass("active");
-				$("body").css({'height':$(window).height(), 'overflow':'hidden'});
-				if ($.exists('#fullpage')) {
-					$.fn.fullpage.setAllowScrolling(false);
-					$.fn.fullpage.setKeyboardScrolling(false);
-				}
+				sitemap_close();
 			}
-			sitemapState = !sitemapState;
+			if ( $(this).data("event") === "toggle") {
+				sitemapState = !sitemapState;
+			}
 		});
+		// Close Button
+		$(".sitemap-close-btn").click(function  () {
+			sitemapState = !sitemapState;
+			sitemap_close();
+		});
+
+		function sitemap_open () {
+			$("#sitemapContent").addClass("open");
+			if ( $(this).data("event") === "toggle") {
+				$(".sitemap-open-btn").addClass("active");
+			}
+			$("body").css({'height':$(window).height(), 'overflow':'hidden'});
+			if ($.exists('#fullpage')) {
+				$.fn.fullpage.setAllowScrolling(false);
+				$.fn.fullpage.setKeyboardScrolling(false);
+			}
+		}
+		function sitemap_close () {
+			$("#sitemapContent").removeClass("open");
+			$(".sitemap-open-btn").removeClass("active");
+			$("body").css({'height':'auto', 'overflow':'auto'});
+			if ($.exists('#fullpage')) {
+				$.fn.fullpage.setAllowScrolling(true);
+				$.fn.fullpage.setKeyboardScrolling(true);
+			}
+		}
 	}
 
 	/* *********************** 하단 :: top버튼 ************************ */
