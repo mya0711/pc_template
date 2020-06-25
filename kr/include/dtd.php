@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title><?=$site_head_title?><? if($page_info){ ?> - <?=$page_info?><? } ?><? if($sub_info){ ?> - <?=$sub_info?><? } ?><? if($bbs_title){ ?> - <?=$bbs_title?><? } ?></title>
-<meta name="Title" content="<?=$site_title?>">
+<title><?=$site_title_last?></title>
+<meta name="Title" content="<?=$site_title_last?>">
 <meta name="Subject" content="<?=$site_subject?>">
 <meta name="Keywords" content="<?=$site_keywords?>">
 <meta name="Description" content="<?=$site_description?>">

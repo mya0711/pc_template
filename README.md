@@ -3,10 +3,19 @@ PC Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2020-06-17
+* UpDate :  2020-06-25
   
 
 ## 업데이트 내역
+
+- #### 2020/06/25
+
+  #### * php 파일
+	<code> <b>1. /kr/include/dtd.php, /kr/lib/sub.php</b></code>
+	* SEO개선을위해 타이틀 순서변경 
+	* 게시판 뷰페이지 description 수정
+
+***************************
 
 - #### 2020/06/17
 
