@@ -1,13 +1,15 @@
 <?
 $page_num = "01";
 $sub_num = "01";
+// $sub_num2 = "01";	// 사용안할시 주석처리
 $page_section = "company";
 $sub_section = "ceo";
 $page_info = "회사소개";
 $sub_info = "CEO인사말";
+// $sub_info2 = "3차메뉴";	// 사용안할시 주석처리
 include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include "../lib/config.php";
-$sub_description = ""; // 페이지 설명(서브페이지) *필요시 사용
+$sub_description = ""; // 페이지 설명(Description)	필요시 사용
 include "../lib/sub.php";
 include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 ?>
